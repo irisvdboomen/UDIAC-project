@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Bebas Neue', cursive;
+}
+
+.contact-info div {
+  margin: 0.8rem 0;
+  padding: 1rem;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*              left box-instructions how to use loyalty program              */
+/* -------------------------------------------------------------------------- */
+.box1 {
+  background-image: url(image/contact-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+
+}
+
+.tim {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #7b8a73;
+  opacity: 0.6;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid black;
+
+}
+
+.tom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #B9CEAC;
+  opacity: 0.6;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid black;
+}
+
+.ali {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #B9CEAC;
+  opacity: 0.6;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid black;
+
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                              right side-form                               */
+/* -------------------------------------------------------------------------- */
+.box2 {
+  background-color: #B9CEAC;
+ 
+}
+
+.logo-lucifer {
+  height: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.check-mark {
+  
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+}
+
+
+
+
+
+.label-form {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+
+}
+
+/* -------------------------------------------------------------------------- */
+/*                               input-username                               */
+/* -------------------------------------------------------------------------- */
+input[type=text], select, textarea {
+
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 17px;
+  box-sizing: width 200rem;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+ 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 input-email                                */
+/* -------------------------------------------------------------------------- */
+input[type=email], select, textarea {
+
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 17px;
+  box-sizing: width 200rem;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  
+}
+
+/* -------------------------------------------------------------------------- */
+/*                               input-password                               */
+/* -------------------------------------------------------------------------- */
+input[type=password], select, textarea {
+
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 17px;
+  box-sizing: width 200rem;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  
+}
+
+.checkbox_term_of_Service{
+  
+  margin-left: 26%;
+  margin-right: auto;
+  transform: scale(1.6);
+}
+.agreement_check{
+  font-size: xx-small;
+}
+.text_link{
+  font-size: xx-small;
+}
+/* -------------------------------------------------------------------------- */
+/*                                button-login                                */
+/* -------------------------------------------------------------------------- */
+.button-login {
+  margin-left: 24.55%;
+  background-color: black;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 17px;
+  cursor: pointer;
+}
+/* -------------------------------------------------------------------------- */
+/*                                 button-join-1                              */
+/* -------------------------------------------------------------------------- */
+.button-join-1 {
+  background-color: white;
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 17px;
+  cursor: pointer;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                button-join-2                               */
+/* -------------------------------------------------------------------------- */
+
+.button-join-2 {
+  background-color: white;
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 17px;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+/* -------------------------------------------------------------------------- */
+/*                            button-back-to-login                            */
+/* -------------------------------------------------------------------------- */
+.button-back-to-login {
+  background-color: black;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 17px;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+
+
+
+
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                                hover-effect                                */
+/* -------------------------------------------------------------------------- */
+input[type=submit]:hover {
+  background-color: #D7B997;
+  color: rgb(15, 15, 15);
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                 Responsive                                 */
+/* -------------------------------------------------------------------------- */
+@media screen and (min-width: 800px) {
+  .contact-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 992px) {}
+
+@media screen and (min-width: 1320px) {
+  .contact-body {
+    max-width: 100%;
+
+  }
+
+}
