@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="form.css">
-  
+
 </head>
 
 <body>
@@ -19,25 +19,32 @@
 
   <div class="contact-body">
     <div class="contact-info">
-      
-        <div class="box1">
-          <div class="tim"><img src="image/icons8-checked-checkbox-100.png" alt=""></div>
-          <div class="tom"><img src="image/icons8-checked-checkbox-100.png" alt=""></div>
-          <div class="ali"><img src="image/icons8-checked-checkbox-100.png" alt=""></div>
+
+      <div class="box1">
+
+        <div class="tim">
+          <img src="images/icons8-checked-checkbox-100.png" alt="">
+          <p class="text">Collect matches by scanning QR code from the receipt</p>
         </div>
-      
+
+        <div class="tom">collect matches and sprend them on rewards<img src="images/icons8-checked-checkbox-100.png"
+            alt=""></div>
+        <div class="ali"><img src="images/icons8-checked-checkbox-100.png" alt="">Go to your profile page and show the
+          claimed rewards to our barista</div>
+      </div>
+
       <div class="box2">
 
         <div class="contact-form">
 
-          <img class="logo-lucifer" src="image/logo lucifer.png" alt="">
+          <img class="logo-lucifer" src="images/logo lucifer.png" alt="">
         </div>
 
         <form action="/action_page.php">
 
 
-          <label class="label-form"  for="fname">username</label>
-          <input required type="text" id="fname" name="firstname" placeholder="Your name..">
+          <label class="label-form" for="email">email</label>
+          <input required type="email" id="email" name="email" placeholder="your email..">
 
 
 
@@ -45,12 +52,15 @@
           <input required type="password" id="lname" name="lastname" placeholder="Your last name..">
 
 
-          <input class="button-login" type="submit" value="submit" >
-          
-          <input class="button-join-1" type="submit" value="join now">
+          <input class="button-login" type="submit" value="submit">
+          <input class="button-join-1" type="submit" value="join now" onclick="location.href='join-now.html'"><br>
+
+          <a href="reset-pass.html" class="text_link">forgot password</a>
 
 
         </form>
+
+
       </div>
     </div>
 
