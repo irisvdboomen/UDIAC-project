@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge page</title>
+    <!--link font-->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <!--links css-->
+    <link rel="stylesheet" href="js/pop-up.js">
+    <link rel="stylesheet" href="css/challenge-style.css">
+    <link rel="stylesheet" href="css/footer-style.css">
+    <!--link icon-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo " id="box">
+            <a href="sponsor.html"><img class="locat" src="./images/location-sign.png" style="width: 13%!important;">Store Locator</a>
+        </div>
+        <div class="logo" id="box">
+            <a href="index.html"><img src="./images/logo lucifer.png" alt="lucifer loyalty program logo"></a>
+        </div>
+        <div class="logo" id="box"></div>
+    </header>
+    <nav class="navbar">
+        <ul>
+            <input type="checkbox" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+            <div class="menu" id="mobile">
+                <div class="mobile">
+                    <li class="left"><a href="#">Home</a></li>
+                    <li class="left"><a href="#">Rewards</a></li>
+                    <li class="left"><a href="index.html">Challenges</a></li>
+                    <li class="left"><a href="sponsor.html">Sponsors</a></li>
+                    <li class="left"><a href="#">Contact us</a></li>
+                    <li class="right"><a href="#">Profile</a></li>
+                </div>
+            </div>
+        </ul>
+    </nav>
+    <div class="hero">
+        <p class="page_name">CHALLENGES</p>
+        <img src="./images/coffee-beans.jpg" alt="coffee-beans">
+    </div>
+    <!--challenge of day start-->
+    <p class="smaller_name">CHALLENGES OF THE DAY</p>
+    <div class="rewards">
+        <div class="one-reward">
+            <div class="box"><img class="photo_ch_1" src="./images/first-challenge-.png"></div>
+            <div class="small-box">
+                <div class="box-text-left">
+                    <button data-modal-id="myModal-first-mod" class="button first-mod">Buy a sandwich</button>
+                </div>
+                <div class=" box-text-right ">
+                    <div class="points ">
+                        <h4>2<img src="./images/point-photo.png "></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="one-reward ">
+            <div class="box "><img class="photo_ch_1 " src="./images/second-challenge.png "></div>
+            <div class="small-box ">
+                <div class="box-text-left ">
+                    <button data-modal-id="myModal-second-mod" class="button second-mod">Order a coffee</button>
+                </div>
+                <div class="box-text-right ">
+                    <div class="points ">
+                        <h4>2<img src="./images/point-photo.png "></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="one-reward ">
+            <div class="box "><img class="photo_ch_1 " src="./images/thurd-challenge.png "></div>
+            <div class="small-box ">
+                <div class="box-text-left ">
+                    <button data-modal-id="myModal-thurd-mod" class="button thurd-mod">Buy a cake</button>
+                </div>
+                <div class="box-text-right ">
+                    <div class="points ">
+                        <h4>2<img src="./images/point-photo.png "></h4>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--challenge of day end-->
+    <br>
+    <br>
+    <br>
+    <br>
+    <!--location challenge start-->
+    <div class="middle part ">
+        <div class="green_square ">
+            <img class="r" src="./images/rectangle_2.png ">
+            <div class="text-ch ">
+                <h1 class="visitl ">VISIT LOCATION KENNEDYPLEIN</h1>
+                <br>
+                <h2>AS A LOYAL CLIENT OF LUCIFER To claim this reward you need to visit one of LUCIFER LOCATIONS kennedyplein . mAKE A PURCHASE AND ENJOY YOUR NEW POINTS AND COFFEE.</h2>
+                <div class="small-box ">
+                    <div class="box-text-left ">
+                        <button data-modal-id="myModal-visit-location" class="button location visit-location">VISIT LOCATION KENNEDYPLEIN</button>
+                    </div>
+                    <div class="box-text-right ">
+                        <div class="points ">
+                            <h4>2<img class="p " style="width: 8%; " src="./images/point-photo.png "></h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal content visit location -->
+                <div id="myModal-visit-location" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <div class="contact-container ">
+                            <div class="left-col left-col1">
+                                <img class="lc" src="./images/rectangle_2.png">
+                            </div>
+                            <div class="right-col">
+                                <h1>Visit location KENNEDYPLEIN</h1>
+                                <button class="button ">Scan QR code :</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal content visit location end -->
+                <!-- Modal content buy sandwich -->
+                <div id="myModal-first-mod" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <div class="contact-container">
+                            <div class="left-col">
+                                <img class="fc" src="./images/first-challenge-.png">
+                            </div>
+                            <div class="right-col">
+                                <h1>Buy a sandwich</h1>
+                                <p>Scan your QR code to get point :</p>
+                                <button data-modal-id="myModal-confirmed-mod" class="button confirmed-mod">Scan QR code :</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal content sandwich end -->
+                <!-- Modal content confirmed qr-code start-->
+                <div id="myModal-confirmed-mod" class="modal">
+                    <div class="modal-content-confirm">
+                        <span class="close">&times;</span>
+                        <div class="contact-container">
+                            <div class="right-col">
+                                <h1 class="confirmed_h1">Code confirmed</h1>
+                                <div class="points confirmed">
+                                    <img class="confirmedphoto" src="./images/check.png">
+                                    <h4 class="pointmain">2<img class="p confirmed" style="width: 8%; " src="images/point-photo.png "></h4>
+                                </div>
+                                <p class="confirmed_p">Suscefully added :</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal content confirmed qr-code end -->
+                <!-- Modal content second  -->
+                <div id="myModal-second-mod" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <div class="contact-container">
+                            <div class="left-col left-col1">
+                                <img class="sc" src="./images/second-challenge.png">
+                            </div>
+                            <div class="right-col">
+                                <h1>Order a coffee:</h1>
+                                <p>Scan your QR code to get point :</p>
+                                <button class="button ">Scan QR code :</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal content second end -->
+                <!-- Modal content thurd  -->
+                <div id="myModal-thurd-mod" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <div class="contact-container">
+                            <div class="left-col left-col1">
+                                <img class="tc" src="./images/thurd-challenge.png">
+                            </div>
+                            <div class="right-col">
+                                <h1>Buy a cake</h1>
+                                <p>Scan your QR code to get point :</p>
+                                <button class="button ">Scan QR code :</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal content thurd end -->
+                <!-- Modal content forth  -->
+                <div id="myModal-forth-mod" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <div class="contact-container">
+                            <div class="left-col left-col1">
+                                <img class="fc" src="./images/thurd-ch.png">
+                            </div>
+                            <div class="right-col">
+                                <h1>Buy 3 juices</h1>
+                                <p>Scan your QR code to get point :</p>
+                                <button class="button ">Scan QR code :</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal content forth end -->
+                <!-- Modal content fifth  -->
+                <div id="myModal-fifth-mod" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <div class="contact-container">
+                            <div class="left-col left-col1">
+                                <img class="fifthc" src="./images/fourth-ch.png">
+                            </div>
+                            <div class="right-col">
+                                <h1>Buy 5 coockies</h1>
+                                <p>Scan your QR code to get point :</p>
+                                <button class="button ">Scan QR code :</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal content six  -->
+                <div id="myModal-six-mod" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <div class="contact-container">
+                            <div class="left-col left-col1">
+                                <img class="sixc" src="./images/5-ch.png">
+                            </div>
+                            <div class="right-col">
+                                <h1>Buy 10 beers</h1>
+                                <p>Scan your QR code to get point :</p>
+                                <button class="button ">Scan QR code :</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal content six end -->
+                <!-- Modal content seven  -->
+                <div id="myModal-seven-mod" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <div class="contact-container">
+                            <div class="left-col left-col1">
+                            </div>
+                            <div class="right-col spend">
+                                <h1 class="tit">Spend 40 matches ?</h1>
+                                <button class="button " id="cancle-btn ">Cancel</button>
+                                <button class="button " id="confBtn">Confirm</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal content seven end -->
+                <!-- Modal game first price -->
+                <div id="myModal-game-mod" class="modal">
+                    <div class="modal-content-price">
+                        <span class="close game-mod">&times;</span>
+                        <div class="contact-container">
+                            <div class="left-col left-col1">
+                                <img class="one-month" src="./images/one-month.png">
+                            </div>
+                            <div class="right-col">
+                                <h1 class="pricex">You won :</h1>
+                                <h2 class="pricey">One moth free delivery bean</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal first price game end -->
+                <!-- Modal game second price -->
+                <div id="myModal-secondp-mod" class="modal">
+                    <div class="modal-content-price">
+                        <span id="close" class="close game-mod">&times;</span>
+                        <div class="contact-container">
+                            <div class="left-col left-col1">
+                                <img class="sand" src="./images/first-challenge-.png">
+                            </div>
+                            <div class="right-col">
+                                <h1 class="pricex">You won :</h1>
+                                <h2 class="pricey">One free sandwich</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal second price game end -->
+                <!-- Modal game thurd price -->
+                <div id="myModal-thurdp-mod" class="modal">
+                    <div class="modal-content-price">
+                        <span id="close" class="close game-mod">&times;</span>
+                        <div class="contact-container">
+                            <div class="left-col left-col1">
+                                <img class="cof" src="./images/second-challenge.png">
+                            </div>
+                            <div class="right-col">
+                                <h1 class="pricex">You won :</h1>
+                                <h2 class="pricey">One free coffee</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal thurd price game end -->
+            </div>
+        </div>
+        <br>
+        <br>
+    </div>
+    <!--location challenge end-->
+    <!--continuing with the challenges  -->
+    <div class="rewards ">
+        <div class="one-reward ">
+            <div class="box "><img class="photo_ch_1 " src="./images/thurd-ch.png "></div>
+            <div class="small-box ">
+                <div class="box-text-left ">
+                    <button data-modal-id="myModal-forth-mod" class="button forth-mod">Buy 3 juices</button>
+                </div>
+                <div class="box-text-right ">
+                    <div class="points ">
+                        <h4>2<img src="./images/point-photo.png "></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="one-reward ">
+            <div class="box "><img class="photo_ch_1 " src="./images/fourth-ch.png"></div>
+            <div class="small-box ">
+                <div class="box-text-left ">
+                    <button data-modal-id="myModal-fifth-mod" class="button fifth-mod">Buy 5 cookies</button>
+                </div>
+                <div class="box-text-right ">
+                    <div class="points ">
+                        <h4>2<img src="./images/point-photo.png "></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="one-reward ">
+            <div class="box "><img class="photo_ch_1 " src="./images/5-ch.png "></div>
+            <div class="small-box ">
+                <div class="box-text-left ">
+                    <button data-modal-id="myModal-six-mod" class="button six-mod">Buy 10 beers</button>
+                </div>
+                <div class="box-text-right ">
+                    <div class="points ">
+                        <h4>2<img src="./images/point-photo.png "></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--challenges end -->
+    <!--game start-->
+    <div class="title ">
+        <p>Lucifer challenges you to spend 50<br> matchsticks on a suprise reward.</p>
+    </div>
+    <img class="cup " src="./images/cup.png ">
+    <img class="lucycup " src="./images/lucifer_4.png ">
+    <img class="oneb " src="./images/oneb.png ">
+    <img class="secb " src="./images/secb.png ">
+    <img class="thurdb " src="./images/thurdb.png ">
+    <br>
+    <!--green boxes start-->
+    <div class="kutii ">
+        <img class="kytiikata1 " src="images/kytiikata.png ">
+        <img class="kytiikata2 " src="images/kytiikata.png ">
+        <img class="kytiikata3 " src="images/kytiikata.png ">
+        <img class="kytiikata4 " src="images/kytiikata.png ">
+        <img class="kytiikata5 " src="images/kytiikata.png ">
+        <img class="kytiikata6 " src="images/kytiikata.png ">
+        <img class="kytiikata7 " src="images/kytiikata.png ">
+        <img class="kytiikata8 " src="images/kytiikata.png ">
+        <img class="kytiikata9 " src="images/kytiikata.png ">
+    </div>
+    <!--green boxes end-->
+    <!--beans placement start-->
+    <div class="kytii_bean " id="game-container">
+    </div>
+    <!--beans placement end-->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="title ">
+        <p>USE 50 MATCHstICKS FOR A surprise :</p>
+    </div>
+    <div class="small-box ">
+        <div class="box-text-left ">
+        </div>
+        <div class="box-text-right ">
+            <div class="points ">
+                <button data-modal-id="myModal-seven-mod" class="button seven-mod" id="btn">USE</button>
+                <h4>50<img src="./images/point-photo.png "></h4>
+            </div>
+        </div>
+    </div>
+    <div class="fix-space ">
+        <br>
+        <br>
+        <br>
+    </div>
+    <script src="./index.js "></script>
+    <script src="./pop-up.js "></script>
+    <!--game end-->
+    <footer>
+        <div class="both">
+            <div class="left-part-footer">
+                <div class="logo-footer">
+                    <img src="./images/logo lucifer.png" alt="logo">
+                </div>
+                <div class="contact-info">
+                    <div class="contact-phone">
+                        <i class="material-icons">phone</i><a href="tel:+39 834 37849">+39 834 37849</a>
+                    </div>
+                    <div class="contact-email">
+                        <i class="material-icons">email</i><a href="mailto:loyaltiesoflucifer@gmail.com">loyaltiesoflucifer@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="right-part-footer">
+                <div class="page-links">
+                    <div class="all-links">
+                        <a href="index.html">Homepage</a>
+                        <p><a href="#">Contact us</a>
+                            <a href="locations.html">Locations</a>
+                            <a href="rewards.html">Rewards</a>
+                            <a href="#">Challenges</a>
+                            <a href="#">Sponsor</a></p>
+                    </div>
+                    <!-- mobile version -->
+                    <div class="three-links">
+                        <p><a href="index.html">Homepage</a></p>
+                        <p><a href="#">Contact us</a></p>
+                        <p><a href="#">Locations</a></p>
+                    </div>
+                    <div class="three-links">
+                        <p><a href="rewards.html">Rewards</a></p>
+                        <p><a href="#">Challenges</a></p>
+                        <p><a href="#">Sponsor</a></p>
+                    </div>
+                    <div class="social-media">
+                        <img src="./images/instagram.png" alt="">
+                        <img src="./images/instagram.png" alt="">
+                        <img src="./images/instagram.png" alt="">
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>©UDIAC 2021</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<!--links js-->
+<script src="js/pop-up.js"></script>
+<script src="js/game.js"></script>
+
+</html>
