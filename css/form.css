@@ -21,7 +21,7 @@
 /*              left box-instructions how to use loyalty program              */
 /* -------------------------------------------------------------------------- */
 .box1 {
-  background-image: url(images/contact-bg.jpg);
+  background-image: url(/images/nathan-dumlao-KixfBEdyp64-unsplash.jpg) ;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -32,51 +32,41 @@
   
 
 }
-.box1-2 {
-  background-image: url(images/contact-bg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-content: center;
-  justify-content: center;
-  
 
-}
+
 
 .tim {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   background-color: #7b8a7360;
   /* opacity: 0.6; */
   padding: 10px;
   border-radius: 12px;
   border: 1px solid black;
-color: white;
+  color: white; 
 }
 
 .tom {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   background-color: #7b8a7360;
   padding: 10px;
   border-radius: 12px;
   border: 1px solid black;
-  color: white;
+  color: white; 
 }
 
 .ali {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   background-color: #7b8a7360;
   padding: 10px;
   border-radius: 12px;
   border: 1px solid black;
-color: white;
+  color: white; 
 }
 
 
@@ -103,6 +93,17 @@ color: white;
   width: 50%;
   
 }
+
+.reset-pass-int{
+  text-align: center;
+
+}
+.confirm{
+  text-align: center;
+  color: white;
+
+}
+
 
 .check-mark {
   display: block;
@@ -243,8 +244,8 @@ input[type=password], select, textarea {
 /* -------------------------------------------------------------------------- */
 
 .button-join-2 {
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
   padding: 12px 20px;
   border: none;
   border-radius: 17px;
@@ -260,7 +261,7 @@ input[type=password], select, textarea {
 /*                            button-back-to-login                            */
 /* -------------------------------------------------------------------------- */
 .button-back-to-login {
-  background-color: rgb(204, 189, 189);
+  background-color: black;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -271,6 +272,7 @@ input[type=password], select, textarea {
   margin-right: auto;
 
 }
+
 
 
 
