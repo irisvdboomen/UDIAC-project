@@ -6,17 +6,10 @@
   margin: 0;
   font-family: 'Bebas Neue', cursive;
 }
-
-
-  
-
 .contact-info{
   min-height: 625px;
   min-width: 1366;
 }
-  
-
-
 /* -------------------------------------------------------------------------- */
 /*              left box-instructions how to use loyalty program              */
 /* -------------------------------------------------------------------------- */
@@ -29,12 +22,7 @@
   gap: 20px;
   align-content: center;
   justify-content: center;
-  
-
 }
-
-
-
 .tim {
   display: flex;
   justify-content: space-evenly;
@@ -46,7 +34,6 @@
   border: 1px solid black;
   color: white; 
 }
-
 .tom {
   display: flex;
   justify-content: space-evenly;
@@ -57,7 +44,6 @@
   border: 1px solid black;
   color: white; 
 }
-
 .ali {
   display: flex;
   justify-content: space-evenly;
@@ -68,62 +54,57 @@
   border: 1px solid black;
   color: white; 
 }
-
-
-
 /* -------------------------------------------------------------------------- */
 /*                              right side-form                               */
 /* -------------------------------------------------------------------------- */
 .box2 {
   background-color: #B9CEAC;
-  
- 
-}
-.box2-2 {
-  background-color: #B9CEAC;
-  
- 
 }
 
 .logo-lucifer {
-  height: 200px;
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-  
 }
-
 .reset-pass-int{
   text-align: center;
-
 }
 .confirm{
   text-align: center;
   color: white;
-
 }
-
-
 .check-mark {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 25%;
 }
-
-
-
-
-
 .label-form {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-
 }
+.agreement_check{
+  font-size: xx-small;
+}
+.terms{
+  margin-left: 24.55%;
+  font-size: x-small;
+}
+.police-link{
+  color: red;
+  text-decoration: none;
+}
+.text_link{
+  font-size: x-small;
+  text-align: center;
+  margin-left: 24.55%;
+  color: rgb(243, 6, 6);
+  text-decoration: none;
+} 
 
+/* --------------------------------- inputs start --------------------------------- */
 /* -------------------------------------------------------------------------- */
 /*                               input-username                               */
 /* -------------------------------------------------------------------------- */
@@ -136,12 +117,10 @@ input[type=text], select, textarea {
   margin-top: 6px;
   margin-bottom: 16px;
   resize: vertical;
- 
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-  
 }
 
 /* -------------------------------------------------------------------------- */
@@ -156,12 +135,28 @@ input[type=email], select, textarea {
   margin-top: 6px;
   margin-bottom: 16px;
   resize: vertical;
-  
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-  
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                input-number                                */
+/* -------------------------------------------------------------------------- */
+input[type=number], select, textarea {
+
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 17px;
+  box-sizing: width 200rem;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -176,45 +171,15 @@ input[type=password], select, textarea {
   margin-top: 6px;
   margin-bottom: 16px;
   resize: vertical;
-  
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-  
-}
-
-.checkbox_term_of_Service{
-  
-  margin-left: 26%;
-  margin-right: auto;
-  transform: scale(1.6);
-}
-.agreement_check{
-  font-size: xx-small;
-}
-
-.terms{
-  margin-left: 24.55%;
-  font-size: x-small;
-
-}
-
-.police-link{
-  color: red;
-  text-decoration: none;
-}
-.text_link{
-  font-size: x-small;
-  text-align: center;
-  margin-left: 24.55%;
-  color: rgb(243, 6, 6);
-  text-decoration: none;
 }
 
 
+/* ----------------------------- button section start----------------------------- */
 
-  
 /* -------------------------------------------------------------------------- */
 /*                                button-login                                */
 /* -------------------------------------------------------------------------- */
@@ -228,6 +193,44 @@ input[type=password], select, textarea {
   cursor: pointer;
 }
 /* -------------------------------------------------------------------------- */
+/*                                button-cancel                               */
+/* -------------------------------------------------------------------------- */
+.button-cancel {
+  margin-left: 24.55%;
+  background-color: black;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 17px;
+  cursor: pointer;
+}
+/* -------------------------------------------------------------------------- */
+/*                                 button-send                                */
+/* -------------------------------------------------------------------------- */
+.button-send {
+  background-color: white;
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 17px;
+  cursor: pointer;
+}
+/* -------------------------------------------------------------------------- */
+/*                                button-submit                               */
+/* -------------------------------------------------------------------------- */
+.button-submit {
+  background-color: black;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 17px;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* -------------------------------------------------------------------------- */
 /*                                 button-join-1                              */
 /* -------------------------------------------------------------------------- */
 .button-join-1 {
@@ -238,11 +241,9 @@ input[type=password], select, textarea {
   border-radius: 17px;
   cursor: pointer;
 }
-
 /* -------------------------------------------------------------------------- */
 /*                                button-join-2                               */
 /* -------------------------------------------------------------------------- */
-
 .button-join-2 {
   background-color: black;
   color: white;
@@ -253,10 +254,7 @@ input[type=password], select, textarea {
   display: block;
   margin-left: auto;
   margin-right: auto;
-
 }
-
-
 /* -------------------------------------------------------------------------- */
 /*                            button-back-to-login                            */
 /* -------------------------------------------------------------------------- */
@@ -270,19 +268,23 @@ input[type=password], select, textarea {
   display: block;
   margin-left: auto;
   margin-right: auto;
-
 }
-
-
-
-
-
-
-
-
-
 /* -------------------------------------------------------------------------- */
-/*                                hover-effect                                */
+/*                                button-change                               */
+/* -------------------------------------------------------------------------- */
+.button-change {
+  background-color: black;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 17px;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* -------------------------------------------------------------------------- */
+/*                                button-hover-effect                         */
 /* -------------------------------------------------------------------------- */
 input[type=submit]:hover {
   background-color: #D7B997;
@@ -302,10 +304,11 @@ input[type=submit]:hover {
 
 @media screen and (min-width: 992px) {}
 
-@media screen and (min-width: 1320px) {
-  .contact-body {
-    max-width: 100%;
+@media (min-width: 1920px) {
 
+  .contact-info{
+    min-height: 937px;
+  
   }
 
 }
