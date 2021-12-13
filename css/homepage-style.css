@@ -4,14 +4,6 @@
     box-sizing: border-box;
 }
 
-/* hero */
-.hero img {
-    position: relative;
-    width: 100%;
-    opacity: 0.8;
-    z-index: -1; /* hide picture behind menu */
-} 
-
 /* beginning of homepage */
 .title-steps {
     margin-top: 50px;

@@ -47,6 +47,10 @@
     font-size: 25px;
 }
 
+.logout a {
+    color: black;
+}
+
 .info-green {
     display: flex;
     flex-direction: column;
@@ -96,6 +100,10 @@
     flex-direction: row;
 }
 
+.steps img {
+    width: 180px;
+}
+
 .steps {
     font-size: 25px;
     width: 400px;
@@ -107,13 +115,14 @@
 }
 
 #text.steps {
-    background-color: #b9ceac;
+    background-color: #b9ceac9d;
 }
 
 .claimed-rewards {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-bottom: 50px;
 }
 
 .box-under-box {
@@ -126,7 +135,6 @@
     font-family: 'Bebas Neue', cursive;
     font-size: 20px;
 }
-
 
 @media (max-width: 768px) {
     .steps-claim-reward {
@@ -153,7 +161,7 @@
     }
 
     #info-user.first-content {
-        height: 150px;
+        height: 200px;
     }
 
     .text-first-content {

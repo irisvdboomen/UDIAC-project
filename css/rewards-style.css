@@ -70,6 +70,14 @@
     width: 830px;
 }
 
+#desktop-img {
+    display: block;
+}
+
+#mobile-img {
+    display: none;
+}
+
 button.open-btn {
     background-color: black;
     color: white;
@@ -154,7 +162,12 @@ button.open-btn {
         margin: 20px 20px;
     }
 
-    .big-box img {
+    #desktop-img {
+        display: none;
+    }
+
+    #mobile-img {
+        display: block;
         width: 200px;
     }
 

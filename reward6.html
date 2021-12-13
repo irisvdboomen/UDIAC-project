@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loyalties of Lucifer</title>
+    <title>Free sandwich</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/header-style.css">
-    <link rel="stylesheet" href="css/homepage-style.css">
+    <link rel="stylesheet" href="css/pop-up-style.css">
+    <link rel="stylesheet" href="css/one-reward-style.css">
     <link rel="stylesheet" href="css/footer-style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> <!-- Icons footer-->
 </head>
 <body>
     <header class="header">
-        <div class="logo" id="box"><a href="locations.html">Locations</a></div>
+        <div class="logo" id="box"><a href="locations.html">Locations</a></div> 
         <div class="logo" id="box"><a href="index.html"><img src="images/logo lucifer.png" alt="lucifer loyalty program logo"></a></div>
         <div class="logo" id="box"></div>
     </header>
@@ -26,8 +27,8 @@
             <label for="checkbox_toggle" class="hamburger">&#9776;</label>            
             <div class="menu" id="mobile">
                 <div class="mobile">
-                <li class="left" id="selected"><a href="index.html">Home</a></li>
-                <li class="left"><a href="rewards.html">Rewards</a></li>
+                <li class="left"><a href="index.html">Home</a></li>
+                <li class="left" id="selected"><a href="rewards.html">Rewards</a></li>
                 <li class="left"><a href="#">Challenges</a></li>
                 <li class="left"><a href="#">Sponsors</a></li>
                 <li class="left"><a href="#">Contact us</a></li>
@@ -38,63 +39,32 @@
         </ul>
     </nav>
     <div class="hero">
-        <p class="hero-text-homepage">Loyalties of Lucifer</p>
-        <img src="images/hero-homepage.png" alt="coffee-beans">
+        <img src="images/coffee-beans.jpg" alt="coffee-beans">
     </div>
-
-    <!-- End of header, menu, hero -->
-    <!-- Beginning of homepage-->
-    <div class="title-steps">
-        <p>How does the loyalty program work?</p>
-    </div>
-    <div class="steps">
-        <div class="step" id="one">
-            <img src="images/coffee-beans.svg" alt="">
-            <p>Complete challenges:<br>Collect match sticks by<br>putting in the code from<br>the recipe</p>
+    <div class="reward-box">
+        <div class="image-reward-box">
+            <img src="https://picsum.photos/id/237/400/400" alt="random">
         </div>
-        <div class="step-mobile">
-            <p>Complete challenges:<br>Collect match sticks by<br>putting in the code from<br>the recipe</p>
+        <div class="text-reward-box">
+            <div class="title-reward">Free Sandwich</div>
+            <div class="other-text-reward-box">Spend 40 match sticks to use this reward anytime you want!</div>
+            <div class="other-text-reward-box">When using this reward you can get a free sandwich of your choice. <br>Click the button below to confirm that you want to spend your points on this.</div>
+            <div id="popUpOverlay"></div>
+    <div id="popUpBox">
+        <div class="text-popUpBox">
+            <p class="success">Successfully claimed!</p>
+            <img src="images/checkbox.png" alt="">
+            <div class="buttons-popup">
+                <div id="closeModal-close">
+                    <button onclick="Alert.ok()">Close</button>
+                </div>
         </div>
-        <div class="arrow">
-            <img src="images/arrow.png" alt="">
-        </div>
-        <div class="step" id="two">
-            <img src="images/cup.svg" alt="">
-            <p>collect matches and spend <br>them on rewards</p>
-        </div>
-        <div class="step-mobile">
-            <p>collect matches and spend <br>them on rewards</p>
-        </div>
-        <div class="arrow">
-            <img src="images/arrow.png" alt="">
-        </div>
-        <div class="step" id="three">
-            <img src="images/filter.svg" alt="">
-            <p>go to your profile page and<br> show the claimed rewards to<br> our barista </p>
-        </div>
-        <div class="step-mobile">
-            <p>go to your profile page and<br> show the claimed rewards to<br> our barista </p>
+        <p>Visit profile page to use reward</p>
         </div>
     </div>
-    <div class="all-boxes">
-        <div class="box1" id="top1">
-            <p>loyalties of lucifer is a loyalty program<br>for lucifer coffee roasters. our loyal<br> customers can earn ‘match sticks’ (points)<br> by doing challenges.</p>
-        </div>
-        <div class="box2" id="top2">
-            <img src="images/coffee-latte.png" alt="random">
+    <button onclick="Alert.render()" class="btn">Use points</button>
         </div>
     </div>
-    <div class="green-box">
-    </div>
-    <div class="all-boxes">
-        <div class="box2" id="bottom2">
-            <img src="images/heart-beans.png" alt="">
-        </div>
-        <div class="box1" id="bottom1">
-            <p>those match sticks can be used on<br> different rewards. check out the<br> <a href="#">challenges</a>  and <a href="rewards.html">rewards</a>.</p>
-        </div>
-    </div>
-    <!-- beginning of footer -->
     <footer>
         <div class="both">
             <div class="left-part-footer">
@@ -128,7 +98,7 @@
                     </div>
                     <div class="three-links">
                         <p><a href="rewards.html">Rewards</a></p>
-                        <p><a href="locations.html">Locations</a></p>
+                        <p><a href="#">Locations</a></p>
                         <p><a href="#">Sponsor</a></p>
                     </div>
                     <div class="social-media">
@@ -142,7 +112,8 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer>    
 
 </body>
+<script src="pop-up.js"></script>
 </html>

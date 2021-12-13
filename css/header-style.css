@@ -90,6 +90,10 @@ li a {
     margin-right: 15px;
 }
 
+#points.right-mobile img {
+    width: 40px;
+}
+
 input[type=checkbox]{
     display: none;
 }
@@ -101,7 +105,34 @@ input[type=checkbox]{
 }
 
 .hero img {
+    position: relative;
     width: 100%;
+    opacity: 0.8;
+    z-index: -1; /* hide picture behind menu */
+} 
+
+.hero .hero-text {
+    position: absolute;
+    z-index: 1;
+    margin-top: 5%;
+    margin-left: 35%;
+    text-shadow: 3px 1px black;
+    text-align: center;
+    font-size: 10vw;
+    font-family: 'Bebas Neue';
+    color: white;
+}
+
+.hero .hero-text-homepage {
+    position: absolute;
+    z-index: 2;
+    margin-top: 5%;
+    margin-left: 17.5%;
+    text-shadow: 3px 1px black;
+    text-align: center;
+    font-size: 10vw;
+    font-family: 'Bebas Neue';
+    color: white;
 }
 
 /* end of header + navbar */
