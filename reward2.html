@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free sandwich</title>
+    <title>10% discount on coffee beans</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -17,7 +17,7 @@
 </head>
 <body>
     <header class="header">
-        <div class="logo" id="box"><a href="locations.html">Locations</a></div> 
+        <div class="logo" id="location"><a href="locations.html"><img src="images/location.png" alt=""></a></div>
         <div class="logo" id="box"><a href="index.html"><img src="images/logo lucifer.png" alt="lucifer loyalty program logo"></a></div>
         <div class="logo" id="box"></div>
     </header>
@@ -39,30 +39,33 @@
         </ul>
     </nav>
     <div class="hero">
-        <img src="images/coffee-beans.jpg" alt="coffee-beans">
+        <p class="hero-text">Rewards</p>
+        <img src="images/rewards-hero.png" alt="hero-image">
     </div>
     <div class="reward-box">
         <div class="image-reward-box">
-            <img src="https://picsum.photos/id/237/400/400" alt="random">
+            <img src="images/coffee-beans-bag.png" alt="discount-coffee-beans">
         </div>
         <div class="text-reward-box">
-            <div class="title-reward">Free Sandwich</div>
-            <div class="other-text-reward-box">Spend 40 match sticks to use this reward anytime you want!</div>
-            <div class="other-text-reward-box">When using this reward you can get a free sandwich of your choice. <br>Click the button below to confirm that you want to spend your points on this.</div>
+            <div class="title-reward">10% discount on coffee beans</div>
+            <div class="other-text-reward-box">Spend 20 match sticks to use this reward anytime you want. When using this reward you can get a 10% discount on coffee beans. <br>Click the button below to confirm that you want to spend your points on this.</div>
             <div id="popUpOverlay"></div>
-    <div id="popUpBox">
-        <div class="text-popUpBox">
-            <p class="success">Successfully claimed!</p>
-            <img src="images/checkbox.png" alt="">
-            <div class="buttons-popup">
-                <div id="closeModal-close">
-                    <button onclick="Alert.ok()">Close</button>
+            <div id="popUpBox">
+                <div class="text-popUpBox">
+                    <p class="success">Successfully claimed!</p>
+                    <img src="images/checkbox.png" alt="">
+                    <div class="buttons-popup">
+                        <div id="closeModal-close">
+                            <button onclick="Alert.ok()">Close</button>
+                        </div>
                 </div>
-        </div>
-        <p>Visit profile page to use reward</p>
-        </div>
-    </div>
-    <button onclick="Alert.render()" class="btn">Use points</button>
+                <p>Visit profile page to use reward</p>
+                </div>
+            </div>
+            <button onclick="Alert.render()" class="btn">Use points</button>
+            <br>
+            <br>
+            <a href="rewards.html">Go back to rewards</a>
         </div>
     </div>
     <footer>
@@ -83,22 +86,22 @@
             <div class="right-part-footer">
                 <div class="page-links">
                     <div class="all-links">
-                        <p><a href="#">Contact us</a>
                         <a href="index.html">Homepage</a> 
+                        <p><a href="#">Contact us</a>
+                            <a href="locations.html">Locations</a>    
+                            <a href="rewards.html">Rewards</a>
                         <a href="#">Challenges</a>
-                        <a href="rewards.html">Rewards</a>
-                        <a href="locations.html">Locations</a>    
                         <a href="#">Sponsor</a></p>
                     </div>
                     <!-- mobile version -->
                     <div class="three-links">
-                        <p><a href="#">Contact us</a></p>
                         <p><a href="index.html">Homepage</a></p>
-                        <p><a href="#">Challenges</a></p>
+                        <p><a href="#">Contact us</a></p>
+                        <p><a href="#">Locations</a></p>
                     </div>
                     <div class="three-links">
                         <p><a href="rewards.html">Rewards</a></p>
-                        <p><a href="#">Locations</a></p>
+                        <p><a href="#">Challenges</a></p>
                         <p><a href="#">Sponsor</a></p>
                     </div>
                     <div class="social-media">
@@ -112,8 +115,7 @@
                 </div>
             </div>
         </div>
-    </footer>    
-
+    </footer>
 </body>
 <script src="pop-up.js"></script>
 </html>

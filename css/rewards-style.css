@@ -44,7 +44,7 @@
     width: 250px;
     height: 100px;
     background-color: #b9ceac;
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Bebas Neue', monospace;
     font-size: 20px;
 }
 
@@ -55,7 +55,7 @@
     width: 830px;
     height: 100px;
     background-color: #b9ceac;
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Bebas Neue', monospace;
     font-size: 20px;
     margin-bottom: 100px;
 }
@@ -81,7 +81,7 @@
 button.open-btn {
     background-color: black;
     color: white;
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Bebas Neue', monospace;
     border-radius: 0px;
     border-style: none;
     padding: 5px 10px;

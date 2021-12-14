@@ -7,7 +7,7 @@ body{
   .btn{
     background-color: black;
     color: white;
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Bebas Neue', monospace;
     border-radius: 0px;
     border-style: none;
     padding: 5px 10px;
@@ -40,7 +40,7 @@ body{
   }
 
   .success {
-    font-size: 30px;
+    font-size: 20px;
   }
 
   .text-popUpBox {
@@ -66,7 +66,7 @@ body{
     background-color: black;
     cursor: pointer;
     color: white;
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Bebas Neue', monospace;
     border-style: none;
     padding: 5px 25px;
     font-size: 20px;
