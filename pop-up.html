@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://kit.fontawesome.com/a71707a89a.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/pop-up-style.css"/>
+<title>Popup Box</title>
+</head>
+<body>
+<div id="popUpOverlay"></div>
+<div id="popUpBox">
+<!-- <div id="box"> -->
+<h1>Here Goes Your Popup</h1>
+<div class="buttons-popup">
+<div id="closeModal-cancel">
+  <button onclick="Alert.ok()">Cancel</button>
+  </div>
+  <div id="closeModal-confirm">
+  <button onclick="Alert.ok()">Confirm</button>
+</div>
+</div>
+<!-- </div> -->
+</div>
+<button onclick="Alert.render()" class="btn">Use points</button>
+
+<div id="popUpOverlay"></div>
+<div id="popUpBox">
+<!-- <div id="box"> -->
+<h1>Here Goes another Popup</h1>
+<div class="buttons-popup">
+<div id="closeModal-cancel">
+  <button onclick="Alert.ok()">Cancel</button>
+  </div>
+  <div id="closeModal-confirm">
+  <button onclick="Alert.ok()">Confirm</button>
+</div>
+</div>
+<!-- </div> -->
+</div>
+<button onclick="Alert.render()" class="btn">Use points</button>
+<script src="pop-up.js"></script>
+</body>
+</html>
