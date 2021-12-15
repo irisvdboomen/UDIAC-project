@@ -148,3 +148,19 @@ function rotate() {
         $(`#beanImg1`).removeClass('active');
     }, 1000)
 }
+
+// we remove the show class from our selected modul and add hide 
+$(function() {
+    $('.close').on('click', function() {
+        $('#myModal-thurdp-mod').removeClass('show');
+        $('#myModal-game-mod').addClass('hide')
+    })
+    $('.close').on('click', function() {
+        $('#myModal-secondp-mod').removeClass('show');
+        $('#myModal-game-mod').addClass('hide')
+    })
+    $('.close').on('click', function() {
+        $('#myModal-game-mod').removeClass('show');
+        $('#myModal-game-mod').addClass('hide')
+    })
+})

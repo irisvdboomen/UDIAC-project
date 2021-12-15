@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,29 +15,40 @@
     <link rel="stylesheet" href="css/rewards-style.css">
     <link rel="stylesheet" href="css/pop-up-style.css">
     <link rel="stylesheet" href="css/footer-style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> <!-- Icons footer-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- Icons footer-->
 </head>
+
 <body>
     <header class="header">
-        <div class="logo" id="location"><a href="locations.html"><img src="images/location.png" alt=""></a></div>
-        <div class="logo" id="box"><a href="index.html"><img src="images/logo lucifer.png" alt="lucifer loyalty program logo"></a></div>
+        <div class="logo" id="location">
+            <a href="locations.html">
+                <img src="images/location.png" alt="">
+            </a>
+            <a href="locations.html" class="store_locator_text">Store locator</a>
+        </div>
+        <div class="logo" id="box">
+            <a href="index.html"><img src="images/logo lucifer.png" alt="lucifer loyalty program logo"></a>
+        </div>
         <div class="logo" id="box"></div>
     </header>
     <nav class="navbar">
         <ul>
             <input type="checkbox" id="checkbox_toggle" />
-            <label for="checkbox_toggle" class="hamburger">&#9776;</label>            
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
             <div class="menu" id="mobile">
                 <div class="mobile">
-                <li class="left"><a href="index.html">Home</a></li>
-                <li class="left"><a href="rewards.html">Rewards</a></li>
-                <li class="left"><a href="#">Challenges</a></li>
-                <li class="left"><a href="#">Sponsors</a></li>
-                <li class="left"><a href="#">Contact us</a></li>
-                <li class="right"><a href="profile.html">Profile</a></li>
-                <li class="right-mobile"><a href="profile.html"><img src="images/user.png" alt="" ></a></li>
-                <li class="right-mobile" id="points"><a href="profile.html">12<img src="images/matchstick-lucifer.png" alt="" ></a></li>
-                <!-- <li class="right-mobile">13</li> -->
+                    <li class="left"><a href="index.html">Home</a></li>
+                    <li class="left"><a href="rewards.html">Rewards</a></li>
+                    <li class="left"><a href="challenge.html">Challenges</a></li>
+                    <li class="left"><a href="sponsor.html">Sponsors</a></li>
+                    <li class="left"><a href="contact.html">Contact us</a></li>
+                    <li class="right"><a href="profile.html">Profile</a></li>
+                    <li class="right-mobile">
+                        <a href="profile.html"><img src="images/user.png" alt=""></a>
+                    </li>
+                    <li class="right-mobile" id="points"><a href="profile.html">12<img src="images/matchstick-lucifer.png" alt="" ></a></li>
+                    <!-- <li class="right-mobile">13</li> -->
                 </div>
             </div>
         </ul>
@@ -49,23 +61,23 @@
     <div class="title-profile">Hello ..., all of your claimed rewards are stored here.</div>
     <div class="green-box-content">
         <div class="first-content" id="profile-picture">
-        <img src="https://picsum.photos/id/237/284/340" alt="">
+            <img src="https://picsum.photos/id/237/284/340" alt="">
         </div>
         <div class="first-content" id="info-user">
             <div class="text-first-content">
                 <br>
-        <p>Name: user</p>
-        <p>email: user@gmail.com</p>
-        <br>
-        <p class="logout">
-        <a href="#">Logout</a>
-        </p>
+                <p>Name: user</p>
+                <p>email: user@gmail.com</p>
+                <br>
+                <p class="logout">
+                    <a href="#">Logout</a>
+                </p>
             </div>
         </div>
         <div class="first-content" id="matchstick">
             <!-- <div class="points-first-content"> -->
-                <img src="images/matchstick-lucifer.png" alt="">
-                <p>Collected: ...</p>
+            <img src="images/matchstick-lucifer.png" alt="">
+            <p>Collected: ...</p>
             <!-- </div> -->
         </div>
 
@@ -97,8 +109,8 @@
                 <img src="images/image 31.png" alt="">
             </div>
         </div>
-    </div>   
-    
+    </div>
+
     <div class="title-claim-reward">Claimed rewards:</div>
     <div class="claimed-rewards">
         <div class="rewards-1">
@@ -114,7 +126,7 @@
                                 <p>Free sandwich</p>
                             </div>
                         </div>
-                        <div class="box-text-right"> 
+                        <div class="box-text-right">
                             <div id="popUpBox">
                                 <div class="text-popUpBox">
                                     <p class="success"> You Successfully claimed the reward, show this to the barista to use it at Lucifer Coffee Roasters. Enjoy!</p>
@@ -125,10 +137,10 @@
                                             <button class="confirm-1">Confirm</button>
                                         </div>
                                     </div>
-                                <p></p>
+                                    <p></p>
                                 </div>
                             </div>
-                            <button onclick="Alert.render()" class="btn">Use reward</button>                
+                            <button onclick="Alert.render()" class="btn">Use reward</button>
                         </div>
                     </div>
                 </div>
@@ -147,7 +159,7 @@
                                 <p>Free beer</p>
                             </div>
                         </div>
-                        <div class="box-text-right"> 
+                        <div class="box-text-right">
                             <div id="popUpBox">
                                 <div class="text-popUpBox">
                                     <p class="success"> You Successfully claimed the reward, show this to the barista to use it at Lucifer Coffee Roasters. Enjoy!</p>
@@ -158,10 +170,10 @@
                                             <button class="confirm-2">Confirm</button>
                                         </div>
                                     </div>
-                                <p></p>
+                                    <p></p>
                                 </div>
                             </div>
-                            <button onclick="Alert.render()" class="btn">Use reward</button>                
+                            <button onclick="Alert.render()" class="btn">Use reward</button>
                         </div>
                     </div>
                 </div>
@@ -180,7 +192,7 @@
                                 <p>Free coffee</p>
                             </div>
                         </div>
-                        <div class="box-text-right"> 
+                        <div class="box-text-right">
                             <div id="popUpBox">
                                 <div class="text-popUpBox">
                                     <p class="success"> You Successfully claimed the reward, show this to the barista to use it at Lucifer Coffee Roasters. Enjoy!</p>
@@ -191,10 +203,10 @@
                                             <button class="confirm-3">Confirm</button>
                                         </div>
                                     </div>
-                                <p></p>
+                                    <p></p>
                                 </div>
                             </div>
-                            <button onclick="Alert.render()" class="btn">Use reward</button>                
+                            <button onclick="Alert.render()" class="btn">Use reward</button>
                         </div>
                     </div>
                 </div>
@@ -217,32 +229,41 @@
                         <i class="material-icons">email</i><a href="mailto:loyaltiesoflucifer@gmail.com">loyaltiesoflucifer@gmail.com</a>
                     </div>
                 </div>
+
+            </div>
+            <div class="middle_part">
+                <img class="footer_line" src="/images/line_17.png">
             </div>
             <div class="right-part-footer">
                 <div class="page-links">
                     <div class="all-links">
-                        <a href="index.html">Homepage</a> 
-                        <p><a href="#">Contact us</a>
-                            <a href="locations.html">Locations</a>    
+                        <a href="index.html">Homepage
+                            <span class="border border-top"></span>
+      <span class="border border-right"></span>
+      <span class="border border-bottom"></span>
+      <span class="border border-left"></span>
+                        </a>
+                        <p><a href="contact.html">Contact us</a>
+                            <a href="locations.html">Locations</a>
                             <a href="rewards.html">Rewards</a>
-                        <a href="#">Challenges</a>
-                        <a href="#">Sponsor</a></p>
+                            <a href="challenge.html">Challenges</a>
+                            <a href="sponsor.html">Sponsor</a></p>
                     </div>
                     <!-- mobile version -->
                     <div class="three-links">
                         <p><a href="index.html">Homepage</a></p>
-                        <p><a href="#">Contact us</a></p>
-                        <p><a href="#">Locations</a></p>
+                        <p><a href="contact.html">Contact us</a></p>
+                        <p><a href="locations.html">Locations</a></p>
                     </div>
                     <div class="three-links">
                         <p><a href="rewards.html">Rewards</a></p>
-                        <p><a href="#">Challenges</a></p>
-                        <p><a href="#">Sponsor</a></p>
+                        <p><a href="challenge.html">Challenges</a></p>
+                        <p><a href="sponsor.html">Sponsor</a></p>
                     </div>
                     <div class="social-media">
-                        <img src="images/instagram.png" alt="">
-                        <img src="images/instagram.png" alt="">
-                        <img src="images/instagram.png" alt="">
+                        <img class="facebook" src="images/facebook.png" alt="facebook">
+                        <img class="instagram" src="images/instagram.png" alt="instagram">
+                        <img class="in" src="images/in.png" alt="in">
                     </div>
                 </div>
                 <div class="copyright">
@@ -254,5 +275,6 @@
 
 </body>
 
-<script src="pop-up.js"></script>
+<script src="/js/pop-up-reward.js"></script>
+
 </html>

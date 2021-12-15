@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="js/pop-up.js">
     <link rel="stylesheet" href="css/challenge-style.css">
     <link rel="stylesheet" href="css/footer-style.css">
+    <link rel="stylesheet" href="css/header-style.css">
     <!--link icon-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -21,11 +22,14 @@
 
 <body>
     <header class="header">
-        <div class="logo " id="box">
-            <a href="sponsor.html"><img class="locat" src="./images/location-sign.png" style="width: 13%!important;">Store Locator</a>
+        <div class="logo" id="location">
+            <a href="locations.html">
+                <img src="images/location.png" alt="">
+            </a>
+            <a href="locations.html" class="store_locator_text">Store locator</a>
         </div>
         <div class="logo" id="box">
-            <a href="index.html"><img src="./images/logo lucifer.png" alt="lucifer loyalty program logo"></a>
+            <a href="index.html"><img src="images/logo lucifer.png" alt="lucifer loyalty program logo"></a>
         </div>
         <div class="logo" id="box"></div>
     </header>
@@ -35,12 +39,17 @@
             <label for="checkbox_toggle" class="hamburger">&#9776;</label>
             <div class="menu" id="mobile">
                 <div class="mobile">
-                    <li class="left"><a href="#">Home</a></li>
-                    <li class="left"><a href="#">Rewards</a></li>
-                    <li class="left"><a href="index.html">Challenges</a></li>
+                    <li class="left" id="selected"><a href="index.html">Home</a></li>
+                    <li class="left"><a href="rewards.html">Rewards</a></li>
+                    <li class="left"><a href="challenge.html">Challenges</a></li>
                     <li class="left"><a href="sponsor.html">Sponsors</a></li>
-                    <li class="left"><a href="#">Contact us</a></li>
-                    <li class="right"><a href="#">Profile</a></li>
+                    <li class="left"><a href="contact.html">Contact us</a></li>
+                    <li class="right"><a href="profile.html">Profile</a></li>
+                    <!-- desktop version -->
+                    <li class="right-mobile">
+                        <a href="profile.html"><img src="images/user.png" alt=""></a>
+                    </li>
+                    <li class="right-mobile" id="points"><a href="profile.html">12<img src="images/matchstick-lucifer.png" alt="" ></a></li>
                 </div>
             </div>
         </ul>
@@ -118,15 +127,15 @@
                 </div>
                 <!-- Modal content visit location -->
                 <div id="myModal-visit-location" class="modal">
-                    <div class="modal-content">
+                    <div class="modal-content location">
                         <span class="close">&times;</span>
-                        <div class="contact-container ">
+                        <div class="contact-container  ">
                             <div class="left-col left-col1">
                                 <img class="lc" src="./images/rectangle_2.png">
                             </div>
-                            <div class="right-col">
-                                <h1>Visit location KENNEDYPLEIN</h1>
-                                <button class="button ">Scan QR code :</button>
+                            <div class="right-col location">
+                                <h1>Visit location <br>KENNEDYPLEIN</h1>
+                                <button data-modal-id="myModal-confirmed-mod" class="button close-pppp">Scan QR code :</button>
                             </div>
                         </div>
                     </div>
@@ -155,7 +164,7 @@
                     <div class="modal-content-confirm">
                         <span class="close">&times;</span>
                         <div class="contact-container">
-                            <div class="right-col">
+                            <div class="right-col confirm">
                                 <h1 class="confirmed_h1">Code confirmed</h1>
                                 <div class="points confirmed">
                                     <img class="confirmedphoto" src="./images/check.png">
@@ -178,7 +187,7 @@
                             <div class="right-col">
                                 <h1>Order a coffee:</h1>
                                 <p>Scan your QR code to get point :</p>
-                                <button class="button ">Scan QR code :</button>
+                                <button data-modal-id="myModal-confirmed-mod" class="button close_pop">Scan QR code :</button>
                             </div>
                         </div>
                     </div>
@@ -195,7 +204,7 @@
                             <div class="right-col">
                                 <h1>Buy a cake</h1>
                                 <p>Scan your QR code to get point :</p>
-                                <button class="button ">Scan QR code :</button>
+                                <button data-modal-id="myModal-confirmed-mod" class="button close-po">Scan QR code :</button>
                             </div>
                         </div>
                     </div>
@@ -213,7 +222,7 @@
                             <div class="right-col">
                                 <h1>Buy 3 juices</h1>
                                 <p>Scan your QR code to get point :</p>
-                                <button class="button ">Scan QR code :</button>
+                                <button data-modal-id="myModal-confirmed-mod" class="button close-p">Scan QR code :</button>
                             </div>
                         </div>
                     </div>
@@ -230,7 +239,7 @@
                             <div class="right-col">
                                 <h1>Buy 5 coockies</h1>
                                 <p>Scan your QR code to get point :</p>
-                                <button class="button ">Scan QR code :</button>
+                                <button data-modal-id="myModal-confirmed-mod" class="button close-pp">Scan QR code :</button>
                             </div>
                         </div>
                     </div>
@@ -246,7 +255,7 @@
                             <div class="right-col">
                                 <h1>Buy 10 beers</h1>
                                 <p>Scan your QR code to get point :</p>
-                                <button class="button ">Scan QR code :</button>
+                                <button data-modal-id="myModal-confirmed-mod" class="button close-ppp">Scan QR code :</button>
                             </div>
                         </div>
                     </div>
@@ -254,14 +263,11 @@
                 <!-- Modal content six end -->
                 <!-- Modal content seven  -->
                 <div id="myModal-seven-mod" class="modal">
-                    <div class="modal-content">
+                    <div class="modal-content confirm">
                         <span class="close">&times;</span>
                         <div class="contact-container">
-                            <div class="left-col left-col1">
-                            </div>
                             <div class="right-col spend">
                                 <h1 class="tit">Spend 40 matches ?</h1>
-                                <button class="button " id="cancle-btn ">Cancel</button>
                                 <button class="button " id="confBtn">Confirm</button>
                             </div>
                         </div>
@@ -272,11 +278,11 @@
                 <div id="myModal-game-mod" class="modal">
                     <div class="modal-content-price">
                         <span class="close game-mod">&times;</span>
-                        <div class="contact-container">
+                        <div class="contact-container price">
                             <div class="left-col left-col1">
                                 <img class="one-month" src="./images/one-month.png">
                             </div>
-                            <div class="right-col">
+                            <div class="right-col price">
                                 <h1 class="pricex">You won :</h1>
                                 <h2 class="pricey">One moth free delivery bean</h1>
                             </div>
@@ -288,11 +294,11 @@
                 <div id="myModal-secondp-mod" class="modal">
                     <div class="modal-content-price">
                         <span id="close" class="close game-mod">&times;</span>
-                        <div class="contact-container">
+                        <div class="contact-container price">
                             <div class="left-col left-col1">
                                 <img class="sand" src="./images/first-challenge-.png">
                             </div>
-                            <div class="right-col">
+                            <div class="right-col price">
                                 <h1 class="pricex">You won :</h1>
                                 <h2 class="pricey">One free sandwich</h1>
                             </div>
@@ -303,12 +309,12 @@
                 <!-- Modal game thurd price -->
                 <div id="myModal-thurdp-mod" class="modal">
                     <div class="modal-content-price">
-                        <span id="close" class="close game-mod">&times;</span>
-                        <div class="contact-container">
+                        <span id="close" class="close game-mod" id="closeBtn">&times;</span>
+                        <div class="contact-container price">
                             <div class="left-col left-col1">
                                 <img class="cof" src="./images/second-challenge.png">
                             </div>
-                            <div class="right-col">
+                            <div class="right-col price">
                                 <h1 class="pricex">You won :</h1>
                                 <h2 class="pricey">One free coffee</h1>
                             </div>
@@ -423,7 +429,7 @@
         <div class="both">
             <div class="left-part-footer">
                 <div class="logo-footer">
-                    <img src="./images/logo lucifer.png" alt="logo">
+                    <img src="images/logo lucifer.png" alt="logo">
                 </div>
                 <div class="contact-info">
                     <div class="contact-phone">
@@ -433,32 +439,41 @@
                         <i class="material-icons">email</i><a href="mailto:loyaltiesoflucifer@gmail.com">loyaltiesoflucifer@gmail.com</a>
                     </div>
                 </div>
+
+            </div>
+            <div class="middle_part">
+                <img class="footer_line" src="/images/line_17.png">
             </div>
             <div class="right-part-footer">
                 <div class="page-links">
                     <div class="all-links">
-                        <a href="index.html">Homepage</a>
-                        <p><a href="#">Contact us</a>
+                        <a href="index.html">Homepage
+                            <span class="border border-top"></span>
+      <span class="border border-right"></span>
+      <span class="border border-bottom"></span>
+      <span class="border border-left"></span>
+                        </a>
+                        <p><a href="contact.html">Contact us</a>
                             <a href="locations.html">Locations</a>
                             <a href="rewards.html">Rewards</a>
-                            <a href="#">Challenges</a>
-                            <a href="#">Sponsor</a></p>
+                            <a href="challenge.html">Challenges</a>
+                            <a href="sponsor.html">Sponsor</a></p>
                     </div>
                     <!-- mobile version -->
                     <div class="three-links">
                         <p><a href="index.html">Homepage</a></p>
-                        <p><a href="#">Contact us</a></p>
-                        <p><a href="#">Locations</a></p>
+                        <p><a href="contact.html">Contact us</a></p>
+                        <p><a href="locations.html">Locations</a></p>
                     </div>
                     <div class="three-links">
                         <p><a href="rewards.html">Rewards</a></p>
-                        <p><a href="#">Challenges</a></p>
-                        <p><a href="#">Sponsor</a></p>
+                        <p><a href="challenge.html">Challenges</a></p>
+                        <p><a href="sponsor.html">Sponsor</a></p>
                     </div>
                     <div class="social-media">
-                        <img src="./images/instagram.png" alt="">
-                        <img src="./images/instagram.png" alt="">
-                        <img src="./images/instagram.png" alt="">
+                        <img class="facebook" src="images/facebook.png" alt="facebook">
+                        <img class="instagram" src="images/instagram.png" alt="instagram">
+                        <img class="in" src="images/in.png" alt="in">
                     </div>
                 </div>
                 <div class="copyright">
@@ -469,7 +484,10 @@
     </footer>
 </body>
 <!--links js-->
-<script src="js/pop-up.js"></script>
+<script src="js/pop-up-challenge.js"></script>
 <script src="js/game.js"></script>
+
+<script>
+</script>
 
 </html>

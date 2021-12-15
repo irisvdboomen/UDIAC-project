@@ -4,22 +4,14 @@
     box-sizing: border-box;
 }
 
-.left:after {
-    content: "";
-    position: absolute;
-    background-color: black;
-    height: 3px;
-    width: 0%;
-    bottom: 74%;
-    transition: 00.3s;
+img.r:hover {
+    transform: scale(1.01);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12);
 }
 
-.left:hover:after {
-    width: 5%;
-}
-
-.smaller_name:hover {
-    color: #b9ceacc2;
+img.lc {
+    transform: scale(1.01);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12);
 }
 
 .smaller_name {
@@ -34,12 +26,20 @@
     display: flex;
 }
 
+.right-col.confirm {
+    width: 90%;
+}
+
 .header {
     width: 100%;
-    height: 120px;
+    height: 135px;
     background-color: #b9ceac;
     display: flex;
     justify-content: center;
+}
+
+h1.visitl {
+    color: #671010;
 }
 
 .left {
@@ -53,7 +53,7 @@
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
-    width: 100%;
+    width: 33%;
 }
 
 .logo#box {
@@ -61,7 +61,7 @@
 }
 
 .logo#box img {
-    width: 140px;
+    width: 166px;
 }
 
 .logo#box a {
@@ -116,6 +116,19 @@ input[type=checkbox] {
     user-select: none;
 }
 
+.modal-content.confirm {
+    width: 25%;
+    background-color: #dac7b2;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 0 5px black;
+    border: 1px solid #888;
+}
+
+.left-col.confirm {
+    width: 0;
+}
+
 
 /*-----------modal style start
 --------------------*/
@@ -143,6 +156,10 @@ input[type=checkbox] {
     /* Black w/ opacity */
 }
 
+.right-col.spend {
+    width: 90%;
+}
+
 button.button.thurd-mod {
     padding: 5px 90px;
 }
@@ -167,6 +184,23 @@ button.button.six-mod {
     display: inline-block;
 }
 
+.contact-container-price {
+    display: flex;
+}
+
+.right-col {
+    background: var(--bg-color);
+    /* width: 50%; */
+    width: 70%;
+    /* margin-left: 10%; */
+    /* text-align: center; */
+    height: 100%;
+    /* margin-right: 2pc; */
+    display: flex;
+    padding: 0.8rem 0.8rem;
+    display: inline-block;
+}
+
 h1.confirmed_h1 {
     color: white;
     font-weight: 100;
@@ -179,13 +213,28 @@ p.confirmed_p {
     padding-left: 10%;
 }
 
+.right-col.price {
+    margin-left: 10%;
+}
+
+.contact-container.price {
+    height: 100%;
+    display: flex;
+    /* width: 40%; */
+    display: flex;
+    /* align-items: flex-start; */
+    background: var(--bg-color);
+    /* width: 40%; */
+    /* margin-left: 20%; */
+}
+
 .modal-content-price {
     background-color: #dac7b2;
     margin: auto;
     padding: 20px;
     box-shadow: 0 0 5px black;
     border: 1px solid #888;
-    width: 40%;
+    width: 29%;
 }
 
 .modal-content-confirm {
@@ -197,9 +246,8 @@ p.confirmed_p {
 }
 
 img.one-month {
-    width: 90%;
+    width: 130%;
     display: flex;
-    margin-left: 10%;
 }
 
 img.sand {
@@ -209,9 +257,9 @@ img.sand {
 }
 
 img.cof {
-    width: 90%;
+    width: 120%;
     display: flex;
-    margin-left: 10%;
+    /* margin-left: 10%; */
 }
 
 
@@ -273,7 +321,11 @@ div#myModal-seven-mod {
 }
 
 button#confBtn {
-    background-color: #B9CEAC;
+    background-color: black;
+}
+
+button#confBtn:hover {
+    color: white;
 }
 
 
@@ -497,11 +549,6 @@ img.cup {
     cursor: pointer;
 }
 
-.button.button:hover {
-    background: #D7B997;
-    color: black;
-}
-
 button.button {
     background-color: black;
     color: white;
@@ -537,6 +584,10 @@ button.button {
     margin-top: 5px;
     align-items: center;
     justify-content: center;
+}
+
+.right-col.location {
+    margin-left: 22%;
 }
 
 .points {
@@ -577,10 +628,18 @@ img.r {
     margin-bottom: 9%;
 }
 
+a.store_locator_text {
+    color: black;
+    font-family: 'Bebas Neue', monospace;
+    margin-right: 50%;
+    font-size: 140%;
+    text-decoration: none;
+}
+
 .hero .page_name {
     position: absolute;
     z-index: 2;
-    margin-top: 10%;
+    margin-top: 5%;
     margin-left: 30%;
     text-shadow: 3px 1px black;
     text-align: center;
@@ -635,8 +694,12 @@ img.tc {
     width: 90%;
 }
 
+.modal-content.location {
+    width: 58%;
+}
+
 img.lc {
-    width: 200%;
+    width: 150%;
 }
 
 img.fc {
@@ -715,6 +778,8 @@ img.sixc {
     .right-col {
         background: var(--bg-color);
         /* width: 50%; */
+        margin-left: 10%;
+        width: 90%;
         height: 100%;
         padding: 0.8rem 0.8rem;
         display: inline-block;
@@ -769,6 +834,14 @@ img.sixc {
         text-shadow: 2px 1px 10px black;
         color: white;
         font-weight: 100;
+    }
+    img.sand {
+        width: 95%;
+    }
+    img.cof {
+        width: 95%;
+        display: flex;
+        /* margin-left: 10%; */
     }
     img.r {
         display: none;
@@ -834,15 +907,23 @@ img.sixc {
         display: flex;
         margin-left: 10%;
     }
+    .modal-content.confirm {
+        width: 60%;
+    }
+    .modal-content.location {
+        width: 75%;
+    }
     .right-col.spend {
         background: var(--bg-color);
         /* width: 50%; */
         display: flex;
         align-items: center;
         /* margin-left: 8%; */
+        margin-left: 1%;
         height: 100%;
         padding: 0.8rem 0.8rem;
         display: flex;
+        text-align: center;
         flex-direction: column;
         flex-wrap: wrap;
         align-content: stretch;
@@ -953,11 +1034,23 @@ img.sixc {
         margin-top: 0;
         margin-bottom: 0;
     }
+    .right-col.location {
+        margin-left: 2%;
+        text-align: center;
+        width: 200%;
+    }
     img.p {
         width: 8%;
     }
     .box img {
         width: 200px;
+    }
+    .right-col.price {
+        margin-right: -8%;
+        width: 130%;
+    }
+    img.one-month {
+        width: 95%;
     }
     .box {
         width: 200px;
@@ -1026,5 +1119,9 @@ img.sixc {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
+    }
+    .right-col.confirm {
+        width: 155%;
+        margin-top: 8%;
     }
 }

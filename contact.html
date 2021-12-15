@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free sandwich</title>
+    <title>Loyalties of Lucifer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/header-style.css">
-    <link rel="stylesheet" href="css/pop-up-style.css">
-    <link rel="stylesheet" href="css/one-reward-style.css">
     <link rel="stylesheet" href="css/footer-style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!-- Icons footer-->
 </head>
@@ -41,7 +41,7 @@
                     <li class="left"><a href="rewards.html">Rewards</a></li>
                     <li class="left"><a href="challenge.html">Challenges</a></li>
                     <li class="left"><a href="sponsor.html">Sponsors</a></li>
-                    <li class="left"><a href="contact.html">Contact us</a></li>
+                    <li class="left"><a href="#">Contact us</a></li>
                     <li class="right"><a href="profile.html">Profile</a></li>
                     <!-- desktop version -->
                     <li class="right-mobile">
@@ -53,35 +53,53 @@
         </ul>
     </nav>
     <div class="hero">
-        <p class="hero-text">Rewards</p>
-        <img src="images/rewards-hero.png" alt="hero-image">
+        <p class="hero-text">Contact</p>
+        <img src="images/contact-profile.png" alt="coffee-beans">
     </div>
-    <div class="reward-box">
-        <div class="image-reward-box">
-            <img src="images/sandwich.png" alt="free-sandwich">
-        </div>
-        <div class="text-reward-box">
-            <div class="title-reward">Free Sandwich</div>
-            <div class="other-text-reward-box">Spend 40 match sticks to use this reward anytime you want. When using this reward you can get a free sandwich of your choice. <br>Click the button below to confirm that you want to spend your points on this.</div>
-            <div id="popUpOverlay"></div>
-            <div id="popUpBox">
-                <div class="text-popUpBox">
-                    <p class="success">Successfully claimed!</p>
-                    <img src="images/checkbox.png" alt="">
-                    <div class="buttons-popup">
-                        <div id="closeModal-close">
-                            <button onclick="Alert.ok()">Close</button>
-                        </div>
-                    </div>
-                    <p>Visit profile page to use reward</p>
+    <section class="contact-section">
+        <div class="contact-body">
+            <div class="contact-info-grid">
+                <div>
+                    <span><i class = "fas fa-mobile-alt"></i></span>
+                    <span>Phone Number</span>
+                    <span class="text">+31 6 19411046</span>
+                </div>
+                <div>
+                    <span><i class = "fas fa-envelope-open"></i></span>
+                    <span>E-mail</span>
+                    <span class="text">hello@lucifercoffeeroasters.com</span>
+                </div>
+                <div>
+                    <span><i class = "fas fa-map-marker-alt"></i></span>
+                    <span>Address</span>
+                    <span class="text">Kleine Berg 47</span>
+                    <span class="text">Bleekweg 1A</span>
+                    <span class="text">Eindhoven</span>
+                </div>
+                <div>
+                    <span><i class = "fas fa-clock"></i></span>
+                    <span>Opening Hours</span>
+                    <span class="text">Monday - Sunday </span>
+                    <span>(7:30 AM to 5:00 PM)</span>
                 </div>
             </div>
-            <button onclick="Alert.render()" class="btn">Use points</button>
-            <br>
-            <br>
-            <a href="rewards.html">Go back to rewards</a>
-        </div>
-    </div>
+            <form action="mailto:dekrasteva@gmail.com" class="contact-form" method=”POST” enctype=”multipart/form-data” name=”EmailForm”>
+                <label for="fname"> First Name </label>
+                <input required type="text" id="fname" name="firstname" placeholder=" Your name...">
+                <label for="lname"> Last Name </label>
+                <input required type="text" id="lname" name="lastname" placeholder=" Your last name..">
+                <label for="subject"> Topic </label>
+                <input required type="subject" id="subject" name="subject" placeholder=" Topic... ">
+                <label for="E-mail"><E-mail> E-mail </E-mail></label>
+                <input required type="email" id="email" name="email" placeholder=" Your email...">
+                <label for="body"> Message </label>
+                <textarea required id="body" name="body" placeholder=" Write something... " style="height:200px"></textarea>
+                <input type="submit" value="Submit">
+            </form>
+    </section>
+    <br>
+    <br>
+    <!-- beginning of footer -->
     <footer>
         <div class="both">
             <div class="left-part-footer">
@@ -96,7 +114,6 @@
                         <i class="material-icons">email</i><a href="mailto:loyaltiesoflucifer@gmail.com">loyaltiesoflucifer@gmail.com</a>
                     </div>
                 </div>
-
             </div>
             <div class="middle_part">
                 <img class="footer_line" src="/images/line_17.png">
@@ -105,12 +122,9 @@
                 <div class="page-links">
                     <div class="all-links">
                         <a href="index.html">Homepage
-                            <span class="border border-top"></span>
-      <span class="border border-right"></span>
-      <span class="border border-bottom"></span>
-      <span class="border border-left"></span>
-                        </a>
-                        <p><a href="contact.html">Contact us</a>
+                        <span class="border border-top"></span>
+                    </a>
+                        <p><a href="#">Contact us</a>
                             <a href="locations.html">Locations</a>
                             <a href="rewards.html">Rewards</a>
                             <a href="challenge.html">Challenges</a>
@@ -119,7 +133,7 @@
                     <!-- mobile version -->
                     <div class="three-links">
                         <p><a href="index.html">Homepage</a></p>
-                        <p><a href="contact.html">Contact us</a></p>
+                        <p><a href="#">Contact us</a></p>
                         <p><a href="locations.html">Locations</a></p>
                     </div>
                     <div class="three-links">
@@ -139,7 +153,9 @@
             </div>
         </div>
     </footer>
+
 </body>
-<script src="/js/pop-up-reward.js"></script>
+
+<script src="pop-up.js"></script>
 
 </html>
