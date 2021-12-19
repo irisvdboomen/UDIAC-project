@@ -54,9 +54,13 @@ a.store_locator_text {
     text-decoration: none;
 }
 
+img {
+    transition: transform .5s;
+}
+
 img:hover {
     transform: scale(1.03);
-    transition: transform .3s;
+    transition: transform .5s;
 }
 
 .box:hover {

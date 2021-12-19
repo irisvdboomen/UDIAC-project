@@ -54,7 +54,7 @@
     </nav>
     <div class="hero">
         <p class="hero-text">Rewards</p>
-        <img src="images/rewards-hero.png" alt="hero-image">
+        <img src="images/rewards-hero.jpeg" alt="hero-image">
     </div>
     <div class="reward-box">
         <div class="image-reward-box">
@@ -63,6 +63,7 @@
         <div class="text-reward-box">
             <div class="title-reward">Free Sandwich</div>
             <div class="other-text-reward-box">Spend 40 match sticks to use this reward anytime you want. When using this reward you can get a free sandwich of your choice. <br>Click the button below to confirm that you want to spend your points on this.</div>
+            <!-- start modal-->
             <div id="popUpOverlay"></div>
             <div id="popUpBox">
                 <div class="text-popUpBox">
@@ -70,13 +71,14 @@
                     <img src="images/checkbox.png" alt="">
                     <div class="buttons-popup">
                         <div id="closeModal-close">
-                            <button onclick="Alert.ok()">Close</button>
+                            <button onclick="Alert.ok(this)">Close</button>
                         </div>
                     </div>
                     <p>Visit profile page to use reward</p>
                 </div>
             </div>
-            <button onclick="Alert.render()" class="btn">Use points</button>
+            <!-- end modal-->
+            <button onclick="Alert.render(this)" class="btn">Use points</button>
             <br>
             <br>
             <a href="rewards.html">Go back to rewards</a>
@@ -96,7 +98,6 @@
                         <i class="material-icons">email</i><a href="mailto:loyaltiesoflucifer@gmail.com">loyaltiesoflucifer@gmail.com</a>
                     </div>
                 </div>
-
             </div>
             <div class="middle_part">
                 <img class="footer_line" src="/images/line_17.png">
@@ -106,9 +107,9 @@
                     <div class="all-links">
                         <a href="index.html">Homepage
                             <span class="border border-top"></span>
-      <span class="border border-right"></span>
-      <span class="border border-bottom"></span>
-      <span class="border border-left"></span>
+                            <span class="border border-right"></span>
+                            <span class="border border-bottom"></span>
+                            <span class="border border-left"></span>
                         </a>
                         <p><a href="contact.html">Contact us</a>
                             <a href="locations.html">Locations</a>

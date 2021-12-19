@@ -7,6 +7,10 @@
 
 /* beginning of homepage */
 
+div#two {
+    padding-bottom: 44px;
+}
+
 .title-steps {
     margin-top: 50px;
     font-family: 'Bebas Neue', monospace;
