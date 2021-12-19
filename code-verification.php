@@ -38,11 +38,15 @@ if(isset($_POST['check-reset-otp'])){
 
 <body>
 
+
+
+
+
   <div class="contact-body">
     <div class="contact-info">
       <div class="box1">
         <div class="tim">
-          <p class="text">Collect matches by scanning NFC tag from the receipt</p>
+          <p class="text">Collect matches by scanning QR code from the receipt</p>
           <img src="images/icon-bean.png" alt="">
 
         </div>
@@ -87,9 +91,9 @@ if(isset($_POST['check-reset-otp'])){
             <?php
         }
         ?>
-        <form action="" method="post">
+        <form  class="form-inputs" action="" method="post">
           
-          <input required type="number" id="lname" placeholder="enter verification code" name="password">
+          <input class="input-verification" required type="number" id="lname" placeholder="enter verification code" name="password">
           <input class="button-submit" type="submit" value="submit" onclick="location.href='make-new-password.php'">
         </form>
       </div>

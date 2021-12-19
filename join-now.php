@@ -37,11 +37,10 @@ if($_POST["submit_customer"]!= ""){
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Join now</title>
+  <title>join now</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/form.css">
-
 </head>
 
 <body>
@@ -49,46 +48,55 @@ if($_POST["submit_customer"]!= ""){
     <div class="contact-info">
       <div class="box1">
         <div class="tim">
-          <p class="text">Collect matches by scanning NFC tag from the receipt</p>
-          <img src="images/icon-bean.png" alt="">
+          <p class="text">Collect matchsticks by<br>
+            putting in the code from
+            the receipt</p>
+          <img class ="icons-step"src="images/icon-bean.png" alt="">
 
         </div>
-
         <div class="tom">
-          <img src="images/icon-scoop.png" alt=""><br>
-          <p class="text">collect matches and sprend them on rewards</p>
+          <img class ="icons-step" src="images/icon-scoop.png" alt=""><br>
+          <p class="text">collect matches and sprend <br> them on rewards</p>
         </div>
-
         <div class="ali">
-          <p class="text">Go to your profile page and show the
-            claimed rewards to our barista</p><img src="images/icon-cup.png" alt="">
+          <p class="text">Go to your profile page and <br>show the
+            claimed rewards <br>to our barista</p><img class ="icons-step" src="images/icon-cup.png" alt="">
         </div>
       </div>
-      
       <div class="box2">
-        <br>
-        
-        <div class="contact-form">
+      <!--logo-->
+      
+      <img  class="logo-lucifer" src="images/logo lucifer.png" alt="" onclick="location.href='login.php'">
+   
+      <form class="form-inputs" action="" method="post">
 
-          <img class="logo-lucifer" src="images/logo lucifer.png" alt="" onclick="location.href='login.php'">
-        </div>
-        <form action="" method="post">
-          <label class="label-form" for="lastName">username</label>
-          <input required type="text" id="lastName" placeholder="Your name.." name="lastName">
-          <label class="label-form" for="email">email</label>
-          <input required type="email" id="email" placeholder="Your email.." name="email">
-          <label class="label-form" for="lname">password</label>
-          <input required type="password" id="lname" placeholder="Your password" name="password">
-          <p class="terms"><input type="checkbox" name="checkbox" id="">
+          <!--username-->
+          <label class="label-username" for="lastName">username</label> <!-- check last name with ali-->
+          <input class="input-username" required type="text" id="lastName" placeholder="Your name.." name="lastName">
+
+          <!--email-->
+          <label class="label-email-2" for="email">email</label>
+          <input class="input-email-2" required type="email" id="email" placeholder="Your email.." name="email">
+
+          <!--password-->
+          <label class="label-password-2" for="lname">password</label>
+          <input class="input-password-2" required type="password" id="lname" placeholder="Your password" name="password">
+
+          <!--check box-->
+          
+          
+          
+          <p class="agreement-phrase"><input type="checkbox" name="checkbox" id="" required>
             By checking this box, you are agreeing to our
-            <br>
-          <p class="center-text"><a href="https://www.lucifercoffeeroasters.com/algemene-voorwaarden/" target="_blank"
-              class="police-link">terms of
+          <p class=""><a href="https://www.lucifercoffeeroasters.com/algemene-voorwaarden/" target="_blank"
+              class="termofservice-link">terms of
               service</a>
             & <a href="https://www.lucifercoffeeroasters.com/privacyverklaring/" target="_blank"
-              class="police-link">privacy
+              class="privacy-link">privacy
               policies</a></p>
           </p>
+<br>
+          <!--btn join now-->
           <input class="button-join-2" type="submit" value="join now" name = "submit_customer" >
         </form>
         

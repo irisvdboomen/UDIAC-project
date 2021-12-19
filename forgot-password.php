@@ -49,19 +49,21 @@ include("conection.php");
     <div class="contact-info">
       <div class="box1">
         <div class="tim">
-          <p class="text">Collect matches by scanning NFC tag from the receipt</p>
-          <img src="images/icon-bean.png" alt="">
+          <p class="text">Collect matchsticks by<br>
+            putting in the code from
+            the receipt</p>
+          <img class ="icons-step"src="images/icon-bean.png" alt="">
 
         </div>
 
         <div class="tom">
-          <img src="images/icon-scoop.png" alt=""><br>
-          <p class="text">collect matches and sp  end them on rewards</p>
+          <img class ="icons-step" src="images/icon-scoop.png" alt=""><br>
+          <p class="text">collect matches and sprend <br> them on rewards</p>
         </div>
 
         <div class="ali">
-          <p class="text">Go to your profile page and show the
-            claimed rewards to our barista</p><img src="images/icon-cup.png" alt="">
+          <p class="text">Go to your profile page and <br>show the
+            claimed rewards <br>to our barista</p><img class ="icons-step" src="images/icon-cup.png" alt="">
         </div>
         <?php
         if(count($errors) > 0){
@@ -78,23 +80,30 @@ include("conection.php");
     ?>
       </div>
       <div class="box2">
-        <br>
-        <br>
-        <div class="contact-form">
-          
-          <img class="logo-lucifer" src="images/logo lucifer.png" alt="" onclick="location.href='index.php'">
-        </div>
-        <br>
-        <br>
-        <p class="reset-pass-int">enter your email</p>
-        <p class="reset-pass-int">to receive link for resetting password:</p>
-        <br>
-        <form action="" method="post">
-          <label class="label-form" for="email">email</label>
-          <input required type="email" id="email" name="email" placeholder="Your email..">
-          
+        
+        <!--logo-->
+      
+      <img class="logo-lucifer" src="images/logo lucifer.png" alt="" onclick="location.href='index.php'">
+      
+      
+      <!--reset password instructions-->
+        <p class="instr">enter your email to receive link for<br> resetting password:</p>
+        
+        
+
+        <form  class="form-inputs" action="" method="post">
+          <!--email-->
+          <label class="label-email-3" for="email">email</label>
+          <input class="input-email-3"  required type="email" id="email" name="email" placeholder="Your email..">
+
+
+          <div class="forgotpass-btn-box">
+          <!--btn cancel-->
           <input class="button-cancel" type="submit" value="cancel" onclick="location.href='login.php'">
-          <input class="button-send" type="submit" value="send" onclick="location.href='link-sent-succ.php'"><br>
+          <!--btn cancel-->
+          <input class="button-send" type="submit" value="send" onclick="location.href='link-sent-succ.php'">
+        </div>
+
         </form>
       </div>
     </div>

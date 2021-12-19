@@ -10,3 +10,4 @@ $database = "dbi450256";
 
 // Create connection
 $db_connection = new mysqli($servername, $username, $password,$database);
+?>
