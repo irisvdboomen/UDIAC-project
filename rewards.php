@@ -69,7 +69,7 @@
                     <div class="box-title">
                         <p>Free sandwich</p>
                     </div>
-                    <a href="reward1.php">
+                    <a href="/rewards-description-pages/reward1.html">
                         <button class="open-btn">Use points</button>
                     </a>
                 </div>
@@ -94,7 +94,7 @@
                     <div class="box-title">
                         <p> 10% off<br/> coffee beans</p>
                     </div>
-                    <a href="reward2.php">
+                    <a href="/rewards-description-pages/reward2.php">
                         <button class="open-btn">Use points</button>
                     </a>
                 </div>
@@ -116,7 +116,7 @@
                     <div class="box-title">
                         <p>free coffee</p>
                     </div>
-                    <a href="reward3.php">
+                    <a href="/rewards-description-pages/reward3.php">
                         <button class="open-btn">Use points</button>
                     </a>
                 </div>
@@ -142,7 +142,7 @@
                     <div class="box-title">
                         <p>lucifer coffee mug</p>
                     </div>
-                    <a href="reward4.php">
+                    <a href="/rewards-description-pages/reward4.php">
                         <button class="open-btn">Use points</button>
                     </a>
                 </div>
@@ -166,7 +166,7 @@
                     <div class="box-title">
                         <p>free beer</p>
                     </div>
-                    <a href="reward5.php">
+                    <a href="/rewards-description-pages/reward5.php">
                         <button class="open-btn">Use points</button>
                     </a>
                 </div>
@@ -193,7 +193,7 @@
                             <br /> subscription
                         </p>
                     </div>
-                    <a href="reward6.php">
+                    <a href="/rewards-description-pages/reward6.php">
                         <button class="open-btn">Use points</button>
                     </a>
                 </div>
@@ -220,7 +220,7 @@
                     <div class="box-title">
                         <p>Latte Art workshop</p>
                     </div>
-                    <a href="reward7.php">
+                    <a href="/rewards-description-pages/reward7.php">
                         <button class="open-btn">Use points</button>
                     </a>
                 </div>
