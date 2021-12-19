@@ -55,12 +55,12 @@
 </nav>
 <div class="hero">
     <p class="page_name">Sponsor</p>
-    <img src="./images/sponsor-hero.jpeg" alt="coffee-beans" />
+    <img src="../images/sponsor-hero.jpeg" alt="coffee-beans" />
 </div>
 
 <body>
     <div class="img_text">
-        <img class="logo_sponsor" src="./images/logo_sponsor.png" />
+        <img class="logo_sponsor" src="../images/logo_sponsor.png" />
         <p class="text_in_s">
             DE KROMME HARING IS ONE OF LUCIFER’S BIG SUPPORTORS AND COLLABORATIOR.
         </p>
@@ -69,13 +69,13 @@
         <p>DE KROMME HARING, Making and drinking beer in great places</p>
     </div>
     <div class="two_photos">
-        <img class="fbeer" src="./images/beer_sponsor.png" />
+        <img class="fbeer" src="../images/beer_sponsor.png" />
         <div class="green_box_again">
             DE KROMME HARING
             <br />
             <br /> Making and drinking beer in great places
         </div>
-        <img class="cbeer" src="./images/raindow_beer.png" />
+        <img class="cbeer" src="../images/raindow_beer.png" />
     </div>
     <footer>
         <div class="both">
@@ -100,7 +100,7 @@
                 </div>
             </div>
             <div class="middle_part">
-                <img class="footer_line" src="/images/line_17.png" />
+                <img class="footer_line" src="../images/line_17.png" />
             </div>
             <div class="right-part-footer">
                 <div class="page-links">

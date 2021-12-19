@@ -23,12 +23,12 @@
     <header class="header">
         <div class="logo" id="location">
             <a href="locations.php">
-                <img src="images/location.png" alt="location-icon">
+                <img src="../images/location.png" alt="location-icon">
             </a>
             <a href="locations.php" class="store_locator_text">Store locator</a>
         </div>
         <div class="logo" id="box">
-            <a href="index.php"><img src="images/logo lucifer.png" alt="lucifer loyalty program logo"></a>
+            <a href="index.php"><img src="../images/logo lucifer.png" alt="lucifer loyalty program logo"></a>
         </div>
         <div class="logo" id="box"></div>
     </header>
@@ -38,7 +38,7 @@
             <label for="checkbox_toggle" class="hamburger">&#9776;</label>
             <div class="points-mobile">
                 <p>12</p>
-                <img src="images/matchstick-lucifer.png" alt="points">
+                <img src="../images/matchstick-lucifer.png" alt="points">
             </div>
             <div class="menu" id="mobile">
                 <div class="mobile">
@@ -65,40 +65,40 @@
     <p class="smaller_name">CHALLENGES OF THE DAY</p>
     <div class="rewards">
         <div class="one-reward">
-            <div class="box"><img class="photo_ch_1" src="./images/first-challenge-.png"></div>
+            <div class="box"><img class="photo_ch_1" src="../images/first-challenge-.png"></div>
             <div class="small-box">
                 <div class="box-text-left">
                     <button data-modal-id="myModal-first-mod" class="button first-mod">Buy a sandwich</button>
                 </div>
                 <div class="box-text-right">
                     <div class="points">
-                        <h4>2<img src="./images/point-photo.png"></h4>
+                        <h4>2<img src="../images/point-photo.png"></h4>
                     </div>
                 </div>
             </div>
         </div>
         <div class="one-reward">
-            <div class="box"><img class="photo_ch_1" src="./images/second-challenge.png"></div>
+            <div class="box"><img class="photo_ch_1" src="../images/second-challenge.png"></div>
             <div class="small-box">
                 <div class="box-text-left">
                     <button data-modal-id="myModal-second-mod" class="button second-mod">Order a coffee</button>
                 </div>
                 <div class="box-text-right">
                     <div class="points">
-                        <h4>2<img src="./images/point-photo.png"></h4>
+                        <h4>2<img src="../images/point-photo.png"></h4>
                     </div>
                 </div>
             </div>
         </div>
         <div class="one-reward">
-            <div class="box"><img class="photo_ch_1" src="./images/thurd-challenge.png"></div>
+            <div class="box"><img class="photo_ch_1" src="../images/thurd-challenge.png"></div>
             <div class="small-box">
                 <div class="box-text-left">
                     <button data-modal-id="myModal-thurd-mod" class="button thurd-mod">Buy a cake</button>
                 </div>
                 <div class="box-text-right">
                     <div class="points">
-                        <h4>2<img src="./images/point-photo.png"></h4>
+                        <h4>2<img src="../images/point-photo.png"></h4>
                     </div>
                 </div>
             </div>
@@ -112,7 +112,7 @@
     <!--location challenge start-->
     <div class="middle part">
         <div class="green_square">
-            <img class="r" src="./images/rectangle_2.png">
+            <img class="r" src="../images/rectangle_2.png">
             <div class="text-ch">
                 <h1 class="visitl">VISIT LOCATION KENNEDYPLEIN</h1>
                 <br>
@@ -123,7 +123,7 @@
                     </div>
                     <div class="box-text-right">
                         <div class="points">
-                            <h4>2<img class="p" style="width: 8%;" src="./images/point-photo.png"></h4>
+                            <h4>2<img class="p" style="width: 8%;" src="../images/point-photo.png"></h4>
                         </div>
                     </div>
                 </div>
@@ -132,7 +132,7 @@
                     <div class="modal-content location">
                         <div class="contact-container  ">
                             <div class="left-col lo">
-                                <img class="lc" src="./images/locat.png">
+                                <img class="lc" src="../images/locat.png">
                             </div>
                             <div class="right-col location">
                                 <span class="close">&times;</span>
@@ -151,7 +151,7 @@
                     <div class="modal-content">
                         <div class="contact-container">
                             <div class="left-col">
-                                <img class="fc" src="./images/first-challenge-.png">
+                                <img class="fc" src="../images/first-challenge-.png">
                             </div>
                             <div class="right-col">
                                 <span class="close">&times;</span>
@@ -177,11 +177,11 @@
                                 <span class="close">&times;</span>
                                 <p>code was confirmed</p>
                                 <br>
-                                <img class="check" src="/images/check.png">
+                                <img class="check" src="../images/check.png">
                                 <br>
                                 <p>suscesfully added</p>
                                 <div class="points ">
-                                    <h4>2<img class="p " style="width: 6%; " src="./images/point-photo.png "></h4>
+                                    <h4>2<img class="p " style="width: 6%; " src="../images/point-photo.png "></h4>
                                 </div>
                             </div>
                         </div>
@@ -192,7 +192,7 @@
                     <div class="modal-content">
                         <div class="contact-container">
                             <div class="left-col left-col1">
-                                <img class="sc" src="./images/second-challenge.png">
+                                <img class="sc" src="../images/second-challenge.png">
                             </div>
                             <div class="right-col">
                                 <span class="close">&times;</span>
@@ -215,7 +215,7 @@
                     <div class="modal-content">
                         <div class="contact-container">
                             <div class="left-col left-col1">
-                                <img class="sc" src="./images/thurd-challenge.png">
+                                <img class="sc" src="../images/thurd-challenge.png">
                             </div>
                             <div class="right-col">
                                 <span class="close">&times;</span>
@@ -240,7 +240,7 @@
 
                         <div class="contact-container">
                             <div class="left-col juice">
-                                <img class="fc" src="./images/thurd-ch.png">
+                                <img class="fc" src="../images/thurd-ch.png">
                             </div>
                             <div class="right-col">
                                 <span class="close">&times;</span>
@@ -260,7 +260,7 @@
 
                         <div class="contact-container">
                             <div class="left-col coockie">
-                                <img class="fifthc" src="./images/fourth-ch.png">
+                                <img class="fifthc" src="../images/fourth-ch.png">
                             </div>
                             <div class="right-col">
                                 <span class="close">&times;</span>
@@ -279,7 +279,7 @@
 
                         <div class="contact-container">
                             <div class="left-col beer">
-                                <img class="sixc" src="./images/5-ch.png">
+                                <img class="sixc" src="../images/5-ch.png">
                             </div>
                             <div class="right-col">
                                 <span class="close">&times;</span>
@@ -332,7 +332,7 @@
                     <div class="modal-content-price model-content ">
                         <div class="contact-container">
                             <div class="left-col">
-                                <img class="month-b" src="/images/month-b.jpg">
+                                <img class="month-b" src="../images/month-b.jpg">
                             </div>
                             <div class="right-col">
                                 <span class="close">&times;</span>
@@ -367,7 +367,7 @@
                     <div class="modal-content-price">
                         <div class="contact-container">
                             <div class="left-col">
-                                <img class="sandw" src="/images/sandwich-reward.jpg">
+                                <img class="sandw" src="../images/sandwich-reward.jpg">
                             </div>
                             <div class="right-col">
                                 <span class="close">&times;</span>
@@ -403,7 +403,7 @@
                     <div class="modal-content-price">
                         <div class="contact-container">
                             <div class="left-col">
-                                <img class="late" src="/images/latte-art-mobile.png">
+                                <img class="late" src="../images/latte-art-mobile.png">
                             </div>
                             <div class="right-col">
                                 <span class="close">&times;</span>
@@ -428,40 +428,40 @@
     <!--continuing with the challenges  -->
     <div class="rewards ">
         <div class="one-reward ">
-            <div class="box "><img class="photo_ch_1 " src="./images/thurd-ch.png "></div>
+            <div class="box "><img class="photo_ch_1 " src="../images/thurd-ch.png "></div>
             <div class="small-box ">
                 <div class="box-text-left ">
                     <button data-modal-id="myModal-forth-mod" class="button forth-mod">Buy a juice</button>
                 </div>
                 <div class="box-text-right">
                     <div class="points">
-                        <h4>2<img src="./images/point-photo.png"></h4>
+                        <h4>2<img src="../images/point-photo.png"></h4>
                     </div>
                 </div>
             </div>
         </div>
         <div class="one-reward">
-            <div class="box "><img class="photo_ch_1" src="./images/fourth-ch.png"></div>
+            <div class="box "><img class="photo_ch_1" src="../images/fourth-ch.png"></div>
             <div class="small-box ">
                 <div class="box-text-left ">
                     <button data-modal-id="myModal-fifth-mod" class="button fifth-mod">Buy a cookie</button>
                 </div>
                 <div class="box-text-right">
                     <div class="points">
-                        <h4>2<img src="./images/point-photo.png"></h4>
+                        <h4>2<img src="../images/point-photo.png"></h4>
                     </div>
                 </div>
             </div>
         </div>
         <div class="one-reward ">
-            <div class="box "><img class="photo_ch_1" src="./images/5-ch.png"></div>
+            <div class="box "><img class="photo_ch_1" src="../images/5-ch.png"></div>
             <div class="small-box ">
                 <div class="box-text-left ">
                     <button data-modal-id="myModal-six-mod" class="button six-mod">Buy a beers</button>
                 </div>
                 <div class="box-text-right">
                     <div class="points ">
-                        <h4>2<img src="./images/point-photo.png"></h4>
+                        <h4>2<img src="../images/point-photo.png"></h4>
                     </div>
                 </div>
             </div>
@@ -472,11 +472,11 @@
     <div class="title">
         <p>Lucifer challenges you to spend 50 <br> matchsticks on a surprise reward.</p>
     </div>
-    <img class="cup" src="./images/cup.png">
-    <img class="lucycup" src="./images/lucifer_4.png">
-    <img class="oneb" src="./images/oneb.png">
-    <img class="secb" src="./images/secb.png">
-    <img class="thurdb" src="./images/thurdb.png">
+    <img class="cup" src="../images/cup.png">
+    <img class="lucycup" src="../images/lucifer_4.png">
+    <img class="oneb" src="../images/oneb.png">
+    <img class="secb" src="../images/secb.png">
+    <img class="thurdb" src="../images/thurdb.png">
     <br>
     <!--green boxes start-->
     <div class="kutii">
@@ -510,7 +510,7 @@
         <div class="box-text-right">
             <div class="points">
                 <button data-modal-id="myModal-seven-mod" class="button seven-mod" id="btn">USE</button>
-                <h4>40<img src="./images/point-photo.png"></h4>
+                <h4>40<img src="../images/point-photo.png"></h4>
             </div>
         </div>
     </div>
@@ -539,7 +539,7 @@
                 </div>
             </div>
             <div class="middle_part">
-                <img class="footer_line" src="/images/line_17.png">
+                <img class="footer_line" src="../images/line_17.png">
             </div>
             <div class="right-part-footer">
                 <div class="page-links">

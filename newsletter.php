@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" href="newsletter-style.css">
+    <title>Subscription Form | CodingNepal</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
@@ -17,7 +18,7 @@
     <div class="icon"><i class="far fa-envelope"></i></div>
     <div class="content">
       <header>Become a Subscriber</header>
-      <p>Subscribe to our newsletter and get the latest updates straight to your inbox.</p>
+      <p>Subscribe to our loyalty program and get the latest updates straight to your inbox.</p>
     </div>
     <form action="index.php" method="POST">
     <?php 
@@ -25,15 +26,15 @@
     if(isset($_POST['subscribe'])){ //if subscribe btn clicked
       $userEmail = $_POST['email']; //getting user entered email
       if(filter_var($userEmail, FILTER_VALIDATE_EMAIL)){ //validating user email
-        $subject = "Thanks for Subscribing - Loyalties of Lucifer ";
-        $message = "Thanks for subscribing to our newsletter. You'll receive updates from us about our new rewards or/and challenges. We won't share and sell your information. - Loyaltes of Lucfer";
+        $subject = "Thanks for Subscribing us - Loyalties of Lucifer ";
+        $message = "Thanks for subscribing to our loyalty program. You'll always receive updates from us about our new rewards or/and challenges. And we won't share and sell your information. - Loyaltes of Lucfer";
         $sender = "From: ";
         //php function to send mail
         if(mail($userEmail, $subject, $message, $sender)){
           ?>
            <!-- show sucess message once email send successfully -->
           <div class="alert success-alert">
-            <?php echo "Thanks for Subscribing." ?>
+            <?php echo "Thanks for Subscribing us." ?>
           </div>
           <?php
           $userEmail = "";

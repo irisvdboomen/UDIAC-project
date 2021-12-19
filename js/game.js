@@ -3,7 +3,7 @@ let beans = new Array();
 //when the doc is loaded adds html elemt to our array
 $(function() {
     for (let i = 1; i < 10; i++) {
-        beans.push(`<img class="gameB${i}" id="beanImg${i}" src="./images/Background_15 (1).svg ">`);
+        beans.push(`<img class="gameB${i}" id="beanImg${i}" src="../images/Background_15 (1).svg ">`);
     }
     //then we iterrate on this array and add insert the html element to our container
     for (let i = 0; i < beans.length; i++) {

@@ -258,7 +258,7 @@ include("connection.php");
                 </div>
             </div>
             <div class="middle_part">
-                <img class="footer_line" src="/images/line_17.png">
+                <img class="footer_line" src="../images/line_17.png">
             </div>
             <div class="right-part-footer">
                 <div class="page-links">
