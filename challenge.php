@@ -5,11 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Challenge page</title>
+    <title>Challenges</title>
     <!--link font-->
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <!--links css-->
-    <link rel="stylesheet" href="js/pop-up.js">
     <link rel="stylesheet" href="css/challenge-style.css">
     <link rel="stylesheet" href="css/footer-style.css">
     <link rel="stylesheet" href="css/header-style.css">
@@ -23,40 +22,44 @@
 <body>
     <header class="header">
         <div class="logo" id="location">
-            <a href="locations.html">
-                <img src="images/location.png" alt="">
+            <a href="locations.php">
+                <img src="images/location.png" alt="location-icon">
             </a>
-            <a href="locations.html" class="store_locator_text">Store locator</a>
+            <a href="locations.php" class="store_locator_text">Store locator</a>
         </div>
         <div class="logo" id="box">
-            <a href="index.html"><img src="images/logo lucifer.png" alt="lucifer loyalty program logo"></a>
+            <a href="index.php"><img src="images/logo lucifer.png" alt="lucifer loyalty program logo"></a>
         </div>
         <div class="logo" id="box"></div>
     </header>
     <nav class="navbar">
-        <ul>
-            <input type="checkbox" id="checkbox_toggle" />
+        <ul class="navbar-mobile">
+            <input type="checkbox" id="checkbox_toggle"/>
             <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+            <div class="points-mobile">
+                <p>12</p>
+                <img src="images/matchstick-lucifer.png" alt="points">
+            </div>
             <div class="menu" id="mobile">
                 <div class="mobile">
-                    <li class="left" id="selected"><a href="index.html">Home</a></li>
-                    <li class="left"><a href="rewards.html">Rewards</a></li>
-                    <li class="left"><a href="challenge.html">Challenges</a></li>
-                    <li class="left"><a href="sponsor.html">Sponsors</a></li>
-                    <li class="left"><a href="contact.html">Contact us</a></li>
-                    <li class="right"><a href="profile.html">Profile</a></li>
+                    <li class="left" id="selected"><a href="index.php">Home</a></li>
+                    <li class="left"><a href="rewards.php">Rewards</a></li>
+                    <li class="left"><a href="challenge.php">Challenges</a></li>
+                    <li class="left"><a href="sponsor.php">Sponsors</a></li>
+                    <li class="left"><a href="contact.php">Contact us</a></li>
+                    <li class="right"><a href="profile.php">Profile</a></li>
                     <!-- desktop version -->
                     <li class="right-mobile">
-                        <a href="profile.html"><img src="images/user.png" alt=""></a>
+                        <a href="profile.php"><img src="images/user.png" alt="profile-icon"></a>
                     </li>
-                    <li class="right-mobile" id="points"><a href="profile.html">12<img src="images/matchstick-lucifer.png" alt="" ></a></li>
+                    <li class="right-mobile" id="points"><a href="profile.php">12<img src="images/matchstick-lucifer.png" alt="matchstick"></a></li>
                 </div>
             </div>
         </ul>
     </nav>
     <div class="hero">
         <p class="page_name">CHALLENGES</p>
-        <img src="./images/coffee-beans.jpg" alt="coffee-beans">
+        <img src="images/coffee-beans.jpg" alt="coffee-beans">
     </div>
     <!--challenge of day start-->
     <p class="smaller_name">CHALLENGES OF THE DAY</p>
@@ -67,36 +70,35 @@
                 <div class="box-text-left">
                     <button data-modal-id="myModal-first-mod" class="button first-mod">Buy a sandwich</button>
                 </div>
-                <div class=" box-text-right ">
-                    <div class="points ">
-                        <h4>2<img src="./images/point-photo.png "></h4>
+                <div class="box-text-right">
+                    <div class="points">
+                        <h4>2<img src="./images/point-photo.png"></h4>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="one-reward ">
-            <div class="box "><img class="photo_ch_1 " src="./images/second-challenge.png "></div>
-            <div class="small-box ">
-                <div class="box-text-left ">
+        <div class="one-reward">
+            <div class="box"><img class="photo_ch_1" src="./images/second-challenge.png"></div>
+            <div class="small-box">
+                <div class="box-text-left">
                     <button data-modal-id="myModal-second-mod" class="button second-mod">Order a coffee</button>
                 </div>
-                <div class="box-text-right ">
-                    <div class="points ">
-                        <h4>2<img src="./images/point-photo.png "></h4>
+                <div class="box-text-right">
+                    <div class="points">
+                        <h4>2<img src="./images/point-photo.png"></h4>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="one-reward ">
-            <div class="box "><img class="photo_ch_1 " src="./images/thurd-challenge.png "></div>
-            <div class="small-box ">
-                <div class="box-text-left ">
+        <div class="one-reward">
+            <div class="box"><img class="photo_ch_1" src="./images/thurd-challenge.png"></div>
+            <div class="small-box">
+                <div class="box-text-left">
                     <button data-modal-id="myModal-thurd-mod" class="button thurd-mod">Buy a cake</button>
                 </div>
-                <div class="box-text-right ">
-                    <div class="points ">
-                        <h4>2<img src="./images/point-photo.png "></h4>
-
+                <div class="box-text-right">
+                    <div class="points">
+                        <h4>2<img src="./images/point-photo.png"></h4>
                     </div>
                 </div>
             </div>
@@ -108,20 +110,20 @@
     <br>
     <br>
     <!--location challenge start-->
-    <div class="middle part ">
-        <div class="green_square ">
-            <img class="r" src="./images/rectangle_2.png ">
-            <div class="text-ch ">
-                <h1 class="visitl ">VISIT LOCATION KENNEDYPLEIN</h1>
+    <div class="middle part">
+        <div class="green_square">
+            <img class="r" src="./images/rectangle_2.png">
+            <div class="text-ch">
+                <h1 class="visitl">VISIT LOCATION KENNEDYPLEIN</h1>
                 <br>
-                <h2>AS A LOYAL CLIENT OF LUCIFER To claim this reward you need to visit one of LUCIFER LOCATIONS kennedyplein . mAKE A PURCHASE AND ENJOY YOUR NEW POINTS AND COFFEE.</h2>
-                <div class="small-box ">
-                    <div class="box-text-left ">
+                <h2>AS A LOYAL CLIENT OF LUCIFER TO CLAIM THIS REWARD YOU NEED TO VISIT ONE OF LUCIFER LOCATIONS KENNEDYPLEIN. MAKE A PURCHASE AND ENJOY YOUR NEW POINTS AND COFFEE.</h2>
+                <div class="small-box">
+                    <div class="box-text-left">
                         <button data-modal-id="myModal-visit-location" class="button location visit-location">VISIT LOCATION KENNEDYPLEIN</button>
                     </div>
-                    <div class="box-text-right ">
-                        <div class="points ">
-                            <h4>2<img class="p " style="width: 8%; " src="./images/point-photo.png "></h4>
+                    <div class="box-text-right">
+                        <div class="points">
+                            <h4>2<img class="p" style="width: 8%;" src="./images/point-photo.png"></h4>
                         </div>
                     </div>
                 </div>
@@ -137,7 +139,7 @@
                                 <h1>Visit location KENNEDYPLEIN</h1>
                                 <br>
                                 <p>mAKE A PURCHASE AND Scan your QR code to collect 2 matchsticks :</p>
-                                <button data-modal-id="myModal-confirmed-mod" class="button close-pppp">Scan QR code :</button>
+                                <button data-modal-id="myModal-confirmed-mod" class="button close-pppp">Scan nfc tag:</button>
                             </div>
                         </div>
                     </div>
@@ -155,7 +157,7 @@
                                 <span class="close">&times;</span>
                                 <h1>Buy a sandwich</h1>
                                 <br>
-                                <p>At one of Lucifer's locations and Scan your QR code to collect 2 matchsticks :</p>
+                                <p>At one of Lucifer's locations and Scan your nfc tag to collect 2 matchsticks :</p>
                                 <br>
                                 <p>#challengeoftheday</p>
                                 <div id="the-final-countdown">
@@ -202,7 +204,7 @@
                                 <div id="the-final-countdown">
                                     <p></p>
                                 </div>
-                                <button data-modal-id="myModal-confirmed-mod" class="button close_pop">Scan QR code :</button>
+                                <button data-modal-id="myModal-confirmed-mod" class="button close_pop">Scan nfc tag:</button>
                             </div>
                         </div>
                     </div>
@@ -225,7 +227,7 @@
                                 <div id="the-final-countdown">
                                     <p></p>
                                 </div>
-                                <button data-modal-id="myModal-confirmed-mod" class="button close-po">Scan QR code :</button>
+                                <button data-modal-id="myModal-confirmed-mod" class="button close-po">Scan nfc tag:</button>
                             </div>
                         </div>
                     </div>
@@ -246,7 +248,7 @@
                                 <p>orange | apple | strawberrie</p>
                                 <br>
                                 <p>Buy a juice by your choice and scan your QR code to collect 2 matchsticks :</p>
-                                <button data-modal-id="myModal-confirmed-mod" class="button close-p">Scan QR code :</button>
+                                <button data-modal-id="myModal-confirmed-mod" class="button close-p">Scan nfc tag:</button>
                             </div>
                         </div>
                     </div>
@@ -266,7 +268,7 @@
                                 <p>triple choco | white choco</p>
                                 <br>
                                 <p>At one of Lucifer's locations and Scan your QR code to collect 2 matchsticks :</p>
-                                <button data-modal-id="myModal-confirmed-mod" class="button close-pp">Scan QR code :</button>
+                                <button data-modal-id="myModal-confirmed-mod" class="button close-pp">Scan nfc tag:</button>
                             </div>
                         </div>
                     </div>
@@ -285,7 +287,7 @@
                                 <p>| DE KROMME HARING | </p>
                                 <br>
                                 <p>At one of Lucifer's locations and Scan your QR code to collect 2 matchsticks :</p>
-                                <button data-modal-id="myModal-confirmed-mod" class="button close-ppp">Scan QR code :</button>
+                                <button data-modal-id="myModal-confirmed-mod" class="button close-ppp">Scan nfc tag:</button>
                             </div>
                         </div>
                     </div>
@@ -431,35 +433,35 @@
                 <div class="box-text-left ">
                     <button data-modal-id="myModal-forth-mod" class="button forth-mod">Buy a juice</button>
                 </div>
-                <div class="box-text-right ">
-                    <div class="points ">
-                        <h4>2<img src="./images/point-photo.png "></h4>
+                <div class="box-text-right">
+                    <div class="points">
+                        <h4>2<img src="./images/point-photo.png"></h4>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="one-reward ">
-            <div class="box "><img class="photo_ch_1 " src="./images/fourth-ch.png"></div>
+        <div class="one-reward">
+            <div class="box "><img class="photo_ch_1" src="./images/fourth-ch.png"></div>
             <div class="small-box ">
                 <div class="box-text-left ">
                     <button data-modal-id="myModal-fifth-mod" class="button fifth-mod">Buy a cookie</button>
                 </div>
-                <div class="box-text-right ">
-                    <div class="points ">
-                        <h4>2<img src="./images/point-photo.png "></h4>
+                <div class="box-text-right">
+                    <div class="points">
+                        <h4>2<img src="./images/point-photo.png"></h4>
                     </div>
                 </div>
             </div>
         </div>
         <div class="one-reward ">
-            <div class="box "><img class="photo_ch_1 " src="./images/5-ch.png "></div>
+            <div class="box "><img class="photo_ch_1" src="./images/5-ch.png"></div>
             <div class="small-box ">
                 <div class="box-text-left ">
                     <button data-modal-id="myModal-six-mod" class="button six-mod">Buy a beers</button>
                 </div>
-                <div class="box-text-right ">
+                <div class="box-text-right">
                     <div class="points ">
-                        <h4>2<img src="./images/point-photo.png "></h4>
+                        <h4>2<img src="./images/point-photo.png"></h4>
                     </div>
                 </div>
             </div>
@@ -467,30 +469,30 @@
     </div>
     <!--challenges end -->
     <!--game start-->
-    <div class="title ">
-        <p>Lucifer challenges you to spend 50<br> matchsticks on a suprise reward.</p>
+    <div class="title">
+        <p>Lucifer challenges you to spend 50 <br> matchsticks on a surprise reward.</p>
     </div>
-    <img class="cup " src="./images/cup.png ">
-    <img class="lucycup " src="./images/lucifer_4.png ">
-    <img class="oneb " src="./images/oneb.png ">
-    <img class="secb " src="./images/secb.png ">
-    <img class="thurdb " src="./images/thurdb.png ">
+    <img class="cup" src="./images/cup.png">
+    <img class="lucycup" src="./images/lucifer_4.png">
+    <img class="oneb" src="./images/oneb.png">
+    <img class="secb" src="./images/secb.png">
+    <img class="thurdb" src="./images/thurdb.png">
     <br>
     <!--green boxes start-->
-    <div class="kutii ">
-        <img class="kytiikata1 " src="images/kytiikata.png ">
-        <img class="kytiikata2 " src="images/kytiikata.png ">
-        <img class="kytiikata3 " src="images/kytiikata.png ">
-        <img class="kytiikata4 " src="images/kytiikata.png ">
-        <img class="kytiikata5 " src="images/kytiikata.png ">
-        <img class="kytiikata6 " src="images/kytiikata.png ">
-        <img class="kytiikata7 " src="images/kytiikata.png ">
-        <img class="kytiikata8 " src="images/kytiikata.png ">
-        <img class="kytiikata9 " src="images/kytiikata.png ">
+    <div class="kutii">
+        <img class="kytiikata1" src="images/kytiikata.png">
+        <img class="kytiikata2" src="images/kytiikata.png">
+        <img class="kytiikata3" src="images/kytiikata.png">
+        <img class="kytiikata4" src="images/kytiikata.png">
+        <img class="kytiikata5" src="images/kytiikata.png">
+        <img class="kytiikata6" src="images/kytiikata.png">
+        <img class="kytiikata7" src="images/kytiikata.png">
+        <img class="kytiikata8" src="images/kytiikata.png">
+        <img class="kytiikata9" src="images/kytiikata.png">
     </div>
     <!--green boxes end-->
     <!--beans placement start-->
-    <div class="kytii_bean " id="game-container">
+    <div class="kytii_bean" id="game-container">
     </div>
     <!--beans placement end-->
     <br>
@@ -499,25 +501,25 @@
     <br>
     <br>
     <br>
-    <div class="title ">
-        <p>USE 50 MATCHstICKS FOR A surprise :</p>
+    <div class="title">
+        <p>USE 40 MATCHSTICKS FOR A SURPRISE:</p>
     </div>
-    <div class="small-box ">
-        <div class="box-text-left ">
+    <div class="small-box">
+        <div class="box-text-left">
         </div>
-        <div class="box-text-right ">
-            <div class="points ">
+        <div class="box-text-right">
+            <div class="points">
                 <button data-modal-id="myModal-seven-mod" class="button seven-mod" id="btn">USE</button>
-                <h4>50<img src="./images/point-photo.png "></h4>
+                <h4>40<img src="./images/point-photo.png"></h4>
             </div>
         </div>
     </div>
-    <div class="fix-space ">
+    <div class="fix-space">
         <br>
         <br>
         <br>
     </div>
-    <script src="/js/countdown-24h.js"></script>
+    <script src="./js/countdown-24h.js"></script>
     <script src="./index.js "></script>
     <script src="./pop-up.js "></script>
     <!--game end-->
@@ -542,33 +544,33 @@
             <div class="right-part-footer">
                 <div class="page-links">
                     <div class="all-links">
-                        <a href="index.html">Homepage
+                        <a href="index.php">Homepage
                             <span class="border border-top"></span>
                             <span class="border border-right"></span>
                             <span class="border border-bottom"></span>
                             <span class="border border-left"></span>
                         </a>
-                        <p><a href="contact.html">Contact us</a>
-                            <a href="locations.html">Locations</a>
-                            <a href="rewards.html">Rewards</a>
-                            <a href="challenge.html">Challenges</a>
-                            <a href="sponsor.html">Sponsor</a></p>
+                        <p><a href="contact.php">Contact us</a>
+                            <a href="locations.php">Locations</a>
+                            <a href="rewards.php">Rewards</a>
+                            <a href="challenge.php">Challenges</a>
+                            <a href="sponsor.php">Sponsor</a></p>
                     </div>
                     <!-- mobile version -->
                     <div class="three-links">
-                        <p><a href="index.html">Homepage</a></p>
-                        <p><a href="contact.html">Contact us</a></p>
-                        <p><a href="locations.html">Locations</a></p>
+                        <p><a href="index.php">Homepage</a></p>
+                        <p><a href="contact.php">Contact us</a></p>
+                        <p><a href="locations.php">Locations</a></p>
                     </div>
                     <div class="three-links">
-                        <p><a href="rewards.html">Rewards</a></p>
-                        <p><a href="challenge.html">Challenges</a></p>
-                        <p><a href="sponsor.html">Sponsor</a></p>
+                        <p><a href="rewards.php">Rewards</a></p>
+                        <p><a href="challenge.php">Challenges</a></p>
+                        <p><a href="sponsor.php">Sponsor</a></p>
                     </div>
                     <div class="social-media">
-                        <img class="facebook" src="images/facebook.png" alt="facebook">
-                        <img class="instagram" src="images/instagram.png" alt="instagram">
-                        <img class="in" src="images/in.png" alt="in">
+                        <a href="https://www.facebook.com/lucifercoffeeroasters" target="_blank"><img class="facebook" src="images/facebook.png" alt="facebook"></a>
+                        <a href="https://www.instagram.com/lucifer.coffee.roasters/" target="_blank"><img class="instagram" src="images/instagram.png" alt="instagram"></a>
+                        <a href="https://nl.linkedin.com/company/lucifer-coffee-roasters" target="_blank"><img class="linkedin" src="images/in.png" alt="linkedin"></a>
                     </div>
                 </div>
                 <div class="copyright">
