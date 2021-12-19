@@ -1,46 +1,20 @@
-<?php  
-session_start();
-include("conection.php");
-include("checkPoints.php");
-?>
-<?php
-$email = $_SESSION['email'];
-$password = $_SESSION['password'];
-if($email != false && $password != false){
-    $sql = "SELECT * FROM customer WHERE email = '$email'";
-    $run_Sql = mysqli_query($db_connection, $sql);
-    if($run_Sql){
-        $fetch_info = mysqli_fetch_assoc($run_Sql);
-        $code = $fetch_info['code'];
-            if($code != 0){
-                header('Location: code-verification.php');
-            }
-        //else{
-         //   header('Location: user-otp.php');
-       // }
-    }
-}else{
-    header('Location: login.php');
-    
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>latte art workshop</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/header-style.css">
-    <link rel="stylesheet" href="../css/pop-up-style.css">
-    <link rel="stylesheet" href="../css/one-reward-style.css">
-    <link rel="stylesheet" href="../css/footer-style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free beer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/header-style.css" />
+    <link rel="stylesheet" href="../css/pop-up-style.css" />
+    <link rel="stylesheet" href="../css/one-reward-style.css" />
+    <link rel="stylesheet" href="../css/footer-style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <!-- Icons footer-->
 </head>
 
@@ -48,20 +22,12 @@ if($email != false && $password != false){
     <header class="header">
         <div class="logo" id="location">
             <a href="locations.php">
-<<<<<<<< HEAD:reward7.php
-                <img src="images/location.png" alt="">
-========
                 <img src="../images/location.png" alt="">
->>>>>>>> 456d00b247a7c64786a110be817241dfa9503378:rewards-description-pages/reward7.php
             </a>
             <a href="locations.php" class="store_locator_text">Store locator</a>
         </div>
         <div class="logo" id="box">
-<<<<<<<< HEAD:reward7.php
-            <a href="index.php"><img src="images/logo lucifer.png" alt="lucifer loyalty program logo"></a>
-========
             <a href="index.php"><img src="../images/logo lucifer.png" alt="lucifer loyalty program logo"></a>
->>>>>>>> 456d00b247a7c64786a110be817241dfa9503378:rewards-description-pages/reward7.php
         </div>
         <div class="logo" id="box"></div>
     </header>
@@ -83,35 +49,32 @@ if($email != false && $password != false){
                     <li class="right"><a href="profile.php">Profile</a></li>
                     <!-- desktop version -->
                     <li class="right-mobile">
-<<<<<<<< HEAD:reward7.php
-                        <a href="profile.php"><img src="images/user.png" alt=""></a>
-                    </li>
-                    <li class="right-mobile" id="points"><a href="profile.php">12<img src="images/matchstick-lucifer.png" alt="" ></a></li>
-========
                         <a href="profile.php"><img src="../images/user.png" alt=""></a>
                     </li>
                     <li class="right-mobile" id="points"><a href="profile.php">12<img src="../images/matchstick-lucifer.png" alt="" ></a></li>
->>>>>>>> 456d00b247a7c64786a110be817241dfa9503378:rewards-description-pages/reward7.php
                 </div>
             </div>
         </ul>
     </nav>
     <div class="hero">
         <p class="hero-text">Rewards</p>
-        <img src="../images/rewards-hero.jpeg" alt="hero-image">
+        <img src="../images/rewards-hero.jpeg" alt="hero-image" />
     </div>
     <div class="reward-box">
         <div class="image-reward-box">
-            <img src="../images/latte-art-mobile.png" alt="latte-art">
+            <img src="../images/beer.png" alt="beer" />
         </div>
         <div class="text-reward-box">
-            <div class="title-reward">Latte art workshop</div>
-            <div class="other-text-reward-box">Spend 200 match sticks to use this reward anytime you want. When using this reward you can participate in a latte art workshop given at Bleekweg. <br>Click the button below to confirm that you want to spend your points on this.</div>
+            <div class="title-reward">Free beer</div>
+            <div class="other-text-reward-box">
+                Spend 20 match sticks to use this reward anytime you want. When using this reward you can get a free beer of your choice.
+                <br /> Click the button below to confirm that you want to spend your points on this.
+            </div>
             <div id="popUpOverlay"></div>
             <div id="popUpBox">
                 <div class="text-popUpBox">
                     <p class="success">Successfully claimed!</p>
-                    <img src="../images/checkbox.png" alt="">
+                    <img src="../images/checkbox.png" alt="" />
                     <div class="buttons-popup">
                         <div id="closeModal-close">
                             <button onclick="Alert.ok(this)">Close</button>
@@ -121,34 +84,35 @@ if($email != false && $password != false){
                 </div>
             </div>
             <button onclick="Alert.render(this)" class="btn">Use points</button>
-            <br>
-            <br>
-<<<<<<<< HEAD:reward7.php
-            <a href="rewards.php">Go back to rewards</a>
-========
+            <br />
+            <br />
             <a href="../rewards.php">Go back to rewards</a>
->>>>>>>> 456d00b247a7c64786a110be817241dfa9503378:rewards-description-pages/reward7.php
         </div>
     </div>
     <footer>
         <div class="both">
             <div class="left-part-footer">
                 <div class="logo-footer">
-                    <img src="../images/logo lucifer.png" alt="logo">
+                    <img src="../images/logo lucifer.png" alt="logo" />
                 </div>
                 <div class="contact-info">
                     <div class="contact-phone">
-                        <i class="material-icons">phone</i><a href="tel:+39
-                                834 37849">+39 834 37849</a>
+                        <i class="material-icons">phone</i>
+                        <a href="tel:+39
+                                834 37849">
+                                +39 834 37849
+                            </a>
                     </div>
                     <div class="contact-email">
-                        <i class="material-icons">email</i><a href="mailto:loyaltiesoflucifer@gmail.com">loyaltiesoflucifer@gmail.com</a>
+                        <i class="material-icons">email</i>
+                        <a href="mailto:loyaltiesoflucifer@gmail.com">
+                                loyaltiesoflucifer@gmail.com
+                            </a>
                     </div>
                 </div>
-
             </div>
             <div class="middle_part">
-                <img class="footer_line" src="../../images/line_17.png">
+                <img class="footer_line" src="../../images/line_17.png" />
             </div>
             <div class="right-part-footer">
                 <div class="page-links">

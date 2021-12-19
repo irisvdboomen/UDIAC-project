@@ -32,9 +32,13 @@
         <div class="logo" id="box"></div>
     </header>
     <nav class="navbar">
-        <ul>
-            <input type="checkbox" id="checkbox_toggle" />
-            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+        <ul class="navbar-mobile">
+                <input type="checkbox" id="checkbox_toggle"/>
+                    <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+                    <div class="points-mobile">
+                        <p>12</p>
+                        <img src="images/matchstick-lucifer.png" alt="points">
+                    </div>            
             <div class="menu" id="mobile">
                 <div class="mobile">
                     <li class="left" id="selected"><a href="index.php">Home</a></li>
@@ -54,7 +58,7 @@
     </nav>
     <div class="hero">
         <p class="hero-text">Contact</p>
-        <img src="images/contact-profile.png" alt="coffee-beans">
+        <img src="images/contact-profile.jpeg" alt="coffee-beans">
     </div>
     <section class="contact-section">
         <div class="contact-body">
@@ -116,7 +120,7 @@
                 </div>
             </div>
             <div class="middle_part">
-                <img class="footer_line" src="/images/line_17.png">
+                <img class="footer_line" src="../images/line_17.png">
             </div>
             <div class="right-part-footer">
                 <div class="page-links">
@@ -142,9 +146,9 @@
                         <p><a href="sponsor.php">Sponsor</a></p>
                     </div>
                     <div class="social-media">
-                        <img class="facebook" src="images/facebook.png" alt="facebook">
-                        <img class="instagram" src="images/instagram.png" alt="instagram">
-                        <img class="in" src="images/in.png" alt="in">
+                        <a href="https://www.facebook.com/lucifercoffeeroasters" target="_blank"><img class="facebook" src="images/facebook.png" alt="facebook"></a>
+                        <a href="https://www.instagram.com/lucifer.coffee.roasters/" target="_blank"><img class="instagram" src="images/instagram.png" alt="instagram"></a>
+                        <a href="https://nl.linkedin.com/company/lucifer-coffee-roasters" target="_blank"><img class="linkedin" src="images/in.png" alt="linkedin"></a>
                     </div>
                 </div>
                 <div class="copyright">

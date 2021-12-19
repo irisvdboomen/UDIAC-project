@@ -26,6 +26,7 @@ const buttons = [
     document.querySelector(".close_pop"),
     document.querySelector(".close-p"),
     document.querySelector(".close-pp"),
+    document.querySelector(".close-po"),
     document.querySelector(".close-ppp"),
     document.querySelector(".close-pppp"),
 ]
@@ -65,4 +66,8 @@ document.querySelector(".close-ppp").addEventListener("click", function() {
 })
 document.querySelector(".close-pppp").addEventListener("click", function() {
     document.getElementById("myModal-visit-location").style.display = "none";
+})
+
+$('[data-modal-id="myModal-confirmed-mod"]').on('click', function() {
+    $('myModal-confirmed-mod').show()
 })

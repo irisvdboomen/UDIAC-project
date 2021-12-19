@@ -58,9 +58,13 @@ if($email != false && $password != false){
         <div class="logo" id="box"></div>
     </header>
     <nav class="navbar">
-        <ul>
-            <input type="checkbox" id="checkbox_toggle" />
+    <ul class="navbar-mobile">
+        <input type="checkbox" id="checkbox_toggle"/>
             <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+                <div class="points-mobile">
+                    <p>12</p>
+                    <img src="images/matchstick-lucifer.png" alt="points">
+                </div>            
             <div class="menu" id="mobile">
                 <div class="mobile">
                     <li class="left" id="selected"><a href="index.php">Home</a></li>
@@ -140,19 +144,18 @@ if($email != false && $password != false){
                         <i class="material-icons">email</i><a href="mailto:loyaltiesoflucifer@gmail.com">loyaltiesoflucifer@gmail.com</a>
                     </div>
                 </div>
-
             </div>
             <div class="middle_part">
-                <img class="footer_line" src="/images/line_17.png">
+                <img class="footer_line" src="../images/line_17.png">
             </div>
             <div class="right-part-footer">
                 <div class="page-links">
                     <div class="all-links">
                         <a href="index.php">Homepage
                             <span class="border border-top"></span>
-      <span class="border border-right"></span>
-      <span class="border border-bottom"></span>
-      <span class="border border-left"></span>
+                            <span class="border border-right"></span>
+                            <span class="border border-bottom"></span>
+                            <span class="border border-left"></span>
                         </a>
                         <p><a href="contact.php">Contact us</a>
                             <a href="locations.php">Locations</a>
@@ -172,9 +175,9 @@ if($email != false && $password != false){
                         <p><a href="sponsor.php">Sponsor</a></p>
                     </div>
                     <div class="social-media">
-                        <img class="facebook" src="images/facebook.png" alt="facebook">
-                        <img class="instagram" src="images/instagram.png" alt="instagram">
-                        <img class="in" src="images/in.png" alt="in">
+                        <a href="https://www.facebook.com/lucifercoffeeroasters" target="_blank"><img class="facebook" src="images/facebook.png" alt="facebook"></a>
+                        <a href="https://www.instagram.com/lucifer.coffee.roasters/" target="_blank"><img class="instagram" src="images/instagram.png" alt="instagram"></a>
+                        <a href="https://nl.linkedin.com/company/lucifer-coffee-roasters" target="_blank"><img class="linkedin" src="images/in.png" alt="linkedin"></a>
                     </div>
                 </div>
                 <div class="copyright">

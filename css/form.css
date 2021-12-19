@@ -6,7 +6,10 @@
   margin: 0;
   font-family: 'Bebas Neue', cursive;
 }
-
+img.icons-step{
+  width: 30%;
+  padding: 4%;
+}
 /* -------------------------------------------------------------------------- */
 /*                                 Menu page                                 */
 /* -------------------------------------------------------------------------- */
@@ -25,63 +28,76 @@ align-items: center;
 }
 
 /* -------------------------------------------------------------------------- */
+/*                                  user-opt                                  */
+/* -------------------------------------------------------------------------- */
+.text-secretcode{
+  margin-top: 40px;
+}
+
+.label-secretcode{
+  margin-right: 94%;
+  width: 100%;
+  margin-top: 40px;
+
+}
+.input-secretcode{
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 17px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  width: 200%;
+}
+/* -------------------------------------------------------------------------- */
 /*              left box-instructions how to use loyalty program              */
 /* -------------------------------------------------------------------------- */
 .box1 {
-  background-image: url(/images/nathan-dumlao-KixfBEdyp64-unsplash.jpg) ;
+  background-image: url('../images/index-hero-c.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 120%;
   align-content: center;
   justify-content: center;
   
   
 }
-
-
-
 .tim {
+  text-shadow: 2px 2px 4px #000000;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: #7b8a7360;
-  /* opacity: 0.6; */
-  /*
-  padding: 10px;
-  border-radius: 12px;
-  border: 1px solid black;
-  */
+  background-color: #99b38a70;
   color: white; 
   width: 70%;
+  font-size: 120%;
+  text-align: center;
   margin-left: auto;
   margin-right: auto;
 }
 .tom {
+  text-shadow: 2px 2px 4px #000000;
+  font-size: 120%;
+  text-align: center;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   background-color: #e5e5e578;
-  /*
-  padding: 10px;
-  border-radius: 12px;
-  border: 1px solid black;
-  */
   color: white; 
   width: 70%;
   margin-left: auto;
   margin-right: auto;
 }
 .ali {
+  text-shadow: 2px 2px 4px #000000;
+  font-size: 120%;
+  text-align: center;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: #7b8a7360;
-  /*
-  padding: 10px;
-  border-radius: 12px;
-  border: 1px solid black;*/
+  background-color: #99b38a70;
   color: white; 
   width: 70%;
   margin-left: auto;
@@ -97,6 +113,8 @@ align-items: center;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-left: 20%;
+  width: 80%;
 }
 /* -------------------------------------------------------------------------- */
 /*                                    logo                                    */
@@ -108,7 +126,7 @@ align-items: center;
 display: flex;
 align-items: center;
 justify-content: center;
-width: 100%;
+width: 50%;
 
 }
 
@@ -150,23 +168,26 @@ margin-right: 174%;
 
 
 .login-btn-box{
-  width: 200%;
+  align-items: center;
+    display: flex;
 }
 .button-login {
-  
+  font-size: unset;
   background-color: black;
   color: white;
   padding: 12px 20px;
   border: none;
   border-radius: 17px;
   cursor: pointer;
-  margin-right: 50%;
+  margin-left: -10%;
+  margin-right: 10%;
 }
 .button-join-1 {
   background-color: white;
   color: black;
-  padding: 12px 20px;
+  padding: 12px 15px;
   border: none;
+  font-size: unset;
   border-radius: 17px;
   cursor: pointer;
   
@@ -176,7 +197,7 @@ margin-right: 174%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: small;
+  font-size: unset;
   color: rgb(243, 6, 6);
   margin-top: 35px;
 } 
@@ -228,6 +249,7 @@ margin-right: 174%;
 .button-join-2 {
   background-color:black;
   color: white;
+  font-size: unset;
   padding: 12px 20px;
   border: none;
   border-radius: 17px;
@@ -235,19 +257,16 @@ margin-right: 174%;
   
 }
 
-.agreement-phrase{
-  font-size: small;
-}
+
 .termofservice-link{
   color: red;
   text-decoration: none;
-  font-size: small;
+
 }
 
 .privacy-link{
   color: red;
   text-decoration: none;
-  font-size: small;
 }
   
 
@@ -272,24 +291,31 @@ margin-right: 174%;
 }
 
 .forgotpass-btn-box{
-  width: 200%;
+  display: flex;
+
 }
 .button-cancel {
   background-color: black;
   color: white;
-  padding: 12px 20px;
+  padding: 12px 17px;
   border: none;
+  font-size: unset;
   border-radius: 17px;
   cursor: pointer;
-  margin-right: 50%;
+  margin-left: -10%;
+    margin-right: 10%;
 }
-
+p.instr{
+  text-align: center;
+    font-size: 115%;
+}
 .button-send {
   background-color: white;
   color: black;
-  padding: 12px 20px;
+  padding: 12px 22px;
   border: none;
   border-radius: 17px;
+  font-size: unset;
   cursor: pointer;
 }
 
@@ -304,7 +330,8 @@ margin-right: 174%;
 /* -------------------------------------------------------------------------- */
 
 .label-password-3{
-  margin-right: 74%;
+  margin-right: 94%;
+  width: 100%;
 
 }
 .input-password-3{
@@ -313,11 +340,12 @@ margin-right: 174%;
   border-radius: 17px;
   margin-top: 6px;
   margin-bottom: 16px;
-  width: 100%;
+  width: 200%;
 }
 
 .label-password-4{
-  margin-right: 74%;
+  margin-right: 94%;
+  width: 100%;
 
 }
 .input-password-4{
@@ -326,10 +354,26 @@ margin-right: 174%;
   border-radius: 17px;
   margin-top: 6px;
   margin-bottom: 16px;
-  width: 100%;
+  width: 200%;
 }
 
-
+@media (max-width: 768px){
+  .box2{
+    margin-left: auto;
+    width: 120%;
+    min-height: 75vh;
+  }
+  .ali{
+    margin-bottom: 5%;
+    width: 90%;
+  }
+  .tom{
+    width: 90%;
+  }
+  .tim{
+    width: 90%;
+  }
+}
 
 
 
@@ -425,11 +469,18 @@ margin-right: 174%;
   color: white;
   padding: 12px 20px;
   border: none;
+  font-size: unset;
   border-radius: 17px;
   cursor: pointer;
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+.contact-form {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
 /* -------------------------------------------------------------------------- */
 /*                                button-change                               */
@@ -439,6 +490,7 @@ margin-right: 174%;
   color: white;
   padding: 12px 20px;
   border: none;
+  font-size: unset;
   border-radius: 17px;
   cursor: pointer;
   display: block;
@@ -465,24 +517,7 @@ input[type=submit]:hover {
 }
 
 
-/* -------------------------------------------------------------------------- */
-/*                                  user-opt                                  */
-/* -------------------------------------------------------------------------- */
-.text-secretcode{
-  margin-top: 40px;
-}
 
-.label-secretcode{
-  margin-right: 94%;
-  width: 100%;
-  margin-top: 40px;
 
-}
-.input-secretcode{
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 17px;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  width: 200%;
-}
+
+

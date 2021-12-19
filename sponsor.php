@@ -31,17 +31,16 @@ if($email != false && $password != false){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sponsor page</title>
+    <title>Sponsor</title>
     <!--link font-->
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
     <!--links css-->
-    <link rel="stylesheet" href="css/header-style.css">
-    <link rel="stylesheet" href="./css/footer-style.css">
-    <link rel="stylesheet" href="./css/sponsor.css">
+    <link rel="stylesheet" href="css/header-style.css" />
+    <link rel="stylesheet" href="./css/footer-style.css" />
+    <link rel="stylesheet" href="./css/sponsor.css" />
     <!--link icon-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 </head>
 <header class="header">
     <div class="logo" id="location">
@@ -56,10 +55,14 @@ if($email != false && $password != false){
     <div class="logo" id="box"></div>
 </header>
 <nav class="navbar">
-    <ul>
-        <input type="checkbox" id="checkbox_toggle" />
-        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
-        <div class="menu" id="mobile">
+<ul class="navbar-mobile">
+        <input type="checkbox" id="checkbox_toggle"/>
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+                <div class="points-mobile">
+                    <p>12</p>
+                    <img src="images/matchstick-lucifer.png" alt="points">
+                </div>        
+            <div class="menu" id="mobile">
             <div class="mobile">
                 <li class="left" id="selected"><a href="index.php">Home</a></li>
                 <li class="left"><a href="rewards.php">Rewards</a></li>
@@ -78,50 +81,61 @@ if($email != false && $password != false){
 </nav>
 <div class="hero">
     <p class="page_name">Sponsor</p>
-    <img src="./images/sponsor-hero.png" alt="coffee-beans">
+    <img src="../images/sponsor-hero.jpeg" alt="coffee-beans" />
 </div>
 
 <body>
     <div class="img_text">
-        <img class="logo_sponsor" src="./images/logo_sponsor.png">
-        <p class="text_in_s">DE KROMME HARING IS ONE OF LUCIFER’S BIG SUPPORTORS AND COLLABORATIOR.</p>
+        <img class="logo_sponsor" src="../images/logo_sponsor.png" />
+        <p class="text_in_s">
+            DE KROMME HARING IS ONE OF LUCIFER’S BIG SUPPORTORS AND COLLABORATIOR.
+        </p>
     </div>
     <div class="mid_green_box">
         <p>DE KROMME HARING, Making and drinking beer in great places</p>
     </div>
     <div class="two_photos">
-        <img class="fbeer" src="./images/beer_sponsor.png">
-        <div class="green_box_again">DE KROMME HARING<br><br> Making and drinking beer in great places</div>
-        <img class="cbeer" src="./images/raindow_beer.png">
-
+        <img class="fbeer" src="../images/beer_sponsor.png" />
+        <div class="green_box_again">
+            DE KROMME HARING
+            <br />
+            <br /> Making and drinking beer in great places
+        </div>
+        <img class="cbeer" src="../images/raindow_beer.png" />
     </div>
     <footer>
         <div class="both">
             <div class="left-part-footer">
                 <div class="logo-footer">
-                    <img src="images/logo lucifer.png" alt="logo">
+                    <img src="images/logo lucifer.png" alt="logo" />
                 </div>
                 <div class="contact-info">
                     <div class="contact-phone">
-                        <i class="material-icons">phone</i><a href="tel:+39 834 37849">+39 834 37849</a>
+                        <i class="material-icons">phone</i>
+                        <a href="tel:+39
+                                834 37849">
+                                +39 834 37849
+                            </a>
                     </div>
                     <div class="contact-email">
-                        <i class="material-icons">email</i><a href="mailto:loyaltiesoflucifer@gmail.com">loyaltiesoflucifer@gmail.com</a>
+                        <i class="material-icons">email</i>
+                        <a href="mailto:loyaltiesoflucifer@gmail.com">
+                                loyaltiesoflucifer@gmail.com
+                            </a>
                     </div>
                 </div>
-
             </div>
             <div class="middle_part">
-                <img class="footer_line" src="/images/line_17.png">
+                <img class="footer_line" src="../images/line_17.png" />
             </div>
             <div class="right-part-footer">
                 <div class="page-links">
                     <div class="all-links">
                         <a href="index.php">Homepage
                             <span class="border border-top"></span>
-      <span class="border border-right"></span>
-      <span class="border border-bottom"></span>
-      <span class="border border-left"></span>
+                            <span class="border border-right"></span>
+                            <span class="border border-bottom"></span>
+                            <span class="border border-left"></span>
                         </a>
                         <p><a href="contact.php">Contact us</a>
                             <a href="locations.php">Locations</a>
@@ -141,9 +155,9 @@ if($email != false && $password != false){
                         <p><a href="sponsor.php">Sponsor</a></p>
                     </div>
                     <div class="social-media">
-                        <img class="facebook" src="images/facebook.png" alt="facebook">
-                        <img class="instagram" src="images/instagram.png" alt="instagram">
-                        <img class="in" src="images/in.png" alt="in">
+                        <a href="https://www.facebook.com/lucifercoffeeroasters" target="_blank"><img class="facebook" src="images/facebook.png" alt="facebook"></a>
+                        <a href="https://www.instagram.com/lucifer.coffee.roasters/" target="_blank"><img class="instagram" src="images/instagram.png" alt="instagram"></a>
+                        <a href="https://nl.linkedin.com/company/lucifer-coffee-roasters" target="_blank"><img class="linkedin" src="images/in.png" alt="linkedin"></a>
                     </div>
                 </div>
                 <div class="copyright">

@@ -44,6 +44,7 @@ if($email != false && $password != false){
     <link rel="stylesheet" href="css/pop-up-style.css">
     <link rel="stylesheet" href="css/footer-style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- Icons footer-->
 </head>
 
@@ -61,9 +62,13 @@ if($email != false && $password != false){
         <div class="logo" id="box"></div>
     </header>
     <nav class="navbar">
-        <ul>
-            <input type="checkbox" id="checkbox_toggle" />
+    <ul class="navbar-mobile">
+        <input type="checkbox" id="checkbox_toggle"/>
             <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+                <div class="points-mobile">
+                    <p>12</p>
+                    <img src="images/matchstick-lucifer.png" alt="points">
+                </div>            
             <div class="menu" id="mobile">
                 <div class="mobile">
                     <li class="left"><a href="index.php">Home</a></li>
@@ -84,7 +89,7 @@ if($email != false && $password != false){
     <?php echo "<h1>".$row['loyalty_points']."</h1>"; ?>
     <div class="hero">
         <p class="hero-text">My profile</p>
-        <img src="images/hero-profile.png" alt="coffee-beans">
+        <img src="images/hero-profile.jpg" alt="coffee-beans">
     </div>
     <!-- End of header, menu, hero -->
     <div class="title-profile">Hello <?php echo "$lastName" ;?>, all of your claimed rewards are stored here.</div>
@@ -112,14 +117,12 @@ if($email != false && $password != false){
             </div>
         </div>
         <div class="first-content" id="matchstick">
-            <!-- <div class="points-first-content"> -->
             <img src="images/matchstick-lucifer.png" alt="">
             <p>
             
             Collected:  <?php echo $row['loyalty_points'];?></p>
             <!-- </div> -->
         </div>
-
     </div>
 
     <div class="steps-claim-reward">
@@ -137,7 +140,7 @@ if($email != false && $password != false){
                 <img src="images/image 30.png" alt="">
             </div>
             <div class="steps" id="text">
-                <p>You will then have 15 seconds to show our barista that you activated your reward.</p>
+                <p>You will then have 30 seconds to show our barista that you activated your reward.</p>
             </div>
         </div>
         <div class="two-steps">
@@ -166,20 +169,25 @@ if($email != false && $password != false){
                             </div>
                         </div>
                         <div class="box-text-right">
+                            <!--modal 1 start-->
                             <div id="popUpBox">
-                                <div class="text-popUpBox">
-                                    <p class="success"> You Successfully claimed the reward, show this to the barista to use it at Lucifer Coffee Roasters. Enjoy!</p>
+                                <div id="app"></div>
+                                <div class="text-popUpBox box1">
+                                    <p class="success"> Would you like to activate your reward for a free sandwitch?
+                                    </p>
+                                    <p class="success"> |You can only use once|
+                                    </p>
                                     <!-- <img src="images/checkbox.png" alt=""> -->
                                     <div class="buttons-popup">
                                         <div id="closeModal-close">
-                                            <button onclick="Alert.ok()">Close</button>
+                                            <button onclick="Alert.ok(this)">Close</button>
                                             <button class="confirm-1">Confirm</button>
                                         </div>
                                     </div>
-                                    <p></p>
                                 </div>
                             </div>
-                            <button onclick="Alert.render()" class="btn">Use reward</button>
+                            <!--modal 1 end-->
+                            <button onclick="Alert.render(this)" class="btn">Use reward</button>
                         </div>
                     </div>
                 </div>
@@ -199,20 +207,22 @@ if($email != false && $password != false){
                             </div>
                         </div>
                         <div class="box-text-right">
-                            <div id="popUpBox">
-                                <div class="text-popUpBox">
-                                    <p class="success"> You Successfully claimed the reward, show this to the barista to use it at Lucifer Coffee Roasters. Enjoy!</p>
-                                    <!-- <img src="images/checkbox.png" alt=""> -->
+                            <div id="popUpBox" class="pop2">
+                                <div id="app-2"></div>
+                                <div class="text-popUpBox box2">
+                                    <p class="success"> Would you like to activate your reward for a free beer?
+                                    </p>
+                                    <p class="success"> |You can only use once|
+                                    </p>
                                     <div class="buttons-popup">
                                         <div id="closeModal-close">
-                                            <button onclick="Alert.ok()">Close</button>
+                                            <button onclick="Alert.ok(this)">Close</button>
                                             <button class="confirm-2">Confirm</button>
                                         </div>
                                     </div>
-                                    <p></p>
                                 </div>
                             </div>
-                            <button onclick="Alert.render()" class="btn">Use reward</button>
+                            <button onclick="Alert.render(this)" class="btn">Use reward</button>
                         </div>
                     </div>
                 </div>
@@ -232,27 +242,29 @@ if($email != false && $password != false){
                             </div>
                         </div>
                         <div class="box-text-right">
-                            <div id="popUpBox">
-                                <div class="text-popUpBox">
-                                    <p class="success"> You Successfully claimed the reward, show this to the barista to use it at Lucifer Coffee Roasters. Enjoy!</p>
-                                    <!-- <img src="images/checkbox.png" alt=""> -->
+                            <div id="popUpBox" class="pop3">
+                                <div id="app-3">
+                                </div>
+                                <div class="text-popUpBox box3">
+                                    <p class="success"> Would you like to activate your reward for a free coffee?
+                                    </p>
+                                    <p class="success"> |You can only use once|
+                                    </p>
                                     <div class="buttons-popup">
                                         <div id="closeModal-close">
-                                            <button onclick="Alert.ok()">Close</button>
+                                            <button onclick="Alert.ok(this)">Close</button>
                                             <button class="confirm-3">Confirm</button>
                                         </div>
                                     </div>
-                                    <p></p>
                                 </div>
                             </div>
-                            <button onclick="Alert.render()" class="btn">Use reward</button>
+                            <button onclick="Alert.render(this)" class="btn">Use reward</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
     <!-- beginning of footer -->
     <footer>
         <div class="both">
@@ -262,25 +274,25 @@ if($email != false && $password != false){
                 </div>
                 <div class="contact-info">
                     <div class="contact-phone">
-                        <i class="material-icons">phone</i><a href="tel:+39 834 37849">+39 834 37849</a>
+                        <i class="material-icons">phone</i><a href="tel:+39
+                                834 37849">+39 834 37849</a>
                     </div>
                     <div class="contact-email">
                         <i class="material-icons">email</i><a href="mailto:loyaltiesoflucifer@gmail.com">loyaltiesoflucifer@gmail.com</a>
                     </div>
                 </div>
-
             </div>
             <div class="middle_part">
-                <img class="footer_line" src="/images/line_17.png">
+                <img class="footer_line" src="../images/line_17.png">
             </div>
             <div class="right-part-footer">
                 <div class="page-links">
                     <div class="all-links">
                         <a href="index.php">Homepage
                             <span class="border border-top"></span>
-      <span class="border border-right"></span>
-      <span class="border border-bottom"></span>
-      <span class="border border-left"></span>
+                            <span class="border border-right"></span>
+                            <span class="border border-bottom"></span>
+                            <span class="border border-left"></span>
                         </a>
                         <p><a href="contact.php">Contact us</a>
                             <a href="locations.php">Locations</a>
@@ -300,9 +312,9 @@ if($email != false && $password != false){
                         <p><a href="sponsor.php">Sponsor</a></p>
                     </div>
                     <div class="social-media">
-                        <img class="facebook" src="images/facebook.png" alt="facebook">
-                        <img class="instagram" src="images/instagram.png" alt="instagram">
-                        <img class="in" src="images/in.png" alt="in">
+                        <a href="https://www.facebook.com/lucifercoffeeroasters" target="_blank"><img class="facebook" src="images/facebook.png" alt="facebook"></a>
+                        <a href="https://www.instagram.com/lucifer.coffee.roasters/" target="_blank"><img class="instagram" src="images/instagram.png" alt="instagram"></a>
+                        <a href="https://nl.linkedin.com/company/lucifer-coffee-roasters" target="_blank"><img class="linkedin" src="images/in.png" alt="linkedin"></a>
                     </div>
                 </div>
                 <div class="copyright">
@@ -315,5 +327,6 @@ if($email != false && $password != false){
 </body>
 
 <script src="/js/pop-up-reward.js"></script>
+<script src="./js/countdown.js"></script>
 
 </html>
