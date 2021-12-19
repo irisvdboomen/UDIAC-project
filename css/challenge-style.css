@@ -333,17 +333,6 @@ button#confBtn:hover {
 --------------------*/
 
 
-/* end of header + navbar */
-
-.hero img {
-    position: relative;
-    width: 100%;
-    opacity: 0.8;
-    z-index: -1;
-    /* hide picture behind menu */
-}
-
-
 /* challenge section begin  */
 
 
@@ -575,6 +564,10 @@ button.button {
     /* text-align: center; */
 }
 
+.box-text-right {
+    font-family: 'Bebas Neue', monospace;
+}
+
 .box-text-right img {
     width: 25px;
 }
@@ -615,6 +608,7 @@ img.lucycup {
 .green_square h2 {
     font-size: 1.5vw;
     font-weight: 500;
+    text-align: center;
 }
 
 h1.visit {
@@ -651,15 +645,24 @@ a.store_locator_text {
 }
 
 .text-ch {
-    margin-left: 2%;
     width: 30%;
-    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.small-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .green_square {
     margin-top: 100px;
     width: 100%;
-    height: 320px;
+    height: 360px;
     background-color: #b9ceac6b;
     display: flex;
     justify-content: center;

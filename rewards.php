@@ -21,31 +21,35 @@
 <body>
     <header class="header">
         <div class="logo" id="location">
-            <a href="locations.html"><img src="images/location.png" alt=""></a>
-            <a href="locations.html" class="store_locator_text">Store locator</a>
+            <a href="locations.php"><img src="images/location.png" alt=""></a>
+            <a href="locations.php" class="store_locator_text">Store locator</a>
         </div>
         <div class="logo" id="box">
-            <a href="index.html"><img src="images/logo lucifer.png" alt="lucifer loyalty program logo"></a>
+            <a href="index.php"><img src="images/logo lucifer.png" alt="lucifer loyalty program logo"></a>
         </div>
         <div class="logo" id="box"></div>
     </header>
     <nav class="navbar">
-        <ul>
-            <input type="checkbox" id="checkbox_toggle" />
+    <ul class="navbar-mobile">
+        <input type="checkbox" id="checkbox_toggle"/>
             <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+                <div class="points-mobile">
+                    <p>12</p>
+                    <img src="images/matchstick-lucifer.png" alt="points">
+                </div>            
             <div class="menu" id="mobile">
                 <div class="mobile">
-                    <li class="left" id="selected"><a href="index.html">Home</a></li>
-                    <li class="left"><a href="rewards.html">Rewards</a></li>
-                    <li class="left"><a href="challenge.html">Challenges</a></li>
-                    <li class="left"><a href="sponsor.html">Sponsors</a></li>
-                    <li class="left"><a href="contact.html">Contact us</a></li>
-                    <li class="right"><a href="profile.html">Profile</a></li>
+                    <li class="left" id="selected"><a href="index.php">Home</a></li>
+                    <li class="left"><a href="rewards.php">Rewards</a></li>
+                    <li class="left"><a href="challenge.php">Challenges</a></li>
+                    <li class="left"><a href="sponsor.php">Sponsors</a></li>
+                    <li class="left"><a href="contact.php">Contact us</a></li>
+                    <li class="right"><a href="profile.php">Profile</a></li>
                     <!-- desktop version -->
                     <li class="right-mobile">
-                        <a href="profile.html"><img src="images/user.png" alt=""></a>
+                        <a href="profile.php"><img src="images/user.png" alt=""></a>
                     </li>
-                    <li class="right-mobile" id="points"><a href="profile.html">12<img src="images/matchstick-lucifer.png" alt="" ></a></li>
+                    <li class="right-mobile" id="points"><a href="profile.php">12<img src="images/matchstick-lucifer.png" alt="" ></a></li>
                 </div>
             </div>
         </ul>
@@ -66,7 +70,7 @@
                     <div class="box-title">
                         <p>Free sandwich</p>
                     </div>
-                    <a href="reward1.html">
+                    <a href="reward1.php">
                         <button class="open-btn">Use points</button>
                     </a>
                 </div>
@@ -89,7 +93,7 @@
                     <div class="box-title">
                         <p>10% off <br>coffee beans</p>
                     </div>
-                    <a href="reward2.html">
+                    <a href="reward2.php">
                         <button class="open-btn">Use points</button>
                     </a>
                 </div>
@@ -111,7 +115,7 @@
                     <div class="box-title">
                         <p>free coffee</p>
                     </div>
-                    <a href="reward3.html">
+                    <a href="reward3.php">
                         <button class="open-btn">Use points</button>
                     </a>
                 </div>
@@ -134,7 +138,7 @@
                     <div class="box-title">
                         <p>lucifer coffee mug</p>
                     </div>
-                    <a href="reward4.html">
+                    <a href="reward4.php">
                         <button class="open-btn">Use points</button>
                     </a>
                 </div>
@@ -155,7 +159,7 @@
                     <div class="box-title">
                         <p>free beer</p>
                     </div>
-                    <a href="reward5.html">
+                    <a href="reward5.php">
                         <button class="open-btn">Use points</button>
                     </a>
                 </div>
@@ -176,7 +180,7 @@
                     <div class="box-title">
                         <p>one month free<br> subscription</p>
                     </div>
-                    <a href="reward6.html">
+                    <a href="reward6.php">
                         <button class="open-btn">Use points</button>
                     </a>
                 </div>
@@ -200,7 +204,7 @@
                     <div class="box-title">
                         <p>Latte Art workshop</p>
                     </div>
-                    <a href="reward7.html">
+                    <a href="reward7.php">
                         <button class="open-btn">Use points</button>
                     </a>
                 </div>
@@ -235,33 +239,33 @@
             <div class="right-part-footer">
                 <div class="page-links">
                     <div class="all-links">
-                        <a href="index.html">Homepage
+                        <a href="index.php">Homepage
                             <span class="border border-top"></span>
-      <span class="border border-right"></span>
-      <span class="border border-bottom"></span>
-      <span class="border border-left"></span>
+                            <span class="border border-right"></span>
+                            <span class="border border-bottom"></span>
+                            <span class="border border-left"></span>
                         </a>
-                        <p><a href="contact.html">Contact us</a>
-                            <a href="locations.html">Locations</a>
-                            <a href="rewards.html">Rewards</a>
-                            <a href="challenge.html">Challenges</a>
-                            <a href="sponsor.html">Sponsor</a></p>
+                        <p><a href="contact.php">Contact us</a>
+                            <a href="locations.php">Locations</a>
+                            <a href="rewards.php">Rewards</a>
+                            <a href="challenge.php">Challenges</a>
+                            <a href="sponsor.php">Sponsor</a></p>
                     </div>
                     <!-- mobile version -->
                     <div class="three-links">
-                        <p><a href="index.html">Homepage</a></p>
-                        <p><a href="contact.html">Contact us</a></p>
-                        <p><a href="locations.html">Locations</a></p>
+                        <p><a href="index.php">Homepage</a></p>
+                        <p><a href="contact.php">Contact us</a></p>
+                        <p><a href="locations.php">Locations</a></p>
                     </div>
                     <div class="three-links">
-                        <p><a href="rewards.html">Rewards</a></p>
-                        <p><a href="challenge.html">Challenges</a></p>
-                        <p><a href="sponsor.html">Sponsor</a></p>
+                        <p><a href="rewards.php">Rewards</a></p>
+                        <p><a href="challenge.php">Challenges</a></p>
+                        <p><a href="sponsor.php">Sponsor</a></p>
                     </div>
                     <div class="social-media">
-                        <img class="facebook" src="images/facebook.png" alt="facebook">
-                        <img class="instagram" src="images/instagram.png" alt="instagram">
-                        <img class="in" src="images/in.png" alt="in">
+                        <a href="https://www.facebook.com/lucifercoffeeroasters" target="_blank"><img class="facebook" src="images/facebook.png" alt="facebook"></a>
+                        <a href="https://www.instagram.com/lucifer.coffee.roasters/" target="_blank"><img class="instagram" src="images/instagram.png" alt="instagram"></a>
+                        <a href="https://nl.linkedin.com/company/lucifer-coffee-roasters" target="_blank"><img class="linkedin" src="images/in.png" alt="linkedin"></a>
                     </div>
                 </div>
                 <div class="copyright">

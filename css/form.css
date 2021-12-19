@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Bebas Neue', cursive;
+}
+.contact-info{
+  min-height: 625px;
+  min-width: 1366;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 Menu page                                 */
+/* -------------------------------------------------------------------------- */
+.menu-page{
+background-color: #B9CEAC;
+}
+.menu {
+display: flexbox;
+align-items: center;
+}
+.menu-logo  {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+
+
+
+
+
+
+
+
+
+/* -------------------------------------------------------------------------- */
+/*              left box-instructions how to use loyalty program              */
+/* -------------------------------------------------------------------------- */
+.box1 {
+  background-image: url(/images/nathan-dumlao-KixfBEdyp64-unsplash.jpg) ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-content: center;
+  justify-content: center;
+}
+.tim {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #7b8a7360;
+  /* opacity: 0.6; */
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid black;
+  color: white; 
+}
+.tom {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #7b8a7360;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid black;
+  color: white; 
+}
+.ali {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #7b8a7360;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid black;
+  color: white; 
+}
+/* -------------------------------------------------------------------------- */
+/*                              right side-form                               */
+/* -------------------------------------------------------------------------- */
+.box2 {
+  background-color: #B9CEAC;
+}
+
+.logo-lucifer {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.reset-pass-int{
+  text-align: center;
+}
+.confirm{
+  text-align: center;
+  color: white;
+}
+.check-mark {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.label-form {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.agreement_check{
+  font-size: xx-small;
+}
+.terms{
+  margin-left: 24.55%;
+  font-size: small;
+}
+.police-link{
+  color: red;
+  text-decoration: none;
+}
+.text_link{
+  font-size: small;
+  text-align: center;
+  margin-left: 24.55%;
+  color: rgb(243, 6, 6);
+  text-decoration: none;
+  margin-top: 50%;
+} 
+
+/* --------------------------------- inputs start --------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                               input-username                               */
+/* -------------------------------------------------------------------------- */
+input[type=text], select, textarea {
+
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 17px;
+  box-sizing: width 200rem;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 input-email                                */
+/* -------------------------------------------------------------------------- */
+input[type=email], select, textarea {
+
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 17px;
+  box-sizing: width 200rem;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                input-number                                */
+/* -------------------------------------------------------------------------- */
+input[type=number], select, textarea {
+
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 17px;
+  box-sizing: width 200rem;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                               input-password                               */
+/* -------------------------------------------------------------------------- */
+input[type=password], select, textarea {
+
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 17px;
+  box-sizing: width 200rem;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+
+/* ----------------------------- button section start----------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                                button-login                                */
+/* -------------------------------------------------------------------------- */
+.button-login {
+  margin-left: 24.55%;
+  background-color: black;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 17px;
+  cursor: pointer;
+}
+/* -------------------------------------------------------------------------- */
+/*                                button-cancel                               */
+/* -------------------------------------------------------------------------- */
+.button-cancel {
+  margin-left: 24.55%;
+  background-color: black;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 17px;
+  cursor: pointer;
+}
+/* -------------------------------------------------------------------------- */
+/*                                 button-send                                */
+/* -------------------------------------------------------------------------- */
+.button-send {
+  background-color: white;
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 17px;
+  cursor: pointer;
+}
+/* -------------------------------------------------------------------------- */
+/*                                button-submit                               */
+/* -------------------------------------------------------------------------- */
+.button-submit {
+  background-color: black;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 17px;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 button-join-1                              */
+/* -------------------------------------------------------------------------- */
+.button-join-1 {
+  background-color: white;
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 17px;
+  cursor: pointer;
+}
+/* -------------------------------------------------------------------------- */
+/*                                button-join-2                               */
+/* -------------------------------------------------------------------------- */
+.button-join-2 {
+  background-color: black;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 17px;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* -------------------------------------------------------------------------- */
+/*                            button-back-to-login                            */
+/* -------------------------------------------------------------------------- */
+.button-back-to-login {
+  background-color: black;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 17px;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* -------------------------------------------------------------------------- */
+/*                                button-change                               */
+/* -------------------------------------------------------------------------- */
+.button-change {
+  background-color: black;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 17px;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* -------------------------------------------------------------------------- */
+/*                                button-hover-effect                         */
+/* -------------------------------------------------------------------------- */
+input[type=submit]:hover {
+  background-color: #D7B997;
+  color: rgb(15, 15, 15);
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                 Responsive                                 */
+/* -------------------------------------------------------------------------- */
+@media screen and (min-width: 800px) {
+  .contact-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 992px) {}
+
+@media (min-width: 1920px) {
+
+  .contact-info{
+    min-height: 937px;
+  
+  }
+
+}
+
+
+
