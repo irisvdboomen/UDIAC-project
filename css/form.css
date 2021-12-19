@@ -1,0 +1,488 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Bebas Neue', cursive;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 Menu page                                 */
+/* -------------------------------------------------------------------------- */
+.menu-page{
+background-color: #B9CEAC;
+}
+.menu {
+display: flexbox;
+align-items: center;
+}
+.menu-logo  {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+
+/* -------------------------------------------------------------------------- */
+/*              left box-instructions how to use loyalty program              */
+/* -------------------------------------------------------------------------- */
+.box1 {
+  background-image: url(/images/nathan-dumlao-KixfBEdyp64-unsplash.jpg) ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-content: center;
+  justify-content: center;
+  
+  
+}
+
+
+
+.tim {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #7b8a7360;
+  /* opacity: 0.6; */
+  /*
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid black;
+  */
+  color: white; 
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.tom {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #e5e5e578;
+  /*
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid black;
+  */
+  color: white; 
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ali {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #7b8a7360;
+  /*
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid black;*/
+  color: white; 
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* -------------------------------------------------------------------------- */
+/*                              right side-form                               */
+/* -------------------------------------------------------------------------- */
+.box2 {
+  background-color: #B9CEAC;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+/* -------------------------------------------------------------------------- */
+/*                                    logo                                    */
+/* -------------------------------------------------------------------------- */
+
+.logo-lucifer{
+  
+  
+display: flex;
+align-items: center;
+justify-content: center;
+width: 100%;
+
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  form body                                 */
+/* -------------------------------------------------------------------------- */
+.form-inputs{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+/* -------------------------------------------------------------------------- */
+/*                                    login                                   */
+/* -------------------------------------------------------------------------- */
+.label-email-1{
+margin-right: 174%;
+}
+.input-email-1{
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 17px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  width: 200%;
+}
+
+
+.label-password-1{
+  margin-right: 155%;
+}
+.input-password-1{
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 17px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  width: 200%;
+}
+
+
+.login-btn-box{
+  width: 200%;
+}
+.button-login {
+  
+  background-color: black;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 17px;
+  cursor: pointer;
+  margin-right: 50%;
+}
+.button-join-1 {
+  background-color: white;
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 17px;
+  cursor: pointer;
+  
+}
+
+.forgot-password-link{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: small;
+  color: rgb(243, 6, 6);
+  margin-top: 35px;
+} 
+/* -------------------------------------------------------------------------- */
+/*                                  join now                                  */
+/* -------------------------------------------------------------------------- */
+
+
+.label-username{
+  margin-right: 77%;
+}
+
+.input-username{
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 17px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  width: 100%;
+
+}
+
+.label-email-2{
+  margin-right: 84%;
+}
+
+.input-email-2{
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 17px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.label-password-2{
+  margin-right: 74%;
+
+}
+.input-password-2{
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 17px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.button-join-2 {
+  background-color:black;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 17px;
+  cursor: pointer;
+  
+}
+
+.agreement-phrase{
+  font-size: small;
+}
+.termofservice-link{
+  color: red;
+  text-decoration: none;
+  font-size: small;
+}
+
+.privacy-link{
+  color: red;
+  text-decoration: none;
+  font-size: small;
+}
+  
+
+/* -------------------------------------------------------------------------- */
+/*                               forgot password                              */
+/* -------------------------------------------------------------------------- */
+.res-pass-phrase{
+  text-align: center;
+}
+
+.label-email-3{
+  margin-right: 172%;
+}
+
+.input-email-3{
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 17px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  width: 200%;
+}
+
+.forgotpass-btn-box{
+  width: 200%;
+}
+.button-cancel {
+  background-color: black;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 17px;
+  cursor: pointer;
+  margin-right: 50%;
+}
+
+.button-send {
+  background-color: white;
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 17px;
+  cursor: pointer;
+}
+
+.center-text{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              make new password                             */
+/* -------------------------------------------------------------------------- */
+
+.label-password-3{
+  margin-right: 74%;
+
+}
+.input-password-3{
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 17px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.label-password-4{
+  margin-right: 74%;
+
+}
+.input-password-4{
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 17px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.confirm{
+  text-align: center;
+  color: white;
+}
+.check-mark {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.terms{
+  margin-left: 24.55%;
+  font-size: small;
+}
+
+
+------------------- */
+
+
+/* -------------------------------------------------------------------------- */
+/*                                button-submit                               */
+/* -------------------------------------------------------------------------- */
+.button-submit {
+  background-color: black;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 17px;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                            button-back-to-login                            */
+/* -------------------------------------------------------------------------- */
+.button-back-to-login {
+  background-color: black;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 17px;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* -------------------------------------------------------------------------- */
+/*                                button-change                               */
+/* -------------------------------------------------------------------------- */
+.button-change {
+  background-color: black;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 17px;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* -------------------------------------------------------------------------- */
+/*                                button-hover-effect                         */
+/* -------------------------------------------------------------------------- */
+input[type=submit]:hover {
+  background-color: #D7B997;
+  color: rgb(15, 15, 15);
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                 Responsive                                 */
+/* -------------------------------------------------------------------------- */
+@media screen and (min-width: 800px) {
+  .contact-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                  user-opt                                  */
+/* -------------------------------------------------------------------------- */
+.text-secretcode{
+  margin-top: 40px;
+}
+
+.label-secretcode{
+  margin-right: 94%;
+  width: 100%;
+  margin-top: 40px;
+
+}
+.input-secretcode{
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 17px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  width: 200%;
+}

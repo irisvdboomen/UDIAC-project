@@ -15,8 +15,8 @@
 </head>
 <body>
     <header class="header">
-        <div class="logo" id="location"><a href="locations.html"><img src="images/location.png" alt=""></a></div>
-        <div class="logo" id="box"><a href="index.html"><img src="images/logo lucifer.png" alt="lucifer loyalty program logo"></a></div>
+        <div class="logo" id="location"><a href="locations.php"><img src="images/location.png" alt=""></a></div>
+        <div class="logo" id="box"><a href="index.php"><img src="images/logo lucifer.png" alt="lucifer loyalty program logo"></a></div>
         <div class="logo" id="box"></div>
     </header>
     <nav class="navbar">
@@ -25,14 +25,14 @@
             <label for="checkbox_toggle" class="hamburger">&#9776;</label>            
             <div class="menu" id="mobile">
                 <div class="mobile">
-                <li class="left" id="selected"><a href="index.html">Home</a></li>
-                <li class="left"><a href="rewards.html">Rewards</a></li>
+                <li class="left" id="selected"><a href="index.php">Home</a></li>
+                <li class="left"><a href="rewards.php">Rewards</a></li>
                 <li class="left"><a href="#">Challenges</a></li>
                 <li class="left"><a href="#">Sponsors</a></li>
                 <li class="left"><a href="#">Contact us</a></li>
-                <li class="right"><a href="profile.html">Profile</a></li>
-                <li class="right-mobile"><a href="profile.html"><img src="images/user.png" alt="" ></a></li>
-                <li class="right-mobile" id="points"><a href="profile.html">12<img src="images/matchstick-lucifer.png" alt="" ></a></li>
+                <li class="right"><a href="profile.php">Profile</a></li>
+                <li class="right-mobile"><a href="profile.php"><img src="images/user.png" alt="" ></a></li>
+                <li class="right-mobile" id="points"><a href="profile.php">12<img src="images/matchstick-lucifer.png" alt="" ></a></li>
                 </div>
             </div>
         </ul>
@@ -62,21 +62,21 @@
             <div class="right-part-footer">
                 <div class="page-links">
                     <div class="all-links">
-                        <a href="index.html">Homepage</a> 
+                        <a href="index.php">Homepage</a> 
                         <p><a href="#">Contact us</a>
-                            <a href="locations.html">Locations</a>    
-                            <a href="rewards.html">Rewards</a>
+                            <a href="locations.php">Locations</a>    
+                            <a href="rewards.php">Rewards</a>
                         <a href="#">Challenges</a>
                         <a href="#">Sponsor</a></p>
                     </div>
                     <!-- mobile version -->
                     <div class="three-links">
-                        <p><a href="index.html">Homepage</a></p>
+                        <p><a href="index.php">Homepage</a></p>
                         <p><a href="#">Contact us</a></p>
                         <p><a href="#">Locations</a></p>
                     </div>
                     <div class="three-links">
-                        <p><a href="rewards.html">Rewards</a></p>
+                        <p><a href="rewards.php">Rewards</a></p>
                         <p><a href="#">Challenges</a></p>
                         <p><a href="#">Sponsor</a></p>
                     </div>

@@ -1,3 +1,29 @@
+<?php  
+session_start();
+include("conection.php");
+include("checkPoints.php");
+?>
+<?php
+$email = $_SESSION['email'];
+$password = $_SESSION['password'];
+if($email != false && $password != false){
+    $sql = "SELECT * FROM customer WHERE email = '$email'";
+    $run_Sql = mysqli_query($db_connection, $sql);
+    if($run_Sql){
+        $fetch_info = mysqli_fetch_assoc($run_Sql);
+        $code = $fetch_info['code'];
+            if($code != 0){
+                header('Location: code-verification.php');
+            }
+        //else{
+         //   header('Location: user-otp.php');
+       // }
+    }
+}else{
+    header('Location: login.php');
+    
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +31,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>one month free subscription</title>
+    <title>10% discount on coffee beans</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -21,15 +47,16 @@
 <body>
     <header class="header">
         <div class="logo" id="location">
-            <a href="locations.html">
+            <a href="locations.php">
                 <img src="images/location.png" alt="">
             </a>
-            <a href="locations.html" class="store_locator_text">Store locator</a>
+            <a href="locations.php" class="store_locator_text">Store locator</a>
         </div>
         <div class="logo" id="box">
-            <a href="index.html"><img src="images/logo lucifer.png" alt="lucifer loyalty program logo"></a>
+            <a href="index.php"><img src="images/logo lucifer.png" alt="lucifer loyalty program logo"></a>
         </div>
         <div class="logo" id="box"></div>
+    </header>
     </header>
     <nav class="navbar">
         <ul>
@@ -37,17 +64,17 @@
             <label for="checkbox_toggle" class="hamburger">&#9776;</label>
             <div class="menu" id="mobile">
                 <div class="mobile">
-                    <li class="left" id="selected"><a href="index.html">Home</a></li>
-                    <li class="left"><a href="rewards.html">Rewards</a></li>
-                    <li class="left"><a href="challenge.html">Challenges</a></li>
-                    <li class="left"><a href="sponsor.html">Sponsors</a></li>
-                    <li class="left"><a href="contact.html">Contact us</a></li>
-                    <li class="right"><a href="profile.html">Profile</a></li>
+                    <li class="left" id="selected"><a href="index.php">Home</a></li>
+                    <li class="left"><a href="rewards.php">Rewards</a></li>
+                    <li class="left"><a href="challenge.php">Challenges</a></li>
+                    <li class="left"><a href="sponsor.php">Sponsors</a></li>
+                    <li class="left"><a href="contact.php">Contact us</a></li>
+                    <li class="right"><a href="profile.php">Profile</a></li>
                     <!-- desktop version -->
                     <li class="right-mobile">
-                        <a href="profile.html"><img src="images/user.png" alt=""></a>
+                        <a href="profile.php"><img src="images/user.png" alt=""></a>
                     </li>
-                    <li class="right-mobile" id="points"><a href="profile.html">12<img src="images/matchstick-lucifer.png" alt="" ></a></li>
+                    <li class="right-mobile" id="points"><a href="profile.php">12<img src="images/matchstick-lucifer.png" alt="" ></a></li>
                 </div>
             </div>
         </ul>
@@ -58,11 +85,11 @@
     </div>
     <div class="reward-box">
         <div class="image-reward-box">
-            <img src="images/one-month-free.png" alt="one-month-free">
+            <img src="images/coffee-beans-bag.png" alt="discount-coffee-beans">
         </div>
         <div class="text-reward-box">
-            <div class="title-reward">one month free subscription</div>
-            <div class="other-text-reward-box">Spend 100 match sticks to use this reward anytime you want. When using this reward you can get one month free subscription on coffee beans. <br>Click the button below to confirm that you want to spend your points on this.</div>
+            <div class="title-reward">10% discount on coffee beans</div>
+            <div class="other-text-reward-box">Spend 20 match sticks to use this reward anytime you want. When using this reward you can get a 10% discount on coffee beans. <br>Click the button below to confirm that you want to spend your points on this.</div>
             <div id="popUpOverlay"></div>
             <div id="popUpBox">
                 <div class="text-popUpBox">
@@ -79,7 +106,7 @@
             <button onclick="Alert.render()" class="btn">Use points</button>
             <br>
             <br>
-            <a href="rewards.html">Go back to rewards</a>
+            <a href="rewards.php">Go back to rewards</a>
         </div>
     </div>
     <footer>
@@ -104,28 +131,28 @@
             <div class="right-part-footer">
                 <div class="page-links">
                     <div class="all-links">
-                        <a href="index.html">Homepage
+                        <a href="index.php">Homepage
                             <span class="border border-top"></span>
       <span class="border border-right"></span>
       <span class="border border-bottom"></span>
       <span class="border border-left"></span>
                         </a>
-                        <p><a href="contact.html">Contact us</a>
-                            <a href="locations.html">Locations</a>
-                            <a href="rewards.html">Rewards</a>
-                            <a href="challenge.html">Challenges</a>
-                            <a href="sponsor.html">Sponsor</a></p>
+                        <p><a href="contact.php">Contact us</a>
+                            <a href="locations.php">Locations</a>
+                            <a href="rewards.php">Rewards</a>
+                            <a href="challenge.php">Challenges</a>
+                            <a href="sponsor.php">Sponsor</a></p>
                     </div>
                     <!-- mobile version -->
                     <div class="three-links">
-                        <p><a href="index.html">Homepage</a></p>
-                        <p><a href="contact.html">Contact us</a></p>
-                        <p><a href="locations.html">Locations</a></p>
+                        <p><a href="index.php">Homepage</a></p>
+                        <p><a href="contact.php">Contact us</a></p>
+                        <p><a href="locations.php">Locations</a></p>
                     </div>
                     <div class="three-links">
-                        <p><a href="rewards.html">Rewards</a></p>
-                        <p><a href="challenge.html">Challenges</a></p>
-                        <p><a href="sponsor.html">Sponsor</a></p>
+                        <p><a href="rewards.php">Rewards</a></p>
+                        <p><a href="challenge.php">Challenges</a></p>
+                        <p><a href="sponsor.<i class="fas fa-pencil-paintbrush    "></i>">Sponsor</a></p>
                     </div>
                     <div class="social-media">
                         <img class="facebook" src="images/facebook.png" alt="facebook">
