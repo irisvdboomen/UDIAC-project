@@ -6,9 +6,9 @@ if(isset($_POST['but_submit'])){
   $email = mysqli_real_escape_string($db_connection, $_POST['email']);
   $password = mysqli_real_escape_string($db_connection, $_POST['password']);
   $check_email = "SELECT * FROM customer WHERE email = '$email'";
-  $res = mysqli_query($db_connection, $check_email);
-  if(mysqli_num_rows($res) > 0){
-      $fetch = mysqli_fetch_assoc($res);
+  $results = mysqli_query($db_connection, $check_email);
+  if(mysqli_num_rows($results) > 0){
+      $fetch = mysqli_fetch_assoc($results);
       $fetch_pass = $fetch['password'];
       if(password_verify($password, $fetch_pass)){
             $_SESSION['email'] = $email;
@@ -23,10 +23,11 @@ if(isset($_POST['but_submit'])){
               //header('location: user-otp.php');
           }
       else{
-          $massage_failed= "Incorrect email or password!";
+        $massageNotMatch =  "Your password or email address do not match.";
+       
       }
   }else{
-      $massage_notmember =  "It's look like you're not yet a member! Click on the bottom link to signup.";
+      $massageNotMember =  "It looks like you're not a member yet! Click on the join now button.";
   }
 }
 ?>
@@ -50,15 +51,14 @@ if(isset($_POST['but_submit'])){
       <div class="box1">
         <div class="tim">
           <p class="text">Collect matchsticks by<br>
-            putting in the code from
-            the receipt</p>
+            scanning the NFC tag</p>
           <img class ="icons-step"src="../images/icon-bean.png" alt="">
 
         </div>
 
         <div class="tom">
           <img class ="icons-step" src="../images/icon-scoop.png" alt=""><br>
-          <p class="text">collect matches and sprend <br> them on rewards</p>
+          <p class="text">collect matches and spend <br> them on rewards</p>
         </div>
 
         <div class="ali">
@@ -70,8 +70,8 @@ if(isset($_POST['but_submit'])){
       
       <img class="logo-lucifer" src="../images/logo lucifer.png" alt="" onclick="location.href='index.php'">
       
-      <?php echo "<p style= 'color:red'  >$massage_failed</p>" ;?><br>
-      <?php echo "<p style= 'color:red'  >$massage_notmember</p>" ;?><br>
+      <?php echo "<p style= 'color:red'  >$massageNotMatch</p>" ;?><br>
+      <?php echo "<p style= 'color:red'  >$massageNotMember</p>" ;?><br>
       <form class="form-inputs"  action="" method="post" id>
         <!--email-->
         <label class="label-email-1" for="email">email</label>

@@ -1,13 +1,6 @@
 <?php
-// Report simple running errors
 include("conection.php");
-
-// Check connection
-//if ($db_conection->connect_error) {
- // die("Connection failed: " . $db_conection->connect_error);
-//}
-//echo "Connected successfully";
-//password_hash($_POST["password"],PASSWORD_BCRYPT))
+include("checkLogin");
 if($_POST["submit_customer"]!= ""){ 
   $code=0; 
  $password = mysqli_real_escape_string($db_connection, $_POST['password']);
@@ -20,15 +13,37 @@ if($_POST["submit_customer"]!= ""){
     $encpass = password_hash($password, PASSWORD_BCRYPT);
     $sql="insert into customer set lastName = '".mysqli_real_escape_string($db_connection,$_POST["lastName"])."',email= '".mysqli_real_escape_string($db_connection,$_POST["email"])."',
      password = '$encpass',code='$code ' ";
-     
-    mysqli_query($db_connection,$sql);
-    $_SESSION['email'] = $email;
-    header("Location: login.php");
-    die();
+    $connectPoints=mysqli_query($db_connection,$sql);
+    //conecting points table to the customer table
+    if($connectPoints){
+      $sqlCustomer="select customerID from customer where email= '".mysqli_real_escape_string($db_connection,$_POST["email"])."'";
+      $res= mysqli_query($db_connection,$sqlCustomer);
+      if(mysqli_num_rows($res)>0){
+      $fetch = mysqli_fetch_assoc($res);
+      $_SESSION['customerID'] = $fetch['customerID'];
+      $customerID =$_SESSION['customerID'];
+      $sqlPoints="insert into points set activePoints='0', usedPoints ='0' , customerID= '$customerID'";
+      $sqlSanReward="insert into rewards set rewardName='Free sandwich', status ='0' , customerID= '$customerID'";
+      $sqlBeerReward="insert into rewards set rewardName='Free beer', status ='0' , customerID= '$customerID'";
+      $sqlCoffReward="insert into rewards set rewardName='Free coffee', status ='0' , customerID= '$customerID'";
+      $sqlNewsletter="insert into newsletter set subscription=True,customerID= '$customerID'";
+      mysqli_query($db_connection,$sqlNewsletter);  
+      mysqli_query($db_connection,$sqlPoints);  
+      mysqli_query($db_connection,$sqlSanReward);  
+      mysqli_query($db_connection,$sqlBeerReward);  
+      mysqli_query($db_connection,$sqlCoffReward);  
+     $_SESSION['email'] = $email;
+    header("Location: link-sent-succ.php");
+    $_SESSION['submit_customer'] = true;
+  }
+    }
+
   } else{
+    $userexist=  "This email already exixst";
+     
     header("Location: login.php");
     die();
-    $userexist=  "the user already exixst";
+    
   }
 }
 }
@@ -52,14 +67,13 @@ if($_POST["submit_customer"]!= ""){
       <div class="box1">
         <div class="tim">
           <p class="text">Collect matchsticks by<br>
-            putting in the code from
-            the receipt</p>
+            scanning the NFC tag</p>
           <img class ="icons-step"src="../images/icon-bean.png" alt="">
 
         </div>
         <div class="tom">
           <img class ="icons-step" src="../images/icon-scoop.png" alt=""><br>
-          <p class="text">collect matches and sprend <br> them on rewards</p>
+          <p class="text">collect matches and spend <br> them on rewards</p>
         </div>
         <div class="ali">
           <p class="text">Go to your profile page and <br>show the

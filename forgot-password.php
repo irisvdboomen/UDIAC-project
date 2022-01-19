@@ -1,62 +1,6 @@
 <?php
 include("conection.php");
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-use PHPMailer\PHPMailer\SMTP;
-
-require "phpmailer/Exception.php";
-require "phpmailer/PHPMailer.php";
-require "phpmailer/SMTP.php";
-    if(isset($_POST['but_forget'])){
-      $email = mysqli_real_escape_string($db_connection, $_POST['email']);
-      $check_email = "SELECT * FROM customer WHERE email='$email'";
-      $run_sql = mysqli_query($db_connection, $check_email);
-      if(mysqli_num_rows($run_sql) > 0){
-          $code = rand(999999, 111111);
-          $insert_code = "UPDATE customer SET code = $code WHERE email = '$email'";
-          $run_query =  mysqli_query($db_connection, $insert_code);
-          if($run_query){
-            $your_pcn="450256"; //Fill in your PCN number (6 numbers)
-            $your_name="Loyalties of Lucifer"; //Fill in your name
-            $recipient_emailaddress="$email"; //Fill in the emailaddress of the recipient
-            $recipient_name="Dear Customer"; //Fill in the name of the recipient
-            $subject="Password Reset Code"; //Fill in the subject
-            $html_body="Your password reset code is $code"; //Fill in the HTML content
-            $text_body="Your password reset code is $code"; //Fill in the textual content
-            
-            //Actual sending of the mail
-            $mail=new PHPMailer();
-            $mail->SMTPOptions = array(
-                'ssl' => array(
-                    'verify_peer' => false,
-                    'verify_peer_name' => false,
-                    'allow_self_signed' => true
-                )
-            );
-            $mail->isSMTP();
-            $mail->Host="mailrelay.fhict.local";
-            $mail->Port=25;    
-            $mail->SMTPAuth=false;
-            $mail->setFrom("i".$your_pcn."@hera.fhict.nl",$your_name); //PUT YOUR I-account number here
-            $mail->addReplyTo("i".$your_pcn."@hera.fhict.nl",$your_name);
-            $mail->addAddress($recipient_emailaddress,$recipient_name);
-            $mail->Subject=$subject;
-            $mail->isHTML(true);                                  
-            $mail->Body=$html_body;
-            $mail->AltBody=$text_body;
-            if(!$mail->send()){
-                //Do something when the message is not send
-                echo 'Mailer Error: ' . $mail->ErrorInfo; //UNCOMMENT FOR DEBUG
-            } else {
-              header('location:link-sent-succ.php');
-                //Do something when the message is send!
-                echo 'Message sent!'; //UNCOMMENT FOR DEBUG
-                exit();
-            }
-          }
-      }
-    }
-
+include("mailForgetPass.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -77,19 +21,20 @@ require "phpmailer/SMTP.php";
     <div class="contact-info">
       <div class="box1">
         <div class="tim">
-          <p class="text">Collect matches by scanning QR code from the receipt</p>
-          <img src="images/icon-bean.png" alt="">
+        <p class="text">Collect matchsticks by<br>
+            scanning the NFC tag</p>
+          <img class ="icons-step" src="images/icon-bean.png" alt="">
 
         </div>
 
         <div class="tom">
-          <img src="images/icon-scoop.png" alt=""><br>
-          <p class="text">collect matches and sprend them on rewards</p>
+          <img class ="icons-step" src="images/icon-scoop.png" alt=""><br>
+          <p class="text">collect matches and spend <br> them on rewards</p>
         </div>
 
         <div class="ali">
-          <p class="text">Go to your profile page and show the
-            claimed rewards to our barista</p><img src="images/icon-cup.png" alt="">
+        <p class="text">Go to your profile page and <br>show the
+            claimed rewards <br>to our barista</p><img class ="icons-step" src="images/icon-cup.png" alt="">
         </div>
         <?php
         if(count($errors) > 0){
@@ -111,9 +56,10 @@ require "phpmailer/SMTP.php";
       <div class="logo-lucifer-box">
       <img class="logo-lucifer" src="images/logo lucifer.png" alt="" onclick="location.href='index.php'">
       </div>
-      
+      <br>
+      <?php echo "<p style= 'color:red' >$massage_login</p>" ;?><br>
       <!--reset password instructions-->
-        <br><br><p class="">Enter your registered email</p><br>
+        <br><p class="">Enter your email</p><br>
         <p class="">We will send you a code to reset your password.</p>
         
 
@@ -128,7 +74,7 @@ require "phpmailer/SMTP.php";
           <!--btn cancel-->
           <input class="button-cancel" type="submit" value="cancel" onclick="location.href='login.php'">
           <!--btn send-->
-          <input class="button-send" type="submit" value="send" onclick="location.href='link-sent-succ.php'" name = "but_forget">
+          <input class="button-send" type="submit" value="send" name = "but_forget">
         </div>
 
         </form>

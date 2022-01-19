@@ -1,29 +1,8 @@
 <?php  
-session_start();
 include("conection.php");
-//include("checkPoints.php");
-?>
-<?php
-$email = $_SESSION['email'];
-$password = $_SESSION['password'];
-$lastName = $_SESSION['lastName'];
-if($email != false && $password != false){
-    $sql = "SELECT * FROM customer WHERE email = '$email'";
-    $run_Sql = mysqli_query($db_connection, $sql);
-    if($run_Sql){
-        $fetch_info = mysqli_fetch_assoc($run_Sql);
-        $code = $fetch_info['code'];
-            if($code != 0){
-                header('Location: code-verification.php');
-            }
-        //else{
-         //   header('Location: user-otp.php');
-       // }
-    }
-}else{
-    header('Location: login.php');
-    
-}
+include("checkPoints.php");
+include("checkLogin.php");
+include("checkOneTimeReward.php");
 ?>
 
 <!DOCTYPE html>
@@ -45,6 +24,7 @@ if($email != false && $password != false){
     <link rel="stylesheet" href="css/footer-style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
     <!-- Icons footer-->
 </head>
 
@@ -63,9 +43,13 @@ if($email != false && $password != false){
         <div class="logo" id="box"></div>
     </header>
     <nav class="navbar">
-        <ul>
+        <ul class="navbar-mobile">
             <input type="checkbox" id="checkbox_toggle" />
             <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+            <div class="points-mobile">
+                <p><?php echo "$messageActivePoints";?></p>
+                <img src="images/matchstick-lucifer.png" alt="points">
+            </div>  
             <div class="menu" id="mobile">
                 <div class="mobile">
                     <li class="left"><a href="index.php">Home</a></li>
@@ -77,7 +61,7 @@ if($email != false && $password != false){
                     <li class="right-mobile">
                         <a href="profile.php"><img src="images/user.png" alt=""></a>
                     </li>
-                    <li class="right-mobile" id="points"><a href="profile.php">12<img
+                    <li class="right-mobile" id="points"><a href="profile.php"><?php echo $messageActivePoints;?><img
                                     src="images/matchstick-lucifer.png" alt=""></a></li>
                     <!-- <li class="right-mobile">13</li> -->
                 </div>
@@ -98,16 +82,18 @@ if($email != false && $password != false){
             <div class="text-first-content">
                 <br>
                 <p>Name: <?php echo "$lastName" ;?></p>
-                <p>email: user@gmail.com</p>
+                <p>email: <?php echo "$email" ;?></p>
+                <p>Used Points: <?php echo "$usedPoints" ;?></p>
                 <br>
-                <p class="logout">
-                    <a href="#">Logout</a>
-                </p>
+                <button class="logout" onclick="window.location.href='logout.php';">
+                 Log out
+                </button>
+
             </div>
         </div>
         <div class="first-content" id="matchstick">
             <img src="images/matchstick-lucifer.png" alt="">
-            <p>Collected: ...</p>
+            <p>Collected: <?php echo "$activePoints";?></p>
         </div>
     </div>
 
@@ -138,47 +124,59 @@ if($email != false && $password != false){
             </div>
         </div>
     </div>
-
-    <div class="title-claim-reward">Claimed rewards:</div>
+    <?php if($statusSan == 0 && $statusCoff == 0 && $statusBeer == 0): ?> 
+    <div class="title-claim-reward">Claimed rewards:</div> <?php endif;?>
     <div class="claimed-rewards">
-        <div class="rewards-1">
-            <!-- 1 -->
-            <div id="myDIV" class="mystyle">
-                <div class="one-reward">
-                    <div class="box">
-                        <img src="images/sandwich.png" alt="random">
-                    </div>
-                    <div class="box-under-box">
-                        <div class="box-text-left">
-                            <div class="box-title">
-                                <p>Free sandwich</p>
+        <?php
+        if( $statusSan == 0) : ?> 
+        
+        
+
+                <div class="rewards-1">
+                    <!-- 1 -->
+                    <div id="myDIV" class="mystyle">
+                        <div class="one-reward">
+                            <div class="box">
+                                <img src="images/sandwich.png" alt="random">
                             </div>
-                        </div>
-                        <div class="box-text-right">
-                            <!--modal 1 start-->
-                            <div id="popUpBox">
-                                <div id="app"></div>
-                                <div class="text-popUpBox box1">
-                                    <p class="success"> Would you like to activate your reward for a free sandwitch?
-                                    </p>
-                                    <p class="success"> |You can only use once|
-                                    </p>
-                                    <!-- <img src="images/checkbox.png" alt=""> -->
-                                    <div class="buttons-popup">
-                                        <div id="closeModal-close">
-                                            <button onclick="Alert.ok(this)">Close</button>
-                                            <button class="confirm-1">Confirm</button>
-                                        </div>
+                            <div class="box-under-box">
+                                <div class="box-text-left">
+                                    <div class="box-title">
+                                        <p>Free sandwich</p>
                                     </div>
                                 </div>
+                                <div class="box-text-right">
+                                    <!--modal 1 start-->
+                                    <div id="popUpBox">
+                                        <div id="app"></div>
+                                        <div class="text-popUpBox box1">
+                                            <p class="success"> Would you like to activate your reward for a free sandwitch?
+                                            </p>
+                                            <p class="success"> |You can only use once|
+                                            </p>
+                                            <!-- <img src="images/checkbox.png" alt=""> -->
+                                            <div class="buttons-popup">
+                                                <div id="closeModal-close">
+                                                    <button onclick="Alert.ok(this)">Close</button>
+                                                   <form action="" method="post">
+                                                    <button class="confirm-1" name ="">Confirm</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--modal 1 end-->
+                                
+                                    <button onclick="Alert.render(this)" class="btn" >Use reward</button>
+                                
+
+                                </div>
                             </div>
-                            <!--modal 1 end-->
-                            <button onclick="Alert.render(this)" class="btn">Use reward</button>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
+                </div>  
+            <?php endif;?>
+           <?php if( $statusBeer == 0) : ?> 
         <div class="rewards-2">
             <!-- 1 -->
             <div id="myDIV" class="mystyle">
@@ -214,8 +212,10 @@ if($email != false && $password != false){
                 </div>
             </div>
         </div>
+        <?php endif;?>
+        <?php if( $statusCoff == 0) : ?> 
         <div class="rewards-3">
-            <!-- 1 -->
+            <!-- 1 --> 
             <div id="myDIV" class="mystyle">
                 <div class="one-reward">
                     <div class="box">
@@ -251,6 +251,7 @@ if($email != false && $password != false){
             </div>
         </div>
     </div>
+    <?php endif;?>
     <!-- beginning of footer -->
     <footer>
         <div class="both">
@@ -298,9 +299,9 @@ if($email != false && $password != false){
                         <p><a href="sponsor.php">Sponsor</a></p>
                     </div>
                     <div class="social-media">
-                        <img class="facebook" src="images/facebook.png" alt="facebook">
-                        <img class="instagram" src="images/instagram.png" alt="instagram">
-                        <img class="in" src="images/in.png" alt="in">
+                        <a href="https://www.facebook.com/lucifercoffeeroasters" target="_blank"><img class="facebook" src="images/facebook.png" alt="facebook"></a>
+                        <a href="https://www.instagram.com/lucifer.coffee.roasters/" target="_blank"><img class="instagram" src="images/instagram.png" alt="instagram"></a>
+                        <a href="https://nl.linkedin.com/company/lucifer-coffee-roasters" target="_blank"><img class="linkedin" src="images/in.png" alt="linkedin"></a>
                     </div>
                 </div>
                 <div class="copyright">
@@ -313,6 +314,7 @@ if($email != false && $password != false){
 </body>
 
 <script src="./js/pop-up-reward.js"></script>
-<script src="./js/countdown.js"></script>
+
+<script src='./js/countdown.js'></script>
 
 </html>

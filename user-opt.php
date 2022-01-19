@@ -14,7 +14,7 @@ if(isset($_POST['confirm_code'])){
         header('location: make-new-password.php');
         exit();
     }else{
-        $massage_failed=  "You've entered incorrect code!";
+        $massage_failed=  "You've entered an incorrect code!";
     }
 }
 ?>
@@ -37,19 +37,20 @@ if(isset($_POST['confirm_code'])){
     <div class="contact-info">
       <div class="box1">
         <div class="tim">
-          <p class="text">Collect matches by scanning QR code from the receipt</p>
-          <img src="images/icon-bean.png" alt="">
+        <p class="text">Collect matchsticks by<br>
+            scanning the NFC tag</p>
+          <img class ="icons-step" src="images/icon-bean.png" alt="">
 
         </div>
 
         <div class="tom">
-          <img src="images/icon-scoop.png" alt=""><br>
-          <p class="text">collect matches and sprend them on rewards</p>
+          <img class ="icons-step"src="images/icon-scoop.png" alt=""><br>
+          <p class="text">collect matches and spend <br> them on rewards</p>
         </div>
 
         <div class="ali">
-          <p class="text">Go to your profile page and show the
-            claimed rewards to our barista</p><img src="images/icon-cup.png" alt="">
+        <p class="text">Go to your profile page and <br>show the
+            claimed rewards <br>to our barista</p><img class ="icons-step" src="images/icon-cup.png" alt="">
         </div>
 
             <div class="alert alert-danger text-center">
@@ -62,8 +63,10 @@ if(isset($_POST['confirm_code'])){
       <img class="logo-lucifer" src="images/logo lucifer.png" alt="" onclick="location.href='index.php'">
       <?php echo "<p style= 'color:red'  >$massage_failed</p>" ;?><br>
         
-        
-        <p class="text-secretcode">enter your code we sent it to your email address.</p>
+      <p class="center-text">code send successfully</p>
+        <br>
+<p class="center-textt">If you can not find your code vertification email in your normal inbox, it is worth checking in your spam or junk mail section.</p>
+        <p class="text-secretcode">enter the code we sent to your email address.</p>
       
         <form class="form-inputs" action="" method="post">
           <label class="label-secretcode" for="email">Code</label>

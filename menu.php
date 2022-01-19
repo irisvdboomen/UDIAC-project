@@ -1,5 +1,6 @@
 <?php
 include("conection.php");
+include("checkPoints.php");
 
 if(isset($_POST["submit_menu"])){
   $customerID=mysqli_real_escape_string($db_connection,$_POST["customerID"]);
@@ -11,14 +12,30 @@ if(isset($_POST["submit_menu"])){
   $points = mysqli_real_escape_string($db_connection,$_POST["points"]);
   $productPrice = mysqli_real_escape_string($db_connection,$_POST["productPrice"]);
   if(mysqli_num_rows($res) > 0) {
-    $sql= "insert into `order` (locationName,customerID ) values ('$locationName','$customerID');";
-    $sql.="insert into `product` (productName,productType, points,price) values ('$productName','$productType','$points','$productPrice');";
-    $result = mysqli_multi_query($db_connection, $sql);
-    var_dump($sql);
-echo "customer is correct";
+    $sqlOrder= "insert into `order` (locationName,customerID ) values ('$locationName','$customerID');";
+    $sqlProduct="insert into `product` (productName,productType,price) values ('$productName','$productType','$productPrice');";
+    $sql = "SELECT  *
+    FROM points 
+    where customerID = '$customerID'";
+    
+  $result=mysqli_query($db_connection, $sql);
+
+ $row = mysqli_fetch_assoc($result);
+ $activePoints = $row["activePoints"];
+    $newPoints = $activePoints + $points;
+    $update_points = "UPDATE points SET activePoints = $newPoints WHERE customerID = $customerID";
+    $results = mysqli_query($db_connection, $update_points);
+    mysqli_query($db_connection, $sqlOrder);
+    mysqli_query($db_connection, $sqlProduct);
+
+
+      echo "<script> alert('Points added successfully!');</script>";
+
   }else{
-    echo "the customer needs to create an acount";
+
+    echo "<script> alert('The customer needs to create an account');</script>";
   }
+
 }
 ?>
 <!DOCTYPE html>
@@ -41,10 +58,13 @@ echo "customer is correct";
         <div class="contact-form">
           <br>
           <br>
-          <img class="menu-logo" src="images/logo lucifer.png" alt="" onclick="location.href='login.html'">
+          <img class="menu-logo m" src="images/logo lucifer.png" alt="" onclick="location.href='login.html'">
+          <p>
+            <button class="bt" onclick="readTag()">Test NFC Read</button>
+          </p>
         </div>
-
         <form action="" method="post">
+          
 
           <label class="label-form" for="customerID">Customer</label>
           <input required type="text" id="customerID" placeholder="Customer ID" name="customerID">
@@ -52,12 +72,19 @@ echo "customer is correct";
           <label class="label-form" for="lucifer-locations">choose location</label>
           <select  id="lucifer-locations"  name="LocationName">
 
-           <option value="kennedyplein 103">kennedyplein</option>
-          <option value="Kleine Berg 47">Little Mountai</option>
+           <option value="kennedyplein 103">Kennedyplein</option>
+          <option value="Kleine Berg 47">Kleine Berg</option>
         </select>
 
-        <label class="label-form" for="product-name">pruduct name</label>
-          <input required type="text" id="product-name" placeholder="fill in your product name" name="productName">
+        <label class="label-form" for="product-name"  >Product name</label>
+          <select  id="product-type" id="product-type" name="productName" >
+
+           <option value="Espresso">Espresso</option>
+          <option value="Latte">Latte</option>
+          <option value="Donuts">Donuts</option>
+          <option value="Croissant">Croissant</option>
+        </select>
+
 
           <label class="label-form" for="product type">product type</label>
           <select  id="product-type"  name="productType">
@@ -72,13 +99,9 @@ echo "customer is correct";
 
         <label class="label-form" for="pruduct-price">product price</label>
         <input required type="text" id="product-price" placeholder="price of pruduct" name="productPrice">
-          
+          <br>
           <input class="button-join-2" type="submit" value="submit" name = "submit_menu">
         </form>
-        <p>
-            <button onclick="readTag()">Test NFC Read</button>
-            <button onclick="writeTag()">Test NFC Write</button>
-          </p>
           <pre id="log"></pre>
           
     </div>

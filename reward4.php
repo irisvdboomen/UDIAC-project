@@ -1,27 +1,23 @@
 <?php  
-session_start();
 include("conection.php");
-//include("checkPoints.php");
+include("checkPoints.php");
+include("checkLogin.php");
 ?>
 <?php
-$email = $_SESSION['email'];
-$password = $_SESSION['password'];
-if($email != false && $password != false){
-    $sql = "SELECT * FROM customer WHERE email = '$email'";
-    $run_Sql = mysqli_query($db_connection, $sql);
-    if($run_Sql){
-        $fetch_info = mysqli_fetch_assoc($run_Sql);
-        $code = $fetch_info['code'];
-            if($code != 0){
-                header('Location: code-verification.php');
-            }
-        //else{
-         //   header('Location: user-otp.php');
-       // }
-    }
+if(isset($_POST['btn_use_points'])){
+            $points = 30;
+    if($activePoints >= $points){
+
+            $customerID=$_SESSION['customerID'];
+            $newPoints = $activePoints - $points;
+            $newUsedPoints =  $usedPoints + $points;
+            $update_points = "UPDATE points SET activePoints = $newPoints, usedPoints = '$newUsedPoints' WHERE customerID = '$customerID'";
+            $run_query = mysqli_query($db_connection, $update_points);
+            $_SESSION["btn_use_points"]=true;
+            header("Location: reward4.php?reward=granded");
 }else{
-    header('Location: login.php');
-    
+    echo "<script> alert('You do not have enough points to claim this reward!');</script>";
+}
 }
 ?>
 <!DOCTYPE html>
@@ -41,6 +37,7 @@ if($email != false && $password != false){
     <link rel="stylesheet" href="css/one-reward-style.css">
     <link rel="stylesheet" href="css/footer-style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="/js/pop-up-reward.js"></script>
     <!-- Icons footer-->
 </head>
 
@@ -58,9 +55,13 @@ if($email != false && $password != false){
         <div class="logo" id="box"></div>
     </header>
     <nav class="navbar">
-        <ul>
-            <input type="checkbox" id="checkbox_toggle" />
+    <ul class="navbar-mobile">
+        <input type="checkbox" id="checkbox_toggle"/>
             <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+                <div class="points-mobile">
+                    <p><?php echo "$messageActivePoints";?></p>
+                    <img src="images/matchstick-lucifer.png" alt="points">
+                </div>            
             <div class="menu" id="mobile">
                 <div class="mobile">
                     <li class="left" id="selected"><a href="index.php">Home</a></li>
@@ -73,14 +74,14 @@ if($email != false && $password != false){
                     <li class="right-mobile">
                         <a href="profile.php"><img src="images/user.png" alt=""></a>
                     </li>
-                    <li class="right-mobile" id="points"><a href="profile.php">12<img src="images/matchstick-lucifer.png" alt="" ></a></li>
+                    <li class="right-mobile" id="points"><a href="profile.php"><?php echo "$messageActivePoints";?><img src="images/matchstick-lucifer.png" alt="" ></a></li>
                 </div>
             </div>
         </ul>
     </nav>
     <div class="hero">
         <p class="hero-text">Rewards</p>
-        <img src="images/rewards-hero.png" alt="hero-image">
+        <img src="images/rewards-hero.jpeg" alt="hero-image">
     </div>
     <div class="reward-box">
         <div class="image-reward-box">
@@ -96,13 +97,18 @@ if($email != false && $password != false){
                     <img src="images/checkbox.png" alt="">
                     <div class="buttons-popup">
                         <div id="closeModal-close">
-                            <button onclick="Alert.ok()">Close</button>
+                            <button onclick="Alert.ok(this)">Close</button>
                         </div>
                     </div>
                     <p>Visit profile page to use reward</p>
                 </div>
             </div>
-            <button onclick="Alert.render()" class="btn">Use points</button>
+            <form action ="" method="post">
+            <button type = "submit" name = "btn_use_points" onclick="Alert.render(this)" class="btn">Use points</button>
+             </form>
+             <?php if($_GET["reward"]=="granded"){
+             echo "<script>Alert.render(document.querySelector('form'))</script>";
+            } ?>
             <br>
             <br>
             <a href="rewards.php">Go back to rewards</a>
@@ -122,7 +128,6 @@ if($email != false && $password != false){
                         <i class="material-icons">email</i><a href="mailto:loyaltiesoflucifer@gmail.com">loyaltiesoflucifer@gmail.com</a>
                     </div>
                 </div>
-
             </div>
             <div class="middle_part">
                 <img class="footer_line" src="/images/line_17.png">
@@ -132,9 +137,9 @@ if($email != false && $password != false){
                     <div class="all-links">
                         <a href="index.php">Homepage
                             <span class="border border-top"></span>
-      <span class="border border-right"></span>
-      <span class="border border-bottom"></span>
-      <span class="border border-left"></span>
+                            <span class="border border-right"></span>
+                            <span class="border border-bottom"></span>
+                            <span class="border border-left"></span>
                         </a>
                         <p><a href="contact.php">Contact us</a>
                             <a href="locations.php">Locations</a>
@@ -154,9 +159,9 @@ if($email != false && $password != false){
                         <p><a href="sponsor.php">Sponsor</a></p>
                     </div>
                     <div class="social-media">
-                        <img class="facebook" src="images/facebook.png" alt="facebook">
-                        <img class="instagram" src="images/instagram.png" alt="instagram">
-                        <img class="in" src="images/in.png" alt="in">
+                        <a href="https://www.facebook.com/lucifercoffeeroasters" target="_blank"><img class="facebook" src="images/facebook.png" alt="facebook"></a>
+                        <a href="https://www.instagram.com/lucifer.coffee.roasters/" target="_blank"><img class="instagram" src="images/instagram.png" alt="instagram"></a>
+                        <a href="https://nl.linkedin.com/company/lucifer-coffee-roasters" target="_blank"><img class="linkedin" src="images/in.png" alt="linkedin"></a>
                     </div>
                 </div>
                 <div class="copyright">

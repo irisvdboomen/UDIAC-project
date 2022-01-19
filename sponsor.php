@@ -1,28 +1,8 @@
 <?php  
 session_start();
 include("conection.php");
-//include("checkPoints.php");
-?>
-<?php
-$email = $_SESSION['email'];
-$password = $_SESSION['password'];
-if($email != false && $password != false){
-    $sql = "SELECT * FROM customer WHERE email = '$email'";
-    $run_Sql = mysqli_query($db_connection, $sql);
-    if($run_Sql){
-        $fetch_info = mysqli_fetch_assoc($run_Sql);
-        $code = $fetch_info['code'];
-            if($code != 0){
-                header('Location: code-verification.php');
-            }
-        //else{
-         //   header('Location: user-otp.php');
-       // }
-    }
-}else{
-    header('Location: login.php');
-    
-}
+include("checkLogin.php");
+include("checkPoints.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -71,20 +51,20 @@ if($email != false && $password != false){
                 <li class="right-mobile">
                     <a href="profile.php"><img src="images/user.png" alt=""></a>
                 </li>
-                <li class="right-mobile" id="points"><a href="profile.php">12<img src="images/matchstick-lucifer.png" alt="" ></a></li>
+                <li class="right-mobile" id="points"><a href="profile.php"><?php echo $messageActivePoints;?><img src="images/matchstick-lucifer.png" alt="" ></a></li>
             </div>
         </div>
     </ul>
 </nav>
 <div class="hero">
     <p class="page_name">Sponsor</p>
-    <img src="./images/sponsor-hero.png" alt="coffee-beans">
+    <img src="./images/sponsor-hero.jpeg" alt="coffee-beans">
 </div>
 
 <body>
     <div class="img_text">
         <img class="logo_sponsor" src="./images/logo_sponsor.png">
-        <p class="text_in_s">DE KROMME HARING IS ONE OF LUCIFER’S BIG SUPPORTORS AND COLLABORATIOR.</p>
+        <p class="text_in_s">DE KROMME HARING IS ONE OF LUCIFER’S BIG SUPPORTERS AND COLLABORATOR.</p>
     </div>
     <div class="mid_green_box">
         <p>DE KROMME HARING, Making and drinking beer in great places</p>
@@ -141,9 +121,9 @@ if($email != false && $password != false){
                         <p><a href="sponsor.php">Sponsor</a></p>
                     </div>
                     <div class="social-media">
-                        <img class="facebook" src="images/facebook.png" alt="facebook">
-                        <img class="instagram" src="images/instagram.png" alt="instagram">
-                        <img class="in" src="images/in.png" alt="in">
+                        <a href="https://www.facebook.com/lucifercoffeeroasters" target="_blank"><img class="facebook" src="images/facebook.png" alt="facebook"></a>
+                        <a href="https://www.instagram.com/lucifer.coffee.roasters/" target="_blank"><img class="instagram" src="images/instagram.png" alt="instagram"></a>
+                        <a href="https://nl.linkedin.com/company/lucifer-coffee-roasters" target="_blank"><img class="linkedin" src="images/in.png" alt="linkedin"></a>
                     </div>
                 </div>
                 <div class="copyright">

@@ -22,18 +22,15 @@ const buttons = [
     document.querySelector(".fifth-mod"),
     document.querySelector(".six-mod"),
     document.querySelector(".seven-mod"),
-    document.querySelector(".confirmed-mod"),
     document.querySelector(".close_pop"),
-    document.querySelector(".close-p"),
-    document.querySelector(".close-pp"),
-    document.querySelector(".close-po"),
-    document.querySelector(".close-ppp"),
-    document.querySelector(".close-pppp"),
 ]
 
 buttons.forEach(button => {
+    console.log(button);
     button.addEventListener('click', () => {
+        console.log(button.dataset.modalId);
         const modal = document.querySelector(`#${button.dataset.modalId}`);
+        console.log(modal);
         modal.style.display = 'block';
     });
 });
@@ -41,6 +38,7 @@ buttons.forEach(button => {
 // When the user clicks on <span> (x), close the modal
 modals.forEach(modal => {
     modal.querySelector('.close').addEventListener('click', () => {
+        console.log("close",modal);
         modal.style.display = 'none';
     });
 });

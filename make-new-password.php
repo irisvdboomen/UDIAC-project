@@ -40,19 +40,20 @@ include("conection.php");
     <div class="contact-info">
       <div class="box1">
         <div class="tim">
-          <p class="text">Collect matches by scanning QR code from the receipt</p>
-          <img src="images/icon-bean.png" alt="">
+        <p class="text">Collect matchsticks by<br>
+            scanning the NFC tag</p>
+          <img class ="icons-step" src="images/icon-bean.png" alt="">
 
         </div>
 
         <div class="tom">
-          <img src="images/icon-scoop.png" alt=""><br>
-          <p class="text">collect matches and sprend them on rewards</p>
+          <img class ="icons-step"src="images/icon-scoop.png" alt=""><br>
+          <p class="text">collect matches and spend <br> them on rewards</p>
         </div>
 
         <div class="ali">
-          <p class="text">Go to your profile page and show the
-            claimed rewards to our barista</p><img src="images/icon-cup.png" alt="">
+        <p class="text">Go to your profile page and <br>show the
+            claimed rewards <br>to our barista</p><img class ="icons-step"src="images/icon-cup.png" alt="">
         </div>
       </div>
       <div class="box2">
@@ -64,8 +65,8 @@ include("conection.php");
                <?php echo "<p style= 'color:red'  >$massage_faild</p>" ;?><br>
 
       <!--creat new password instructions-->
-        <p class="">please create a new password </p>
-        <p class="">that you don not use on any other site</p><br>
+        <p class="">Please create a new password </p>
+        <p class="">that you don't use on any other site</p><br>
 
         <form  class="form-inputs" action="" method="post">
           <!-- new password-->

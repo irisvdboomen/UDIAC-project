@@ -3,6 +3,22 @@
     padding: 0;
 }
 
+.logout { margin-left: 23%; 
+    background-color: black; 
+    color: white; 
+    padding: 12px 20px;
+     border: none; 
+     border-radius: 17px; 
+     cursor: pointer; 
+     margin-top: 30px; 
+     width: 30%; 
+     margin-bottom: 30px; 
+     font-size: 17px; 
+     font-family: 'Bebas Neue', monospace; }
+     
+.logout:hover{
+          background-color: #D7B997;
+           color: rgb(15, 15, 15); }
 .green-box-content {
     display: flex;
 }

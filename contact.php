@@ -1,3 +1,11 @@
+<?php 
+include("conection.php");
+include("checkPoints.php");
+include("checkLogin.php");
+include("mailContactForm.php");
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,9 +40,13 @@
         <div class="logo" id="box"></div>
     </header>
     <nav class="navbar">
-        <ul>
+        <ul class="navbar-mobile">
             <input type="checkbox" id="checkbox_toggle" />
             <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+            <div class="points-mobile">
+                <p>12</p>
+                <img src="images/matchstick-lucifer.png" alt="points">
+            </div>   
             <div class="menu" id="mobile">
                 <div class="mobile">
                     <li class="left" id="selected"><a href="index.php">Home</a></li>
@@ -47,14 +59,14 @@
                     <li class="right-mobile">
                         <a href="profile.php"><img src="images/user.png" alt=""></a>
                     </li>
-                    <li class="right-mobile" id="points"><a href="profile.php">12<img src="images/matchstick-lucifer.png" alt="" ></a></li>
+                    <li class="right-mobile" id="points"><a href="profile.php"><?php echo $messageActivePoints;?><img src="images/matchstick-lucifer.png" alt="" ></a></li>
                 </div>
             </div>
         </ul>
     </nav>
     <div class="hero">
         <p class="hero-text">Contact</p>
-        <img src="images/contact-profile.png" alt="coffee-beans">
+        <img src="images/contact-profile.jpeg" alt="coffee-beans">
     </div>
     <section class="contact-section">
         <div class="contact-body">
@@ -83,7 +95,7 @@
                     <span>(7:30 AM to 5:00 PM)</span>
                 </div>
             </div>
-            <form action="mailto:dekrasteva@gmail.com" class="contact-form" method=”POST” enctype=”multipart/form-data” name=”EmailForm”>
+            <form action="" class="contact-form" method="post" enctype=”multipart/form-data” >
                 <label for="fname"> First Name </label>
                 <input required type="text" id="fname" name="firstname" placeholder=" Your name...">
                 <label for="lname"> Last Name </label>
@@ -93,8 +105,8 @@
                 <label for="E-mail"><E-mail> E-mail </E-mail></label>
                 <input required type="email" id="email" name="email" placeholder=" Your email...">
                 <label for="body"> Message </label>
-                <textarea required id="body" name="body" placeholder=" Write something... " style="height:200px"></textarea>
-                <input type="submit" value="Submit">
+                <textarea required id="body" name="message" placeholder=" Write something... " style="height:200px"></textarea>
+                <input type="submit" value="Submit" name = "btn_contact">
             </form>
     </section>
     <br>
@@ -155,7 +167,9 @@
     </footer>
 
 </body>
-
+ <?php if($_GET["messageSent"]=="done"){
+    echo "<script> alert('Email sent succecfully');</script>";
+   } ?>
 <script src="pop-up.js"></script>
 
 </html>

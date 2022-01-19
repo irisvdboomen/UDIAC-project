@@ -1,32 +1,10 @@
 <?php 
-session_start();
 include("conection.php");
-//include("login.php");
-//include("newsletter.php");
-//include("checkPoints.php");
+include("checkPoints.php");
+include("checkLogin.php");
+//require_once "newsletter.php"; is desabled becouse we have some css problems when i try to use newsletter ,
 ?>
-<?php
-$email = $_SESSION['email'];
-$password = $_SESSION['password'];
-$lastName = $_SESSION['lastName'];
-if($email != false && $password != false){
-    $sql = "SELECT * FROM customer WHERE email = '$email'";
-    $run_Sql = mysqli_query($db_connection, $sql);
-    if($run_Sql){
-        $fetch_info = mysqli_fetch_assoc($run_Sql);
-        $code = $fetch_info['code'];
-            if($code != 0){
-                header('Location: user-otp.php');
-            }
-        //else{
-         //   header('Location: user-otp.php');
-       // }
-    }
-}else{
-    header('Location: login.php');
-    
-}
-?>
+
 <!DOCTYPE html>
     <html lang="en">
 
@@ -60,9 +38,13 @@ if($email != false && $password != false){
             <div class="logo" id="box"></div>
         </header>
         <nav class="navbar">
-            <ul>
+            <ul class="navbar-mobile">
                 <input type="checkbox" id="checkbox_toggle" />
                 <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+                <div class="points-mobile">
+                    <p><?php echo "$messageActivePoints";?></p>
+                    <img src="images/matchstick-lucifer.png" alt="points">
+                </div>       
                 <div class="menu" id="mobile">
                     <div class="mobile">
                         <li class="left" id="selected"><a href="index.php">Home</a></li>
@@ -75,7 +57,7 @@ if($email != false && $password != false){
                         <li class="right-mobile">
                             <a href="profile.php"><img src="images/user.png" alt=""></a>
                         </li>
-                        <li class="right-mobile" id="points"><a href="profile.php">12<img src="images/matchstick-lucifer.png" alt="" ></a></li>
+                        <li class="right-mobile" id="points"><a href="profile.php"><?php echo "$messageActivePoints";?><img src="images/matchstick-lucifer.png" alt="" ></a></li>
                     </div>
                 </div>
             </ul>
@@ -92,11 +74,11 @@ if($email != false && $password != false){
         </div>
         <div class="steps">
             <div class="step" id="one">
-                <img src="images/coffee-beans.svg" alt="">
-                <p>Complete challenges:<br>Collect matchsticks by<br>putting in the code from<br>receipt</p>
+                <img src="images/coffee-beans .svg" alt="">
+                <p>Complete challenges:<br>Collect matchsticks by<br>scanning the <br>NFC tag</p>
             </div>
             <div class="step-mobile">
-                <p>Complete challenges:<br>Collect match sticks by<br>putting in the code from<br>receipt</p>
+                <p>Complete challenges:<br>Collect matchsticks by<br>scanning the<br>NFC tag</p>
             </div>
             <div class="arrow">
                 <img src="images/arrow.png" alt="">
@@ -180,13 +162,13 @@ if($email != false && $password != false){
                             <p><a href="sponsor.php">Sponsor</a></p>
                         </div>
                         <div class="social-media">
-                            <img class="facebook" src="images/facebook.png" alt="facebook">
-                            <img class="instagram" src="images/instagram.png" alt="instagram">
-                            <img class="in" src="images/in.png" alt="in">
-                        </div>
+                        <a href="https://www.facebook.com/lucifercoffeeroasters" target="_blank"><img class="facebook" src="images/facebook.png" alt="facebook"></a>
+                        <a href="https://www.instagram.com/lucifer.coffee.roasters/" target="_blank"><img class="instagram" src="images/instagram.png" alt="instagram"></a>
+                        <a href="https://nl.linkedin.com/company/lucifer-coffee-roasters" target="_blank"><img class="linkedin" src="images/in.png" alt="linkedin"></a>
+                    </div>
                     </div>
                     <div class="copyright">
-                        <p>©UDIAC 2021</p>
+                        <p>©UDIAC</a>2021</p>
                     </div>
                 </div>
             </div>

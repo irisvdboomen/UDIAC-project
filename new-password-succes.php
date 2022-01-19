@@ -16,19 +16,20 @@
     <div class="contact-info">
       <div class="box1">
         <div class="tim">
-          <p class="text">Collect matches by scanning QR code from the receipt</p>
-          <img src="images/icon-bean.png" alt="">
+        <p class="text">Collect matchsticks by<br>
+            scanning the NFC tag</p>
+          <img class ="icons-step" src="images/icon-bean.png" alt="">
 
         </div>
 
         <div class="tom">
-          <img src="images/icon-scoop.png" alt=""><br>
-          <p class="text">collect matches and sprend them on rewards</p>
+          <img class ="icons-step" src="images/icon-scoop.png" alt=""><br>
+          <p class="text">collect matches and spend <br> them on rewards</p>
         </div>
 
         <div class="ali">
-          <p class="text">Go to your profile page and show the
-            claimed rewards to our barista</p><img src="images/icon-cup.png" alt="">
+        <p class="text">Go to your profile page and <br>show the
+            claimed rewards <br>to our barista</p><img class ="icons-step" src="images/icon-cup.png" alt="">
         </div>
       </div>
       <div class="box2">
@@ -37,10 +38,12 @@
         <div class="contact-form">
           <img class="logo-lucifer" src="images/logo lucifer.png" alt="" onclick="location.href='index.php'">
           <br>
-          <p class="reset-pass-int">password changed succesfuly</p>
+          <p class="reset-pass-int">password changed successfully</p>
           <p class="reset-pass-int">you can now login with your new password</p>
-          <img class="check-mark" src="images/icons8-checked-checkbox-100.png" alt="">
+          <br>
+          <img class="check-mark" src="images/check.png" alt="">
         </div>
+        <br>
         <input class="button-back-to-login" type="submit" value="back to login" onclick="location.href='login.php'">
       </div>
     </div>

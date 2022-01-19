@@ -1,32 +1,10 @@
-<?php 
-session_start();
+<?php  
 include("conection.php");
-//include("login.php");
-//include("newsletter.php");
-//include("checkPoints.php");
+include("checkPoints.php");
+include("checkLogin.php");
+include("getPointByChallenge.php");
 ?>
-<?php
-$email = $_SESSION['email'];
-$password = $_SESSION['password'];
-$lastName = $_SESSION['lastName'];
-if($email != false && $password != false){
-    $sql = "SELECT * FROM customer WHERE email = '$email'";
-    $run_Sql = mysqli_query($db_connection, $sql);
-    if($run_Sql){
-        $fetch_info = mysqli_fetch_assoc($run_Sql);
-        $code = $fetch_info['code'];
-            if($code != 0){
-                header('Location: user-otp.php');
-            }
-        //else{
-         //   header('Location: user-otp.php');
-       // }
-    }
-}else{
-    header('Location: login.php');
-    
-}
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,7 +12,7 @@ if($email != false && $password != false){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Challenge page</title>
+    <title>Challenges</title>
     <!--link font-->
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <!--links css-->
@@ -63,9 +41,13 @@ if($email != false && $password != false){
         <div class="logo" id="box"></div>
     </header>
     <nav class="navbar">
-        <ul>
+        <ul class="navbar-mobile">
             <input type="checkbox" id="checkbox_toggle" />
             <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+            <div class="points-mobile">
+                <p><?php echo "$messageActivePoints";?></p>
+                <img src="images/matchstick-lucifer.png" alt="points">
+            </div>   
             <div class="menu" id="mobile">
                 <div class="mobile">
                     <li class="left" id="selected"><a href="index.php">Home</a></li>
@@ -78,7 +60,7 @@ if($email != false && $password != false){
                     <li class="right-mobile">
                         <a href="profile.php"><img src="images/user.png" alt=""></a>
                     </li>
-                    <li class="right-mobile" id="points"><a href="profile.php">12<img src="images/matchstick-lucifer.png" alt="" ></a></li>
+                    <li class="right-mobile" id="points"><a href="profile.php"><?php echo "$messageActivePoints";?><img src="images/matchstick-lucifer.png" alt="" ></a></li>
                 </div>
             </div>
         </ul>
@@ -98,7 +80,7 @@ if($email != false && $password != false){
                 </div>
                 <div class=" box-text-right ">
                     <div class="points ">
-                        <h4>2<img src="./images/point-photo.png "></h4>
+                        <h4>40<img src="./images/point-photo.png "></h4>
                     </div>
                 </div>
             </div>
@@ -111,7 +93,7 @@ if($email != false && $password != false){
                 </div>
                 <div class="box-text-right ">
                     <div class="points ">
-                        <h4>2<img src="./images/point-photo.png "></h4>
+                        <h4>20<img src="./images/point-photo.png "></h4>
                     </div>
                 </div>
             </div>
@@ -124,7 +106,7 @@ if($email != false && $password != false){
                 </div>
                 <div class="box-text-right ">
                     <div class="points ">
-                        <h4>2<img src="./images/point-photo.png "></h4>
+                        <h4>50<img src="./images/point-photo.png "></h4>
 
                     </div>
                 </div>
@@ -143,14 +125,14 @@ if($email != false && $password != false){
             <div class="text-ch ">
                 <h1 class="visitl ">VISIT LOCATION KENNEDYPLEIN</h1>
                 <br>
-                <h2>AS A LOYAL CLIENT OF LUCIFER To claim this reward you need to visit one of LUCIFER LOCATIONS kennedyplein . mAKE A PURCHASE AND ENJOY YOUR NEW POINTS AND COFFEE.</h2>
+                <h2>AS A LOYAL CLIENT OF LUCIFER, To claim this reward, you need to visit LUCIFER at kennedyplein. mAKE A PURCHASE AND ENJOY YOUR NEW POINTS AND COFFEE.</h2>
                 <div class="small-box ">
                     <div class="box-text-left ">
                         <button data-modal-id="myModal-visit-location" class="button location visit-location">VISIT LOCATION KENNEDYPLEIN</button>
                     </div>
                     <div class="box-text-right ">
                         <div class="points ">
-                            <h4>2<img class="p " style="width: 8%; " src="./images/point-photo.png "></h4>
+                            <h4>100<img class="p " style="width: 8%; " src="./images/point-photo.png "></h4>
                         </div>
                     </div>
                 </div>
@@ -165,8 +147,10 @@ if($email != false && $password != false){
                                 <span class="close">&times;</span>
                                 <h1>Visit location KENNEDYPLEIN</h1>
                                 <br>
-                                <p>mAKE A PURCHASE AND Scan your QR code to collect 2 matchsticks :</p>
-                                <button data-modal-id="myModal-confirmed-mod" class="button close-pppp">Scan QR code :</button>
+                                <p>mAKE A PURCHASE AND Scan your NFC tag to collect 100 matchsticks:</p>
+                                <form action="" method="post">
+                                <button name = "get_points_location" data-modal-id="myModal-confirmed-mod" class="button close_pop">Scan NFC tag:</button>
+                            </form>
                             </div>
                         </div>
                     </div>
@@ -184,13 +168,15 @@ if($email != false && $password != false){
                                 <span class="close">&times;</span>
                                 <h1>Buy a sandwich</h1>
                                 <br>
-                                <p>At one of Lucifer's locations and Scan your QR code to collect 2 matchsticks :</p>
+                                <p>At one of Lucifer's locations and Scan your NFC tag to collect 40 matchsticks:</p>
                                 <br>
                                 <p>#challengeoftheday</p>
                                 <div id="the-final-countdown">
                                     <p></p>
                                 </div>
-                                <button data-modal-id="myModal-confirmed-mod" class="button confirmed-mod">Scan QR code :</button>
+                                <form action="" method="post">
+                                <button name = "get_points_sandwich" data-modal-id="myModal-confirmed-mod" class="button close_pop">Scan NFC tag:</button>
+                            </form><ton>
                             </div>
                         </div>
                     </div>
@@ -206,9 +192,9 @@ if($email != false && $password != false){
                                 <br>
                                 <img class="check" src="./images/check.png">
                                 <br>
-                                <p>suscesfully added</p>
+                                <p>successfully added</p>
                                 <div class="points ">
-                                    <h4>2<img class="p " style="width: 6%; " src="./images/point-photo.png "></h4>
+                                    <h4>40<img class="p " style="width: 6%; " src="./images/point-photo.png "></h4>
                                 </div>
                             </div>
                         </div>
@@ -225,13 +211,15 @@ if($email != false && $password != false){
                                 <span class="close">&times;</span>
                                 <h1>Order a coffee:</h1>
                                 <br>
-                                <p>At one of Lucifer's locations and Scan your QR code to collect 2 matchsticks :</p>
+                                <p>At one of Lucifer's locations and Scan your NFC tag to collect 20 matchsticks:</p>
                                 <br>
                                 <p>#challengeoftheday</p>
                                 <div id="the-final-countdown">
                                     <p></p>
                                 </div>
-                                <button data-modal-id="myModal-confirmed-mod" class="button close_pop">Scan QR code :</button>
+                                <form action="" method="post">
+                                <button name = "get_points_coffe" data-modal-id="myModal-confirmed-mod" class="button close_pop">Scan NFC tag:</button>
+                            </form>
                             </div>
                         </div>
                     </div>
@@ -248,13 +236,15 @@ if($email != false && $password != false){
                                 <span class="close">&times;</span>
                                 <h1>Order a cake:</h1>
                                 <br>
-                                <p>At one of Lucifer's locations and Scan your QR code to collect 2 matchsticks :</p>
+                                <p>At one of Lucifer's locations and Scan your NFC tag to collect 25 matchsticks:</p>
                                 <br>
                                 <p>#challengeoftheday</p>
                                 <div id="the-final-countdown">
                                     <p></p>
                                 </div>
-                                <button data-modal-id="myModal-confirmed-mod" class="button close-po">Scan QR code :</button>
+                                <form action="" method="post">
+                                <button name = "get_points_cake" data-modal-id="myModal-confirmed-mod" class="button close_pop">Scan NFC tag:</button>
+                            </form>
                             </div>
                         </div>
                     </div>
@@ -272,10 +262,12 @@ if($email != false && $password != false){
                             <div class="right-col">
                                 <span class="close">&times;</span>
                                 <h1>Buy juice</h1>
-                                <p>orange | apple | strawberrie</p>
+                                <p>orange | apple | strawberry</p>
                                 <br>
-                                <p>Buy a juice by your choice and scan your QR code to collect 2 matchsticks :</p>
-                                <button data-modal-id="myModal-confirmed-mod" class="button close-p">Scan QR code :</button>
+                                <p>Buy a juice by your choice and scan your NFC tag to collect 15 matchsticks:</p>
+                                <form action="" method="post">
+                                <button name = "get_points_juice" data-modal-id="myModal-confirmed-mod" class="button close_pop">Scan NFC tag:</button>
+                            </form>
                             </div>
                         </div>
                     </div>
@@ -291,11 +283,13 @@ if($email != false && $password != false){
                             </div>
                             <div class="right-col">
                                 <span class="close">&times;</span>
-                                <h1>Buy a coockie</h1>
+                                <h1>Buy a cookie</h1>
                                 <p>triple choco | white choco</p>
                                 <br>
-                                <p>At one of Lucifer's locations and Scan your QR code to collect 2 matchsticks :</p>
-                                <button data-modal-id="myModal-confirmed-mod" class="button close-pp">Scan QR code :</button>
+                                <p>At one of Lucifer's locations and Scan your NFC tag to collect 5 matchsticks:</p>
+                                <form action="" method="post">
+                                <button name = "get_points_cookie" data-modal-id="myModal-confirmed-mod" class="button close_pop">Scan NFC tag:</button>
+                            </form>
                             </div>
                         </div>
                     </div>
@@ -313,8 +307,10 @@ if($email != false && $password != false){
                                 <h1>Buy a beer</h1>
                                 <p>| DE KROMME HARING | </p>
                                 <br>
-                                <p>At one of Lucifer's locations and Scan your QR code to collect 2 matchsticks :</p>
-                                <button data-modal-id="myModal-confirmed-mod" class="button close-ppp">Scan QR code :</button>
+                                <p>At one of Lucifer's locations and Scan your NFC tag to collect 5 matchsticks:</p>
+                                <form action="" method="post">
+                                <button name = "get_points_beer" data-modal-id="myModal-confirmed-mod" class="button close_pop">Scan NFC tag:</button>
+                            </form>
                             </div>
                         </div>
                     </div>
@@ -327,14 +323,15 @@ if($email != false && $password != false){
                             <div class="right-col spend">
                                 <span class="close">&times;</span>
                                 <h1 class="tit">Lucifer game</h1>
-                                <p>Spend 50 matches for a random suprise.</p>
+                                <p>Spend 50 matches for a random surprise.</p>
                                 <br>
                                 <p>Instructions</p>
                                 <br>
-                                <p>The beans will light up randomly between each other until it lands on one .</p>
-                                <p>After stopping a random price will appear on the screen </p>
+                                <p>The beans will light up randomly between each other until it lands on one.</p>
+                                <p>After stopping, a random price will appear on the screen </p>
                                 <p>Good luck !</p>
-                                <button class="button " id="confBtn">Confirm</button>
+                                <button   class="button " id="confBtn">Confirm</button>
+
                             </div>
                         </div>
                     </div>
@@ -363,10 +360,10 @@ if($email != false && $password != false){
                             </div>
                             <div class="right-col">
                                 <span class="close">&times;</span>
-                                <h1>You won :</h1>
-                                <p>Free Montly Subscription | 250 grams</p>
+                                <h1>You won:</h1>
+                                <p>Free Monthly Subscription | 250 grams</p>
                                 <br>
-                                <p>Choose a coffee blend by your choice</p>
+                                <p>Choose a coffee blend of your choice</p>
                                 <p>Usable once</p>
                                 <br>
                                 <p>Visit profile page to use reward</p>
@@ -398,10 +395,10 @@ if($email != false && $password != false){
                             </div>
                             <div class="right-col">
                                 <span class="close">&times;</span>
-                                <h1>You won :</h1>
+                                <h1>You won:</h1>
                                 <p>Free sandwich</p>
                                 <br>
-                                <p>Order a fresh sandwich by your choice</p>
+                                <p>Order a fresh sandwich of your choice</p>
                                 <p>Usable once</p>
                                 <br>
                                 <p>Visit profile page to use reward</p>
@@ -434,10 +431,10 @@ if($email != false && $password != false){
                             </div>
                             <div class="right-col">
                                 <span class="close">&times;</span>
-                                <h1>You won :</h1>
+                                <h1>You won:</h1>
                                 <p>Free coffee</p>
                                 <br>
-                                <p>Order a coffee by your choice</p>
+                                <p>Order a coffee of your choice</p>
                                 <p>Usable once</p>
                                 <br>
                                 <p>Visit profile page to use reward</p>
@@ -462,7 +459,7 @@ if($email != false && $password != false){
                 </div>
                 <div class="box-text-right ">
                     <div class="points ">
-                        <h4>2<img src="./images/point-photo.png "></h4>
+                        <h4>12<img src="./images/point-photo.png "></h4>
                     </div>
                 </div>
             </div>
@@ -475,7 +472,7 @@ if($email != false && $password != false){
                 </div>
                 <div class="box-text-right ">
                     <div class="points ">
-                        <h4>2<img src="./images/point-photo.png "></h4>
+                        <h4>7<img src="./images/point-photo.png "></h4>
                     </div>
                 </div>
             </div>
@@ -484,11 +481,11 @@ if($email != false && $password != false){
             <div class="box "><img class="photo_ch_1 " src="./images/5-ch.png "></div>
             <div class="small-box ">
                 <div class="box-text-left ">
-                    <button data-modal-id="myModal-six-mod" class="button six-mod">Buy a beers</button>
+                    <button data-modal-id="myModal-six-mod" class="button six-mod">Buy a beer</button>
                 </div>
                 <div class="box-text-right ">
                     <div class="points ">
-                        <h4>2<img src="./images/point-photo.png "></h4>
+                        <h4>5<img src="./images/point-photo.png "></h4>
                     </div>
                 </div>
             </div>
@@ -496,8 +493,8 @@ if($email != false && $password != false){
     </div>
     <!--challenges end -->
     <!--game start-->
-    <div class="title ">
-        <p>Lucifer challenges you to spend 50<br> matchsticks on a suprise reward.</p>
+    <div class="title">
+        <p>Game</br>Lucifer challenges you to spend 50<br> matchsticks on a surprise reward.</p>
     </div>
     <img class="cup " src="./images/cup.png ">
     <img class="lucycup " src="./images/lucifer_4.png ">
@@ -529,7 +526,7 @@ if($email != false && $password != false){
     <br>
     <br>
     <div class="title ">
-        <p>USE 50 MATCHstICKS FOR A surprise :</p>
+        <p>USE 50 MATCHstICKS FOR A surprise:</p>
     </div>
     <div class="small-box ">
         <div class="box-text-left ">
@@ -595,9 +592,9 @@ if($email != false && $password != false){
                         <p><a href="sponsor.php">Sponsor</a></p>
                     </div>
                     <div class="social-media">
-                        <img class="facebook" src="images/facebook.png" alt="facebook">
-                        <img class="instagram" src="images/instagram.png" alt="instagram">
-                        <img class="in" src="images/in.png" alt="in">
+                        <a href="https://www.facebook.com/lucifercoffeeroasters" target="_blank"><img class="facebook" src="images/facebook.png" alt="facebook"></a>
+                        <a href="https://www.instagram.com/lucifer.coffee.roasters/" target="_blank"><img class="instagram" src="images/instagram.png" alt="instagram"></a>
+                        <a href="https://nl.linkedin.com/company/lucifer-coffee-roasters" target="_blank"><img class="linkedin" src="images/in.png" alt="linkedin"></a>
                     </div>
                 </div>
                 <div class="copyright">

@@ -7,7 +7,7 @@
   <title>reset-password-succes</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/form.css">
+  <link rel="stylesheet" href="/css/form.css">
 
 
 </head>
@@ -17,34 +17,35 @@
     <div class="contact-info">
       <div class="box1">
         <div class="tim">
-          <p class="text">Collect matches by scanning QR code from the receipt</p>
-          <img src="images/icon-bean.png" alt="">
+          <p class="text">Collect matchsticks by<br>
+            scanning the NFC tag</p>
+          <img class ="icons-step"src="/images/icon-bean.png" alt="">
 
         </div>
 
         <div class="tom">
-          <img src="images/icon-scoop.png" alt=""><br>
-          <p class="text">collect matches and sprend them on rewards</p>
+          <img class ="icons-step" src="/images/icon-scoop.png" alt=""><br>
+          <p class="text">collect matches and spend <br> them on rewards</p>
         </div>
 
         <div class="ali">
-          <p class="text">Go to your profile page and show the
-            claimed rewards to our barista</p><img src="images/icon-cup.png" alt="">
+          <p class="text">Go to your profile page and <br>show the
+            claimed rewards <br>to our barista</p><img class ="icons-step" src="/images/icon-cup.png" alt="">
         </div>
       </div>
 
       <div class="box2">
-        <br>
-        <br>
-        <div class="contact-form">
-          <img class="logo-lucifer" src="images/logo lucifer.png" alt="" onclick="location.href='index.php'">
+
+      <img class="logo-lucifer" src="/images/logo lucifer.png" alt="" onclick="location.href='index.php'">
+
+          <p class="center-text">You successfully registered</p>
+          <p class="center-text">you can now go back to login</p>
           <br>
-          <p class="reset-pass-int">Confirmed!</p><br>
-          <p class="reset-pass-int">An email with a verification code was just sent to</p><br>
-          <img class="check-mark" src="images/icons8-checked-checkbox-100.png" alt="" onclick="location.href='user-opt.php'">
-          <p class="reset-pass-int">If you have not yet received an email from the Loyalties of Lucifer, check your Spam folder, or try <a href="forgot-password.php">resending</a>. 
-        <br>In order to change your password, please click on the checkmark icon!</p><br>
+          <img class="check-mark" src="/images/check.png" alt="">
+          <br>
+           <input class="button-back-to-login" type="submit" value="back to login" onclick="location.href='login.php'">
         </div>
+       
       </div>
     </div>
   </div>
