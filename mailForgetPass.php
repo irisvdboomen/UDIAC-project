@@ -16,8 +16,8 @@ require "phpmailer/SMTP.php";
       $check_email = "SELECT * FROM customer WHERE email='$email'";
       $run_sql = mysqli_query($db_connection, $check_email);
       if(mysqli_num_rows($run_sql) > 0){
-          $code = rand(999999, 111111);
-          $insert_code = "UPDATE customer SET code = $code WHERE email = '$email'";
+          $code = rand(999999, 111111); //picke a random number 
+          $insert_code = "UPDATE customer SET code = $code WHERE email = '$email'"; // insert the number to the databass
           $run_query =  mysqli_query($db_connection, $insert_code);
           if($run_query){
             $your_pcn="450256"; //Fill in your PCN number (6 numbers)
@@ -26,7 +26,7 @@ require "phpmailer/SMTP.php";
             $recipient_name="Dear Customer"; //Fill in the name of the recipient
             $subject="Password Reset Code"; //Fill in the subject
             $html_body="Your password reset code is $code"; //Fill in the HTML content
-            $text_body="Your password reset code is $code"; //Fill in the textual content
+            $text_body="Your password reset code is $code"; //Fill in the textual content // email the code to users email
             
             //Actual sending of the mail
             $mail=new PHPMailer();

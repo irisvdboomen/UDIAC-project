@@ -1,6 +1,6 @@
-<?php 
+<?php //checking if user is subscribed or not
         $customerID=$_SESSION['customerID'];
-        $checkSub="select subscription from newsletter where customerID = $customerID ";
+        $checkSub="select subscription from newsletter where customerID = $customerID "; 
         $resultsSub=mysqli_query($db_connection, $checkSub);
         $fetchBSub = mysqli_fetch_assoc($resultsSub);
         $_SESSION['subscription'] = $fetchBSub['subscription'];

@@ -10,7 +10,7 @@ if($_POST["submit_customer"]!= ""){
 }else {
   $sql="select customerID from customer where email= '".mysqli_real_escape_string($db_connection,$_POST["email"])."'";
   if(mysqli_num_rows( mysqli_query($db_connection,$sql))==0){
-    $encpass = password_hash($password, PASSWORD_BCRYPT);
+    $encpass = password_hash($password, PASSWORD_BCRYPT); // encrypting password
     $sql="insert into customer set lastName = '".mysqli_real_escape_string($db_connection,$_POST["lastName"])."',email= '".mysqli_real_escape_string($db_connection,$_POST["email"])."',
      password = '$encpass',code='$code ' ";
     $connectPoints=mysqli_query($db_connection,$sql);
@@ -22,6 +22,7 @@ if($_POST["submit_customer"]!= ""){
       $fetch = mysqli_fetch_assoc($res);
       $_SESSION['customerID'] = $fetch['customerID'];
       $customerID =$_SESSION['customerID'];
+      // adding 0 point to the points table
       $sqlPoints="insert into points set activePoints='0', usedPoints ='0' , customerID= '$customerID'";
       $sqlSanReward="insert into rewards set rewardName='Free sandwich', status ='0' , customerID= '$customerID'";
       $sqlBeerReward="insert into rewards set rewardName='Free beer', status ='0' , customerID= '$customerID'";

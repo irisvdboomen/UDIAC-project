@@ -53,7 +53,7 @@ include("checkLogin.php");
                     <li class="right-mobile">
                         <a href="profile.php"><img src="images/user.png" alt=""></a>
                     </li>
-                    <li class="right-mobile" id="points"><a href="profile.php"><?php echo "$messageActivePoints";?><img src="images/matchstick-lucifer.png" alt="" ></a></li>
+                    <li class="right-mobile" id="points"><a href="profile.php"><?php echo $messageActivePoints;?><img src="images/matchstick-lucifer.png" alt="" ></a></li>
                 </div>
             </div>
         </ul>

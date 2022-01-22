@@ -1,7 +1,8 @@
-<?php
+<?php 
 $email = $_SESSION['email'];
 $password = $_SESSION['password'];
 $lastName = $_SESSION['lastName'];
+//checking  user is loged in
 if($email != false && $password != false){
     $sql = "SELECT * FROM customer WHERE email = '$email'";
     $run_Sql = mysqli_query($db_connection, $sql);

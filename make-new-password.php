@@ -5,7 +5,7 @@ include("conection.php");
       $password = mysqli_real_escape_string($db_connection, $_POST['password']);
       $cpassword = mysqli_real_escape_string($db_connection, $_POST['cpassword']);
       if($password !== $cpassword){
-          $massage= "password not matched!";
+          $massage= "password not matched!"; //if password does not matched do this
       }else{
           $code = 0;
           $email = $_SESSION['email']; //getting this email using session

@@ -14,7 +14,7 @@ if(isset($_POST['btn_use_points'])){
             $update_points = "UPDATE points SET activePoints = '$newPoints', usedPoints = '$newUsedPoints' WHERE customerID = '$customerID'";
             $run_query = mysqli_query($db_connection, $update_points);
             $_SESSION["btn_use_points"]=true;
-            header("Location: reward1.php?reward=granded");
+            header("Location: reward1.php?reward=granded");//if user get reward show the popup
             
 }else{
     echo "<script> alert('You do not have enough points to claim this reward!');</script>";
@@ -77,7 +77,7 @@ if(isset($_POST['btn_use_points'])){
                     <li class="right-mobile">
                         <a href="profile.php"><img src="images/user.png" alt=""></a>
                     </li>
-                    <li class="right-mobile" id="points"><a href="profile.php"><?php echo "$messageActivePoints";?><img src="images/matchstick-lucifer.png" alt="" ></a></li>
+                    <li class="right-mobile" id="points"><a href="profile.php"><?php echo $messageActivePoints;?><img src="images/matchstick-lucifer.png" alt="" ></a></li>
                 </div>
             </div>
         </ul>

@@ -2,6 +2,7 @@
 include("conection.php");
 if(isset($_POST['confirm_code'])){
     $_SESSION['info'] = "";
+    //
     $otp_code = mysqli_real_escape_string($db_connection, $_POST['code']);
     $check_code = "SELECT * FROM customer WHERE code = '$otp_code'";
     $code_res = mysqli_query($db_connection, $check_code);
@@ -9,7 +10,6 @@ if(isset($_POST['confirm_code'])){
         $fetch_data = mysqli_fetch_assoc($code_res);
         $email = $fetch_data['email'];
         $_SESSION['email'] = $email;
-        $info = "Please create a new password that you don't use on any other site.";
         $_SESSION['info'] = $info;
         header('location: make-new-password.php');
         exit();

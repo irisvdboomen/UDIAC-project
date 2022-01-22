@@ -3,7 +3,7 @@ include("conection.php");
 include("checkPoints.php");
 include("checkLogin.php");
 ?>
-<?php
+<?php //
 if(isset($_POST['get_points_coffe'])){
             $points = 20;
             $customerID=$_SESSION['customerID'];

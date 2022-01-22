@@ -16,13 +16,13 @@ if(isset($_POST["submit_menu"])){
     $sqlProduct="insert into `product` (productName,productType,price) values ('$productName','$productType','$productPrice');";
     $sql = "SELECT  *
     FROM points 
-    where customerID = '$customerID'";
+    where customerID = '$customerID'"; // get the points that user already have 
     
   $result=mysqli_query($db_connection, $sql);
 
  $row = mysqli_fetch_assoc($result);
  $activePoints = $row["activePoints"];
-    $newPoints = $activePoints + $points;
+    $newPoints = $activePoints + $points; // 
     $update_points = "UPDATE points SET activePoints = $newPoints WHERE customerID = $customerID";
     $results = mysqli_query($db_connection, $update_points);
     mysqli_query($db_connection, $sqlOrder);
@@ -117,14 +117,14 @@ if(isset($_POST["submit_menu"])){
 <script>  
 async function readTag() {
   alert("reading")
-  if ("NDEFReader" in window) {
+  if ("NDEFReader" in window) { // reading data through NFC tag 
     const ndef = new NDEFReader();
     try {
       await ndef.scan();
       ndef.onreading = event => {
         const decoder = new TextDecoder();
         for (const record of event.message.records) {
-          document.querySelector("#customerID").value=decoder.decode(record.data);
+          document.querySelector("#customerID").value=decoder.decode(record.data);// import data from NFC to the customerId section 
           consoleLog("Record type:  " + record.recordType);
           consoleLog("MIME type:    " + record.mediaType);
           consoleLog("=== data ===\n" + decoder.decode(record.data));
@@ -138,19 +138,6 @@ async function readTag() {
   }
 }
 
-async function writeTag() {
-  if ("NDEFReader" in window) {
-    const ndef = new NDEFReader();
-    try {
-      await ndef.write("What Web Can Do Today");
-      consoleLog("NDEF message written!");
-    } catch(error) {
-      consoleLog(error);
-    }
-  } else {
-    consoleLog("Web NFC is not supported.");
-  }
-}
 
 function consoleLog(data) {
   var logElement = document.getElementById('log');

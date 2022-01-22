@@ -30,7 +30,7 @@ $statusCoff = $_SESSION['status'];
 ?>
 
 
-<?php  // all these code is when the user press the button in the claimed reward section so the reward 
+<?php  // all these code is when the user press the button in the claimed reward section 
 if(isset($_POST['confirm_sandwitch'])){
     $customerID=$_SESSION['customerID'];
     $sqlUpdateStatus= "UPDATE rewards set status = '1'  where customerID = $customerID AND rewardName = 'Free Sandwich'";

@@ -40,7 +40,7 @@ include("checkLogin.php");
             <input type="checkbox" id="checkbox_toggle" />
             <label for="checkbox_toggle" class="hamburger">&#9776;</label>
             <div class="points-mobile">
-                <p><?php echo "$messageActivePoints";?></p>
+                <p><?php echo $messageActivePoints;?></p>
                 <img src="images/matchstick-lucifer.png" alt="points">
             </div>  
             <div class="menu" id="mobile">

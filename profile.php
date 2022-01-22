@@ -5,6 +5,7 @@ include("checkLogin.php");
 include("checkOneTimeReward.php");
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -73,7 +74,7 @@ include("checkOneTimeReward.php");
         <img src="images/hero-profile.jpg" alt="coffee-beans">
     </div>
     <!-- End of header, menu, hero -->
-    <div class="title-profile">Hello <?php echo "$lastName" ;?>, all of your claimed rewards are stored here.</div>
+    <div class="title-profile">Hello <?php echo $lastName ;?>, all of your claimed rewards are stored here.</div>
     <div class="green-box-content">
         <div class="first-content" id="profile-picture">
             <img src="https://picsum.photos/id/237/284/340" alt="">
@@ -81,9 +82,9 @@ include("checkOneTimeReward.php");
         <div class="first-content" id="info-user">
             <div class="text-first-content">
                 <br>
-                <p>Name: <?php echo "$lastName" ;?></p>
-                <p>email: <?php echo "$email" ;?></p>
-                <p>Used Points: <?php echo "$usedPoints" ;?></p>
+                <p>Name: <?php echo $lastName ;?></p>
+                <p>email: <?php echo $email;?></p>
+                <p>Used Points: <?php echo $usedPoints ;?></p>
                 <br>
                 <button class="logout" onclick="window.location.href='logout.php';">
                  Log out
@@ -124,7 +125,7 @@ include("checkOneTimeReward.php");
             </div>
         </div>
     </div>
-    <?php if($statusSan == 0 && $statusCoff == 0 && $statusBeer == 0): ?> 
+    <?php if($statusSan == 0 && $statusCoff == 0 && $statusBeer == 0): // if user claimed reward dont show it again?> 
     <div class="title-claim-reward">Claimed rewards:</div> <?php endif;?>
     <div class="claimed-rewards">
         <?php

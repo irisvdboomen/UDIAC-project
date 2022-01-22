@@ -10,8 +10,8 @@ if(isset($_POST['but_submit'])){
   if(mysqli_num_rows($results) > 0){
       $fetch = mysqli_fetch_assoc($results);
       $fetch_pass = $fetch['password'];
-      if(password_verify($password, $fetch_pass)){
-            $_SESSION['email'] = $email;
+      if(password_verify($password, $fetch_pass)){  //verifying the  hashed password
+            $_SESSION['email'] = $email;   // save it to the session
             $_SESSION['customerID'] = $fetch['customerID'];
            $_SESSION['password'] = $password;
            $_SESSION['lastName'] = $fetch['lastName'];

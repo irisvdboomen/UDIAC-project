@@ -1,4 +1,5 @@
 <?php
+// getting points from points table and showing it in the website
 session_start();
 include ("conection.php");
  $customerID=$_SESSION['customerID'];
